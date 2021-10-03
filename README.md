@@ -1,37 +1,18 @@
-# 资源bd库
+# Dabook
 
-#### 介绍
-by chan
+#### 开发者
+学生党小陈
 
 #### 软件架构
-软件架构说明
+Android lua iapp
 
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
 
 #### 参与贡献
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+更新：
+此次对Ui调整总体没有太大的改变（除了设置界面重新整理与关于界面有修改），软件追求简洁，将小部分没用的功能调整至关于面
+软件使用大量的开源，在关于面上有标注
+软件2.0版本会出现退出输入法没退出和启动速度过慢的问题，这次在此版本都修复了
+此次更是图标有阿里icon矢量图库加持，Logo更多！
 
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
