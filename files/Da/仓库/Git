@@ -1,0 +1,1332 @@
+【设置v7列表滚动到某个位置】
+
+gvs(1,列表)
+java(null,列表,"android.support.v7.widget.RecyclerView.scrollToPosition","int",11)
+
+
+
+【滚动布局回到顶部】
+gvs(1,滚动)
+java(null,滚动,"android.widget.ScrollView.scrollTo","int",0,"int",0)
+
+【5.0-设置图片颜色】
+
+java{
+  //获取控件对象
+  final android.widget.ImageView tx1 = (android.widget.ImageView) findViewById(R.id.tx1);
+  
+  //设置图片颜色
+  tx1.setColorFilter(android.graphics.Color.parseColor("#2196f3"));
+  }
+
+【5.0-底部弹窗(BottomSheetDialog)】
+//新建一个名为dialog的界面
+java
+{
+final android.support.design.widget.BottomSheetDialog b = new android.support.design.widget.BottomSheetDialog(this);
+
+android.view.View v = getLayoutInflater().inflate(R.layout.dialog, null);
+
+b.setContentView(v);
+
+//设置背景颜色为透明，方便自定义圆角背景
+//b.getWindow().findViewById(R.id.design_bottom_sheet).setBackgroundResource(android.R.color.transparent);
+
+b.show();
+}
+【5.0-打开或关闭WIFI】
+java
+{
+final android.net.wifi.WifiManager wifi = (android.net.wifi.WifiManager)getSystemService(Context.WIFI_SERVICE);
+
+if (wifi.isWifiEnabled()) {
+    //关
+    wifi.setWifiEnabled(false);
+} else {
+    //开
+    wifi.setWifiEnabled(true);
+}
+
+
+//需要添加相关权限
+/*
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+*/
+
+【5.0-设置布局圆角】
+java
+{
+//获取控件对象
+final android.widget.LinearLayout xxbj1 = (android.widget.LinearLayout) findViewById(R.id.xxbj1);
+
+android.graphics.drawable.GradientDrawable shape = new android.graphics.drawable.GradientDrawable();
+shape.setShape(android.graphics.drawable.GradientDrawable.RECTANGLE);
+//设置圆角，可指定某个角的弧度
+shape.setCornerRadii(new float[] { 50, 50, 50, 50, 50, 50, 50, 50 });
+//设置背景颜色
+shape.setColor(android.graphics.Color.parseColor("#ffffff"));
+//设置边框大小及边框颜色
+shape.setStroke(3, android.graphics.Color.parseColor("#ffffff"));
+//设置控件的背景资源
+控件对象.setBackgroundDrawable(shape);
+}
+
+
+【浏览器拉起,打开App】
+
+//浏览器>浏览器事件>加载网址之前
+java(b,st_url,"java.lang.String.startsWith","String","http")
+syso(b)
+f(b)
+{
+  us(st_vW,"url",st_url)
+  endcode
+}
+sit(a,"action","android.intent.action.VIEW")
+sit(a,"data",st_url)
+uit(a, "chooser", "链接正在唤醒APP")
+
+【菜单列表弹窗】
+cls("android.support.v7.app.AlertDialog$Builder",class)
+javanew(dialog,class,"Context",activity)
+javax(null,dialog,class,"setTitle","CharSequence","菜单")
+//设置标题
+s menu="一;二;三;四"
+//设置菜单文本
+sl(menu,";",items)
+
+//例如获取文件列表
+//fl("%iApp",items)
+
+cls("android.content.DialogInterface$OnClickListener", 事件类)
+javacb(事件, 事件类)
+{
+  sgsz(st_aS,1,mult)
+  //列表项是0开始，也就是0,1,2,3，分别代表一，二，三，四
+  /*
+  //用序列来判断点击了什么
+  f(mult==0)
+  {
+    tw("一")
+  }
+  f(mult==1)
+  {
+    tw("二")
+  }
+  */
+  sgsz(items,mult,wtm)
+  tw(wtm)
+}
+javax(null,dialog,class,"setItems","CharSequence[]",items,事件类,事件)
+javax(dialog,dialog,class,"show")
+//显示
+
+
+【控件着色】
+//iyu调用
+
+fn 着色.控件着色(id,"#ffffff")
+
+
+//新建 着色.myu
+/.
+1，更新了一个toolbar左右两边图片着色，toolbar背景上色直接us(backgroundcolor)就行
+2，更新了下新iapp控件——浮动动作按钮(FAB)的背景色及图标色的修改
+3，V4列表如果用:
+gvs(12,列表)
+java(null,列表,"android.widget.AbsListView.setFastScrollEnabled","boolean","true")
+代码调用开启了快速拖动条，那么会自动上色拖动条颜色
+./
+
+fn 控件着色(控件,颜色)
+
+java(类,控件,"java.lang.Object.getClass")
+java(类名,类,"java.lang.Class.getName")
+f(类名 == "java.lang.Integer")
+{
+  gvs(控件,控件)
+  java(类,控件,"java.lang.Object.getClass")
+  java(类名,类,"java.lang.Class.getName")
+}
+f(颜色 ? "#")
+{
+  s 小颜色=颜色
+  java(颜色,null,"android.graphics.Color.parseColor","String",颜色)
+}
+//syso(类名)
+f(类名 == "android.widget.EditText")
+{
+  fn 着色.编辑框着色(控件,颜色)
+}
+else f(类名 == "android.widget.CheckBox" || 类名 == "android.widget.RadioButton" || )
+{
+  fn 着色.单选多选着色(控件,颜色)
+}
+else f(类名 == "android.widget.ProgressBar" || 类名 == "android.widget.RatingBar")
+{
+  //RatingBar间接继承自ProgressBar，貌似这样也可以，就偷懒了  
+  fn 着色.进度条着色(控件,颜色)
+}
+else f(类名 == "android.support.v7.widget.SwitchCompat")
+{
+  fn 着色.开关着色(控件,小颜色)
+}
+else f(类名 == "android.widget.SeekBar")
+{
+  fn 着色.拖动条着色(控件,颜色)
+}
+else f(类名 == "android.widget.ImageView")
+{
+  fn 着色.图片控件着色(控件,颜色)
+}
+else f(类名 == "android.widget.ScrollView")
+{
+  fn 着色.滚动控件边缘着色(控件,颜色)
+}
+else f(类名 == "android.widget.ListView")
+{
+  fn 着色.列表控件边缘着色(控件,颜色)
+}
+else f(类名 == "android.widget.HorizontalScrollView")
+{
+  fn 着色.水平滚动边缘着色(控件,颜色)
+}
+else f(类名 == "android.support.v4.view.ViewPager")
+{
+  fn 着色.滑动窗体边缘着色(控件,颜色)
+}
+else f(类名 == "android.support.v7.widget.Toolbar")
+{  
+  fn 着色.工具栏图标着色(控件,颜色)
+}
+else f(类名 == "android.support.design.widget.FloatingActionButton")
+{  
+  fn 着色.浮动按钮着色(控件,颜色)
+}
+else
+{
+  fn 着色.背景着色(控件,颜色)
+}
+end fn
+
+
+fn 工具栏图标着色(控件,颜色)
+javags(mMode, null, "android.graphics.PorterDuff$Mode", "SRC_ATOP")
+java(back, 控件, "android.support.v7.widget.Toolbar.getNavigationIcon")
+java(menu, 控件, "android.support.v7.widget.Toolbar.getOverflowIcon")
+f(back!=null)
+{
+  java(null, back, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+}
+f(menu!=null)
+{
+  java(null, menu, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+}
+end fn
+
+
+
+fn 浮动按钮着色(控件,颜色)
+
+s 背景颜色 = 颜色
+java(图标颜色,null,"android.graphics.Color.parseColor","String","#ffffff")
+
+java(null, 控件, "android.widget.ImageView.setColorFilter", "int", 图标颜色)
+java(背景颜色,null,"android.content.res.ColorStateList.valueOf","int",背景颜色)
+java(null, 控件, "android.support.design.widget.FloatingActionButton.setBackgroundTintList","android.content.res.ColorStateList",背景颜色)
+
+endcode
+
+fn 编辑框着色(控件,颜色)
+fn 着色.背景着色(控件,颜色)
+javags(SDK_INT,null,"android.os.Build$VERSION","SDK_INT")
+f(SDK_INT > 12)
+{
+  //安卓版本大于3.1才支持光标着色
+  javags(dres,控件,"android.widget.TextView","mCursorDrawableRes")
+  f(dres > 0)
+  {
+    java(res,activity,"android.content.Context.getResources")
+    java(drawable,res,"android.content.res.Resources.getDrawable","int",dres)
+    fn 着色.Drawable着色(drawable,颜色)
+    javags(editor,控件,"android.widget.TextView","mEditor")
+    javags(drawables,editor,"android.widget.Editor","mCursorDrawable")
+    sssz(drawables,0,sss.drawable)
+    sssz(drawables,1,sss.drawable)    
+    //还有个问题，那个选择水滴的颜色不能改……    
+  }
+}
+end fn
+
+fn 单选多选着色(控件,颜色)
+javags(SDK_INT,null,"android.os.Build$VERSION","SDK_INT")
+f(SDK_INT >= 21)
+{
+  //5.0以上直接调用系统的设置颜色
+  java(csl,null,"android.content.res.ColorStateList.valueOf","int",颜色)
+  java(null,控件,"android.widget.CompoundButton.setButtonTintList","android.content.res.ColorStateList",csl)
+}
+else
+{
+  //5.0以下自己实现（其实5.0以上系统自己的实现也是这样）
+  javags(drawable,控件,"android.widget.CompoundButton","mButtonDrawable")
+  fn 着色.Drawable着色(drawable,颜色)
+}
+end fn
+
+fn 进度条着色(控件,颜色)
+java(是否不精确,控件,"android.widget.ProgressBar.isIndeterminate")
+f(是否不精确)
+{
+  java(drawable,控件,"android.widget.ProgressBar.getIndeterminateDrawable")
+  fn 着色.Drawable着色(drawable,颜色)
+}
+else
+{
+  java(drawable,控件,"android.widget.ProgressBar.getProgressDrawable")
+  fn 着色.Drawable着色(drawable,颜色)
+}
+end fn
+
+fn 拖动条着色(控件,颜色)
+fn 着色.进度条着色(控件,颜色)
+//SeekBar继承自ProgressBar，可以直接这样对进度值着色
+//让我偷个懒吧……
+
+java(drawable,控件,"android.widget.AbsSeekBar.getThumb")
+fn 着色.Drawable着色(drawable,颜色)
+end fn
+
+fn 开关着色(控件,颜色)
+
+slg(颜色, ifs)
+f(ifs=="7")
+{
+  ssg(颜色,1,ys)
+  ss("#50"+ys,xolor)
+}
+else f(ifs=="9")
+{
+  ssg(颜色,3,ys)
+  ss("#50"+ys,xolor)
+}
+
+s view=控件
+ug(view,"checked",if0)
+cls("android.support.v7.widget.SwitchCompat",switch_c)
+f(if0)
+{
+  javax(d,view,switch_c,"getThumbDrawable")
+  cls("android.graphics.drawable.Drawable",d_c)
+  java(color,null,"android.graphics.Color.parseColor","String",颜色)
+  javax(d2,d,d_c,"setTint","int",color)
+  javax(d,view,switch_c,"getTrackDrawable")
+  java(color,null,"android.graphics.Color.parseColor","String",xolor)
+  javax(d2,d,d_c,"setTint","int",color)
+}
+java(null, view, "android.widget.CompoundButton.setOnCheckedChangeListener", ".android.widget.CompoundButton$OnCheckedChangeListener", null)
+{
+  slg(颜色, ifs)  
+  f(ifs=="7")
+  {
+    ssg(颜色,1,ys)
+    ss("#50"+ys,xolor)
+  }
+  else f(ifs=="9")
+  {
+    ssg(颜色,3,ys)
+    ss("#50"+ys,xolor)
+  }  
+  sgsz(st_aS,0,mview)
+  ug(mview,"checked",if)
+  cls("android.support.v7.widget.SwitchCompat",switch_c)
+  f(if)
+  {
+    javax(d,mview,switch_c,"getThumbDrawable")
+    cls("android.graphics.drawable.Drawable",d_c)
+    java(color,null,"android.graphics.Color.parseColor","String",颜色)
+    javax(d2,d,d_c,"setTint","int",color)
+    javax(d,mview,switch_c,"getTrackDrawable")
+    java(color,null,"android.graphics.Color.parseColor","String",xolor)
+    javax(d2,d,d_c,"setTint","int",color)
+  }
+  else
+  {
+    javax(d,mview,switch_c,"getThumbDrawable")
+    cls("android.graphics.drawable.Drawable",d_c)
+    java(color,null,"android.graphics.Color.parseColor","String","#ececec")
+    javax(d2,d,d_c,"setTint","int",color)
+    javax(d,mview,switch_c,"getTrackDrawable")
+    java(color,null,"android.graphics.Color.parseColor","String","#9e9e9e")
+    javax(d2,d,d_c,"setTint","int",color)
+  }
+}
+
+end fn
+
+fn 图片控件着色(控件,颜色)
+java(null,控件,"android.widget.ImageView.setColorFilter","int",颜色)
+end fn
+
+fn 滚动控件边缘着色(控件,颜色)
+javags(顶部边缘,控件,"android.widget.ScrollView","mEdgeGlowTop")
+fn 着色.EdgeEffect着色(顶部边缘,颜色)
+javags(底部边缘,控件,"android.widget.ScrollView","mEdgeGlowBottom")
+fn 着色.EdgeEffect着色(底部边缘,颜色)
+end fn
+
+fn 列表控件边缘着色(控件,颜色)
+javags(顶部边缘,控件,"android.widget.AbsListView","mEdgeGlowTop")
+fn 着色.EdgeEffect着色(顶部边缘,颜色)
+javags(底部边缘,控件,"android.widget.AbsListView","mEdgeGlowBottom")
+fn 着色.EdgeEffect着色(底部边缘,颜色)
+
+javags(test,控件,"android.widget.AbsListView","mThumbVertical")
+syso(test)
+
+javags(SDK_INT,null,"android.os.Build$VERSION","SDK_INT")
+f(SDK_INT >= 21)
+{
+  javags(滑条,控件,"android.widget.AbsListView","mFastScroll")
+}
+else
+{
+  javags(滑条,控件,"android.widget.AbsListView","FastScroller")
+}
+//5.0以前把mFastScroll改为FastScroller
+f(滑条!=null)
+{
+  javags(图标,滑条,"android.widget.FastScroller","mThumbImage")  
+  fn 着色.图片控件着色(图标,颜色)
+}
+
+end fn
+
+fn 水平滚动边缘着色(控件,颜色)
+javags(左边缘,控件,"android.widget.HorizontalScrollView","mEdgeGlowLeft")
+fn 着色.EdgeEffect着色(左边缘,颜色)
+javags(右边缘,控件,"android.widget.HorizontalScrollView","mEdgeGlowRight")
+fn 着色.EdgeEffect着色(右边缘,颜色)
+end fn
+
+fn 滑动窗体边缘着色(控件,颜色)
+javags(左边缘,控件,"android.support.v4.view.ViewPager","mLeftEdge")
+fn 着色.EdgeEffectCompat着色(左边缘,颜色)
+javags(右边缘,控件,"android.support.v4.view.ViewPager","mRightEdge")
+fn 着色.EdgeEffectCompat着色(右边缘,颜色)
+end fn
+
+fn 背景着色(控件,颜色)
+java(背景,控件,"android.view.View.getBackground")
+fn 着色.Drawable着色(背景,颜色)
+end fn
+
+fn Drawable着色(drawable,颜色)
+
+//内部函数，请不要随意调用
+f(drawable != null)
+{
+  javags(atop,null,"android.graphics.PorterDuff$Mode","SRC_ATOP")
+  javanew(pdcf,"android.graphics.PorterDuffColorFilter","int",颜色,"android.graphics.PorterDuff$Mode",atop)
+  java(null,drawable,"android.graphics.drawable.Drawable.setColorFilter","android.graphics.ColorFilter",pdcf)
+  sss drawable = drawable
+}
+end fn
+
+fn EdgeEffect着色(edge,颜色)
+//内部函数，请不要随意调用
+f(edge != null)
+{
+  javags(SDK_INT,null,"android.os.Build$VERSION","SDK_INT")
+  f(SDK_INT >= 21)
+  {
+    //Api21及以上，绘制方法变化，调用系统的方法进行着色
+    java(null,edge,"android.widget.EdgeEffect.setColor","int",颜色)
+  }
+  else
+  {
+    //Api21以下，自己实现
+    javags(drawable,edge,"android.widget.EdgeEffect","mEdge")
+    fn 着色.Drawable着色(drawable,颜色)
+    javags(drawable,edge,"android.widget.EdgeEffect","mGlow")
+    fn 着色.Drawable着色(drawable,颜色)
+  }
+}
+end fn
+
+fn EdgeEffectCompat着色(edgeCompat,颜色)
+//内部函数，请不要随意调用
+f(edgeCompat != null)
+{
+  javags(edge,edgeCompat,"android.support.v4.widget.EdgeEffectCompat","mEdgeEffect")
+  fn 着色.EdgeEffect着色(edge,颜色)
+}
+end fn
+
+//禁止修改任何代码，不然会报错！！
+
+
+
+
+【单选弹窗】
+cls("android.support.v7.app.AlertDialog$Builder",class)
+javanew(dialog,class,"Context",activity)
+javax(null,dialog,class,"setTitle","CharSequence","菜单")
+//设置标题
+s menu="一;二;三;四"
+//设置菜单文本
+sl(menu,";",items)
+
+cls("android.content.DialogInterface$OnClickListener", 事件类)
+javacb(事件, 事件类)
+{
+  sgsz(st_aS,1,mult)
+  syso(mult)
+  //列表项是0开始，也就是0,1,2,3，分别代表一，二，三，四
+  f(mult==0)
+  {
+    tw("一")
+  }
+  f(mult==1)
+  {
+    tw("二")
+  }
+  //...
+}
+
+//第二个参数是打开时哪一个勾选上的，0开始
+javax(null,dialog,class,"setSingleChoiceItems","CharSequence[]",items,"int",0,事件类,事件)
+
+
+javax(null,dialog,class,"setTitle","CharSequence","菜单")
+javacb(按钮事件, 事件类)
+{
+  tw("事件")
+}
+javax(null, dialog, class, "setPositiveButton", "CharSequence", "右边按钮", 事件类, 按钮事件)
+
+javax(dialog,dialog,class,"show")
+//显示
+
+
+【修改浮动按钮背景/图片颜色】
+gvs(4,fab)
+java(图标颜色,null,"android.graphics.Color.parseColor","String","#009688")
+java(背景颜色,null,"android.graphics.Color.parseColor","String","#00ff00")
+
+java(null, fab, "android.widget.ImageView.setColorFilter", "int", 图标颜色)
+java(背景颜色,null,"android.content.res.ColorStateList.valueOf","int",背景颜色)
+java(null, fab, "android.support.design.widget.FloatingActionButton.setBackgroundTintList","android.content.res.ColorStateList",背景颜色)
+
+【base64加解密】
+
+//Base64编码：
+s 原文 = "噬心"
+java(字节数组,原文,"java.lang.String.getBytes")
+//转成byte[]字节数组
+java(密文,null,"android.util.Base64.encodeToString","byte[]",字节数组,"int",0)
+//Base64编码，0是模式
+//如果失败请更改模式
+/.
+模式列表：
+DEFAULT=0
+NO_PADDING=1
+NO_WRAP=2
+CRLF=4
+URL_SAFE=8
+./
+tw(密文)
+
+//base64解码：
+s 密文 = "5q6L6aG1"
+java(字节数组,null,"android.util.Base64.decode","String",密文,"int",0)
+//Base64解码，0是模式
+//如果失败请更改模式
+javanew(原文,"java.lang.String","byte[]",字节数组)
+//由于返回的是byte[]字节数组，所以转化成字符串
+tw(原文)
+
+//作者:残页
+
+
+【耳机是否插入】
+java(音频管理器,activity,"android.content.Context.getSystemService","String","audio")
+java(wh,音频管理器,"android.media.AudioManager.isWiredHeadsetOn")
+ss("耳机插入状态为："+wh,so)
+tw(so)
+
+【获取当前应用悬浮窗权限】
+java(opps,null,"android.provider.Settings.canDrawOverlays","android.content.Context",activity)
+tw(opps)
+
+【跳转悬浮窗设置界面】
+sit(a, "action", "android.intent.action.VIEW")
+sit(a, "action", "android.settings.action.MANAGE_OVERLAY_PERMISSION")
+cls("android.content.ContextWrapper",类)
+javax(one,activity,类,"getPackageName")
+ss("package:"+one,pk)
+sit(a, "data", pk)
+uit(a, "chooser", "设置悬浮窗权限")
+
+【自定义tws背景等】
+
+//需要一个容器
+gvs(1,view)
+cls("android.support.design.widget.Snackbar",类)
+//文本传入和时间
+javax(snk,null,类,"make","android.view.View",view,"java.lang.CharSequence","Snkbar，后面number单位是毫秒","int",3000)
+cls("android.view.View$OnClickListener", 事件类)
+javacb(事件, 事件类)
+{
+s qun=123456789
+ss("mqqapi://card/show_pslcard?src_type=internal&version=1&uin="+qun+"&card_type=group&source=qrcode",joinqq)
+sit(a,"action", "android.intent.action.VIEW")
+sit(a,"data",joinqq)
+uit(a, "chooser", "选择QQ")
+}
+//按钮的文字
+javax(null,snk,类,"setAction","java.lang.CharSequence","确定",事件类,事件)
+//按钮的颜色
+java(颜色,null,"android.graphics.Color.parseColor","String","#00ffff")
+javax(null,snk,类,"setActionTextColor","int",颜色)
+javax(get,snk,"android.support.design.widget.BaseTransientBottomBar","getView")
+//us(get,"backgroundcolor","#ff3f51b5")
+us(get,"background","@chbar.jpg")
+//可以设置图片背景
+//us(get,"height","300dp")
+//可以设置高度
+java(null, snk, "android.support.design.widget.BaseTransientBottomBar.show")
+javags(id,null,"android.support.design.R$id","snackbar_text")
+java(文本,get,"android.view.View.findViewById","int",id)
+us(文本,"textcolor","#0000ff")
+//文本颜色
+
+
+
+
+【图片黑白化】
+
+//sbp("@chbar.jpg",bmp)
+tot(1, bmp)
+
+java(宽, bmp, "android.graphics.Bitmap.getWidth")
+java(高, bmp, "android.graphics.Bitmap.getHeight")
+
+javags(config,null,"android.graphics.Bitmap$Config","RGB_565")
+java(图片,null,"android.graphics.Bitmap.createBitmap","int",宽,"int",高,"android.graphics.Bitmap$Config",config)
+javanew(画板,"android.graphics.Canvas","android.graphics.Bitmap",图片)
+javanew(paint,"android.graphics.Paint")
+javanew(cm,"android.graphics.ColorMatrix")
+java(null,cm,"android.graphics.ColorMatrix.setSaturation","float",0)
+javanew(cmcf,"android.graphics.ColorMatrixColorFilter","android.graphics.ColorMatrix",cm)
+java(null,paint,"android.graphics.Paint.setColorFilter","android.graphics.ColorFilter",cmcf)
+java(null,画板,"android.graphics.Canvas.drawBitmap","android.graphics.Bitmap",bmp,"float",0,"float",0,"android.graphics.Paint",paint)
+
+
+us(2,"src",图片)
+
+
+
+
+【获取当前软件相关信息】
+
+javax(pm,activity,"android.content.ContextWrapper","getPackageManager")
+
+javax(pknm,activity,"android.content.ContextWrapper","getPackageName")
+//本应用包名
+syso(pknm)
+
+javax(ver,pm,"android.content.pm.PackageManager","getPackageInfo","String",pknm,"int",0)
+javags(版本,ver,"android.content.pm.PackageInfo.versionName")
+//本包名的版本
+syso(版本)
+
+javax(icon,pm,"android.content.pm.PackageManager","getApplicationInfo","String",pknm,"int",0)
+javax(图标,icon,"android.content.pm.PackageItemInfo","loadIcon","android.content.pm.PackageManager",pm)
+//本应用图标
+syso(图标)
+
+javags(pkg,ver,"android.content.pm.PackageInfo.applicationInfo")
+javax(应用名称,pkg,"android.content.pm.PackageItemInfo","loadLabel","android.content.pm.PackageManager",pm)
+//本应用名
+syso(应用名称)
+
+
+javags(time,ver,"android.content.pm.PackageInfo.lastUpdateTime")
+javanew(格式, "java.text.SimpleDateFormat", "String", "yyyy年MM月dd日H时mm分ss秒")
+javanew(时间, "java.util.Date", "long", time)
+java(更新时间, 格式, "java.text.DateFormat.format", "java.util.Date", 时间)
+//本应用最后一次更新时间
+syso(更新时间)
+
+【强制隐藏输入法】
+java(acit,activity,"android.content.ContextWrapper.getApplicationContext")
+java(windows,activity,"android.content.Context.getSystemService","String","input_method")
+java(getact,activity,"android.app.Activity.getCurrentFocus")
+java(win,getact,"android.view.View.getWindowToken")
+java(null,windows,"android.view.inputmethod.InputMethodManager.hideSoftInputFromWindow","android.os.IBinder",win,"int","0")
+
+【获取电量信息】
+javanew(intentFilter,"android.content.IntentFilter","String","android.intent.action.BATTERY_CHANGED")
+java(batteryStatus,activity,"android.content.Context.registerReceiver","android.content.BroadcastReceiver",null,"android.content.IntentFilter",intentFilter)
+//BATTERY_CHANGED是一个粘性广播，所以传null值就能拿到当前状态
+
+java(status,batteryStatus,"android.content.Intent.getIntExtra","String","status","int",-1)
+f(status == 2) {
+  tw("充电中")
+  } else f(status == 3 || status == 4) {
+  tw("放电中")
+  } else f(status == 5) {
+  tw("已充满")
+  }
+
+java(plug,batteryStatus,"android.content.Intent.getIntExtra","String","plugged","int",-1)
+f(plug == 1) {
+  tw("AC充电中")
+  } else f(plug == 2) {
+  tw("USB充电中")
+  } else f(plug == 4) {
+  tw("无线充电中")
+  }
+
+java(level,batteryStatus,"android.content.Intent.getIntExtra","String","level","int",-1)
+//当前电池电量
+java(scale,batteryStatus,"android.content.Intent.getIntExtra","String","scale","int",-1)
+//最大电池电量
+ss("当前电池电量：" + level + "
+最大电池电量：" + scale,msg)
+tw(msg)
+
+
+【文件夹相关操作】
+
+s file="shixin/iapp"
+fdir(file,uri)
+javanew(file,"java.io.File","java.lang.String",uri)
+//创建新的多级文件夹
+java(创建多级判断,file,"java.io.File.mkdirs")
+syso(创建多级判断)
+
+//创建文件夹
+java(创建文件夹判断,file,"java.io.File.mkdir")
+syso(创建文件夹判断)
+
+//判断文件夹是否存在
+java(文件夹存在,file,"java.io.File.isDirectory")
+syso(文件夹存在)
+
+//删除文件夹,只能删除空文件夹
+java(删除状态,file,"java.io.File.delete")
+syso(删除状态)
+
+
+
+
+【自定义utw弹窗】
+cls("android.app.AlertDialog", 弹窗子类)
+s cls = "android.app.AlertDialog$Builder"
+cls(cls,弹窗类)
+javanew(弹窗对象, 弹窗类, "android.content.Context", activity)
+javax(null, 弹窗对象, cls, "setMessage","CharSequence","欢迎加入iapp大本营！")
+//javax(null, 弹窗对象, cls, "setCancelable", "boolean", false)
+//设置是否可以取消
+javax(null,弹窗对象,cls,"setTitle","CharSequence","提示")
+cls("android.content.DialogInterface$OnClickListener", 事件类)
+javacb(点击事件, 事件类)
+{
+  end()
+}
+javacb(中间事件,事件类)
+{
+  end()
+  }
+javax(null, 弹窗对象, 弹窗类, "setNegativeButton", "CharSequence", "进入软件", 事件类, 中间事件)
+javax(null, 弹窗对象, 弹窗类, "setPositiveButton", "CharSequence", "确定", 事件类, 点击事件)
+javax(弹窗对象,弹窗对象,cls,"create")
+java(null,弹窗对象,"android.app.Dialog.show")
+//显示
+//注意，以下所有代码必须在show之后调用！否则报错
+javags(对话框,弹窗对象,"android.app.AlertDialog","mAlert")
+javags(标题,对话框,"com.android.internal.app.AlertController","mTitleView")
+//取得标题
+us(标题,"textcolor","#E91E63")
+javags(消息,对话框,"com.android.internal.app.AlertController","mMessageView")
+//取得消息
+us(消息,"textcolor","#E91E63")
+javax(右边按钮, 弹窗对象, 弹窗子类, "getButton", "int", -1)
+us(右边按钮, "textcolor", "#E91E63")
+//设置按钮颜色
+java(window,弹窗对象,"android.app.Dialog.getWindow")
+javags(位置,null,"android.view.Gravity","CENTER")
+/.TOP
+CENTER
+BOTTOM
+RIGHT
+LEFT
+./
+java(null,window,"android.view.Window.setGravity","int",位置)
+//设置弹窗位置，不设置默认为CENTER
+cls("android.view.WindowManager$LayoutParams",cls_lp)
+java(lp,window,"android.view.Window.getAttributes")
+zdp(-1,宽度)
+javass(null,lp,"android.view.ViewGroup$LayoutParams","width",宽度)
+//设置弹窗宽度
+zdp(-1,高度)
+javass(null,lp,"android.view.ViewGroup$LayoutParams","height",高度)
+//设置弹窗高度
+//弹窗的高度和宽度的单位为px，可以通过zdp把dp转换为px
+javass(null,lp,"android.view.WindowManager$LayoutParams","y",0)
+//设置y轴位置
+javass(null,lp,"android.view.WindowManager$LayoutParams","x",0)
+//设置x轴位置
+java(null,window,"android.view.Window.setAttributes",cls_lp,lp)
+//设置为自定义样式
+java(win,弹窗对象,"android.app.Dialog.getWindow")
+java(don,win,"android.view.Window.getDecorView")
+
+s a = 0
+s b = 40
+s c = "#00000000"
+s d = "#333333"
+ngde(a, b, c, d, f)
+
+//背景
+us(don,"background",f)
+
+
+【设置布局单个或多个圆角】
+//iyu调用代码
+
+call(null,"mjava","set.setBackground",activity,6,80,40,80,40,"#000000")
+
+
+//新建一个set.mjava
+
+import android.app.*;
+import android.content.res.*;
+import android.graphics.*;
+import android.os.*;
+
+
+public static void setBackground(Activity activity, int id, int yja, int yjb, int yjc, int yjd, String color)
+{
+  try
+  {
+     android.graphics.drawable.GradientDrawable shape = new android.graphics.drawable.GradientDrawable();
+     shape.setShape(android.graphics.drawable.GradientDrawable.RECTANGLE);
+     shape.setCornerRadii(new float[] { yja, yja, yjb, yjb, yjc, yjc, yjd, yjd });
+     shape.setColor(Color.parseColor(color));
+     shape.setStroke(0, Color.parseColor("#ffffff"));
+     activity.findViewById(id).setBackgroundDrawable(shape);
+  }
+  catch (Exception e)
+  {
+  }
+}
+
+
+【修改浮动按钮颜色】
+gvs(4,fab)
+java(图标颜色,null,"android.graphics.Color.parseColor","String","#009688")
+java(背景颜色,null,"android.graphics.Color.parseColor","String","#00ff00")
+
+java(null, fab, "android.widget.ImageView.setColorFilter", "int", 图标颜色)
+java(背景颜色,null,"android.content.res.ColorStateList.valueOf","int",背景颜色)
+java(null, fab, "android.support.design.widget.FloatingActionButton.setBackgroundTintList","android.content.res.ColorStateList",背景颜色)
+
+【获取文件/文件夹创建时间】
+fdir("%iApp/Userimg",file)
+
+javanew(f,"java.io.File","java.lang.String",file)
+java(cal,f,"java.util.Calendar.getInstance")
+java(time,f,"java.io.File.lastModified")
+java(null,cal,"java.util.Calendar.setTimeInMillis","long",time)
+java(tims,cal,"java.util.Calendar.getTime")
+javanew(格式, "java.text.SimpleDateFormat", "String", "yyyy年MM月dd日 HH时mm分ss秒")
+java(时间, 格式, "java.text.DateFormat.format", "java.util.Date", tims)
+
+syso(时间)
+
+【调整当前屏幕亮度】
+java(window,activity,"android.app.Activity.getWindow")
+java(lp,window,"android.view.Window.getAttributes")
+//0-1之间
+javass(nu,lp,"android.view.WindowManager$LayoutParams","screenBrightness",0.55)
+javax(null,window,"android.view.Window","setAttributes","android.view.WindowManager$LayoutParams",lp)
+
+【高斯模糊】
+s 路径="%tumblr/6f319d21-827c-486d-9ecf-11541aaea3c2.jpg"
+s 半径="4"
+s 模糊度 ="5"
+
+cls("android.graphics.Bitmap",图像类)
+cls("android.renderscript.RenderScript",高斯类)
+cls("android.renderscript.Element",指针类)
+cls("android.renderscript.ScriptIntrinsicBlur",模糊类)
+cls("android.renderscript.Allocation",计算类)
+
+sbp(路径,img)
+javax(bmpw, img, 图像类,"getWidth")
+s(bmpw/半径,bmpw)
+javax(bmph, img, 图像类,"getHeight")
+s(bmph/半径,bmph)
+
+javax(img,null,图像类,"createScaledBitmap",图像类,img,"int",bmpw,"int",bmph,"boolean",false)
+javax(rs,null,高斯类,"create","android.content.Context",activity)
+javax(eme,null,指针类,"U8_4",高斯类,rs)
+javax(sb,null,模糊类,"create",高斯类,rs,指针类,eme)
+
+javax(inp,null,计算类,"createFromBitmap",高斯类,rs,图像类,img)
+javax(inpget,inp,计算类,"getType")
+javax(otp,null,计算类,"createTyped",高斯类,rs,"android.renderscript.Type",inpget)
+
+javax(null,sb,模糊类,"setRadius","float",模糊度)
+javax(null,sb,模糊类,"setInput",计算类,inp)
+javax(null,sb,模糊类,"forEach",计算类,otp)
+javax(null,otp,计算类,"copyTo",图像类,img)
+
+javax(null,rs,高斯类,"destroy")
+java(null,sb,"android.renderscript.BaseObj.destroy")
+
+//最后输出img，可以设置src或者bg
+us(1,"background",img)
+
+【编辑框错误提示】
+gvs(2,编辑框)
+java(null,编辑框,"android.widget.TextView.setError","CharSequence","错误提示")
+
+【普通列表快速拖动条】
+gvs(12,列表)
+java(null,列表,"android.widget.AbsListView.setFastScrollEnabled","boolean","true")
+//v7列表不能用
+//拖动条默认颜色为白色，在列表大于一定数量才有
+
+【控件透明度】
+gvs(1,控件)
+//0-1之间
+java(null,控件,"android.view.View.setAlpha","float",0.5)
+
+【判断vpn是否开启】
+s isVpn = false
+java(nis,null,"java.net.NetworkInterface.getNetworkInterfaces")
+f(nis != null){
+  java(list,null,"java.util.Collections.list","java.util.Enumeration",nis)
+  for(ni;list){
+    java(up,ni,"java.net.NetworkInterface.isUp")
+    java(ia,ni,"java.net.NetworkInterface.getInterfaceAddresses")
+    java(size,ia,"java.util.List.size")
+    f(up && size != 0){
+      java(name,ni,"java.net.NetworkInterface.getName")
+      f(name == "tun0" || name == "ppp0"){
+        s isVpn = true
+        break
+        }
+      }
+    }
+  }
+f(isVpn==true)
+{
+  syso("有抓包")
+  tw("网络错误")
+  end()
+  endcode
+}
+else
+{
+  syso("没有抓包")
+}
+
+
+【java修改图片颜色】
+gvs(8,view)
+
+java(c,null,"android.graphics.Color.parseColor","String","#212121")
+javags(mode,null,"android.graphics.PorterDuff$Mode","SRC_ATOP")
+java(null,view,"android.widget.ImageView.setColorFilter","int",c,"android.graphics.PorterDuff$Mode",mode)
+
+【获取手机电量】
+java(管理器,activity,"android.app.Activity.getSystemService","String","batterymanager")
+//初始化
+java(a,管理器,"android.os.BatteryManager.getIntProperty","int",4)
+//获取剩余电量，加上%就是手机剩余的电量
+tw(a)
+【v7列表的多种用法】
+//竖直列表
+gvs(4,对象)
+cls("android.support.v7.widget.RecyclerView",列表类)
+cls("android.support.v7.widget.LinearLayoutManager",布局管理类)
+javanew(布局,布局管理类,"Context",activity,"int",1,"boolean",false)
+javax(null,对象,列表类,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",布局)
+
+//横向列表
+gvs(4,对象)
+cls("android.support.v7.widget.RecyclerView",列表类)
+cls("android.support.v7.widget.LinearLayoutManager",布局管理类)
+javanew(布局,布局管理类,"Context",activity,"int",0,"boolean",false)
+javax(null,对象,列表类,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",布局)
+
+//网格列表
+gvs(4,对象)
+cls("android.support.v7.widget.RecyclerView",列表类)
+cls("android.support.v7.widget.GridLayoutManager",布局管理类)
+javanew(布局,布局管理类,"Context",activity,"int",3)
+javax(null,对象,列表类,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",布局)
+
+//瀑布流
+gvs(4,对象)
+cls("android.support.v7.widget.RecyclerView",列表类)
+cls("android.support.v7.widget.StaggeredGridLayoutManager",布局管理类)
+javanew(布局,布局管理类,"int",2,"int",1)
+javax(null,对象,列表类,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",布局)
+
+
+【java设置手机壁纸】
+//初始化包
+cls("android.app.WallpaperManager",wm)
+cls("android.graphics.Bitmap",bitp)
+cls("android.graphics.BitmapFactory",bfy)
+
+//图片路径(/sdcard/+路径)
+s path = "/sdcard/iApp/Userimg/icon_iapp.png"
+//初始化壁纸工具
+javax(Wallm,null,wm,"getInstance","Context",activity)
+//初始化图片为Bitmap变量
+javax(image,null,bfy,"decodeFile","String",path)
+//设置壁纸
+javax(null,Wallm,wm,"setBitmap",bitp,image)
+
+//需要权限<uses-permission android:name="android.permission.SET_WALL_PAPER"/>应该是这个我手写的或者百度安卓设置壁纸权限
+
+
+【图片圆角】
+sbp("图片",bitmap)
+
+java(res,activity,"android.content.Context.getResources")
+
+java(sss.drawable,null,"android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory.*","android.content.res.Resources",res,"android.graphics.Bitmap",bitmap)
+
+java(null,sss.drawable,"android.support.v4.graphics.drawable.RoundedBitmapDrawable.setCornerRadius","float",100)
+//圆角度数
+
+us(控件id,"background",sss.drawable)
+
+【状态栏白底黑字】
+java(cs, activity, "android.app.Activity.getWindow")
+java(cs2, cs, "android.view.Window.getDecorView")
+java(null, cs2, "android.view.View.setSystemUiVisibility", "int", "8192")
+//设置状态栏透明(沉浸式)
+java(null, cs, "android.view.Window.addFlags", "int", "67108864")
+
+【输入法相关】
+
+说明：此代码可以解决输入法弹出的时候遮住你的控件/让布局乱动的问题
+//请根据需要，自行修改
+s flag = 18
+/.
+可选值：
+0 系统默认，由系统选择显示方式
+2 当用户进入时，默认隐藏输入法
+4 当用户进入时，默认显示输入法
+16 输入法弹出时，调整空白区域来显示输入法。即使调整空白区域，输入法还是有可能遮挡一些有内容区域，这时用户就只有退出输入法才能看到这些被遮挡区域并进行交互。
+18 与16相同，但是当用户进入时，默认隐藏输入法
+20 与16相同，但是当用户进入时，默认显示输入法
+32 输入法弹出时，顶起当前布局（更改布局高度，同时整个布局上移）
+34 与32相同，但是当用户进入时，默认隐藏输入法
+36 与32相同，但是当用户进入时，默认显示输入法
+48 当输入法弹出时，什么也不做，直接让输入法覆盖界面
+50 与48相同，但是当用户进入时，默认隐藏输入法
+52 与48相同，但是当用户进入时，默认显示输入法
+./
+java(window,activity,"android.app.Activity.getWindow")
+java(null,window,"android.view.Window.setSoftInputMode","int",flag)
+
+
+【控件转图片】
+gvs(1,控件)
+
+java(宽,控件,"android.view.View.getWidth")
+java(高,控件,"android.view.View.getHeight")
+//这里我动态获取控件高度，你们可以自己填进去
+/.
+这里有几个问题
+1.在载入事件不能获取，返回0
+2.如果是滚动控件，列表控件等等可以滚动的控件，
+获取的高度/不是真实高度宽度，最大只能获取到手机屏的宽高
+造成转出来的图片只是已经显示出来的部分
+可以用自己手动填入宽高来解决
+./
+
+javags(config,null,"android.graphics.Bitmap$Config","ARGB_4444")
+//可选值ARGB_8888，ARGB_4444，RGB_565，ALPHA_8
+//ARGB_8888画质最好，这里用ARGB_4444是为了节约内存
+
+java(图片,null,"android.graphics.Bitmap.createBitmap","int",宽,"int",高,"android.graphics.Bitmap$Config",config)
+f(图片 == null){
+  tw("似乎出现问题了")
+  endcode
+  }
+javanew(画板,"android.graphics.Canvas","android.graphics.Bitmap",图片)
+
+java(null,控件,"android.view.View.draw","android.graphics.Canvas",画板)
+
+us(6,"src",图片)
+
+【禁止截图】
+java(a,activity,"android.app.Activity.getWindow")
+java(null,a,"android.view.Window.addFlags","int",8192)
+
+【拉起iApp导入源码】
+fdir("@a.iApp",位置)
+//源码位置
+javanew(位置,"java.io.File","String",位置)
+java(uri,null,"android.net.Uri.fromFile","java.io.File",位置)
+sit(a,"data",uri)
+sit(a,"flags",268435456)
+sit(a,"classname","com.iapp.app","com.iapp.app.logoActivity2")
+sit(a, "action", "android.intent.action.VIEW")
+java(null,activity,"Context.startActivity","android.content.Intent",a)
+java(null,null,"android.content.Intent.createChooser","android.content.Intent",a,"String","iApp")
+
+【MD风格提示】
+//iyu调用代码
+fn md.tw("MD提示！")
+
+//新建一个md.myu
+//mdtw
+fn tw(show)
+nvw(o,o,"线性布局","",obj)
+nvw(o,obj,"线性布局","background=#323232",d)
+swh("pxw",w)
+us(d,"width",w)
+nvw(o,d,"文本","linespacingextra=8\nlayout_margintop=14dp\nlayout_marginright=24dp\nlayout_marginbottom=10dp\nlayout_marginleft=24dp\ntextsize=14sp\ntextcolor=#ffffff",b)
+us(b,"text",show)
+call(toast,"mlua","lua.Toasts",obj)
+end fn
+
+//新建一个lua.mlua
+function Toasts(cv)
+--自定义tw
+import "android.widget.*"
+import "android.view.Gravity"
+to=Toast(activity)
+to:setGravity(Gravity.BOTTOM,0,0);
+to:setView(cv)
+to:show()
+end
+
+
+【mjava获取网络图片】
+//iyu调用代码
+t()
+{
+  //参数:图片URL直链
+  s picurl="http://img6.bdstatic.com/img/image/public/20180814.jpg"
+  call(back,"mjava","Http.getInternetPicture",picurl)
+  ufnsui()
+  {
+    //背景可以设置哦
+    us(1,"background",back)
+  }
+}
+
+//新建一个Http.mjava
+
+import android.app.*;
+import android.content.*;
+import android.graphics.*;
+import android.net.*;
+import java.io.*;
+import java.net.*;
+import android.graphics.drawable.*;
+
+//获取网络图片
+	public static BitmapDrawable getInternetPicture(String UrlPath) {  
+        Bitmap bm = null;  
+        String urlpath = UrlPath;  
+        try {  
+            URL uri = new URL(urlpath);  
+            HttpURLConnection connection = (HttpURLConnection) uri.openConnection();
+            connection.setRequestMethod("GET");  
+            connection.setReadTimeout(5000);  
+            connection.setConnectTimeout(5000);  
+            connection.connect();  
+			if (connection.getResponseCode() == 200) {  
+                InputStream is = connection.getInputStream();  
+                bm = BitmapFactory.decodeStream(is);  
+            } else {
+                bm = null;  
+            }  
+        } catch (MalformedURLException e) {  
+            e.printStackTrace();  
+        } catch (IOException e) {  
+            e.printStackTrace();  
+        }  
+        return new BitmapDrawable(bm);  
+
+    }
+    
+
+【java获取手机壁纸】
+cls("android.app.WallpaperManager",class)
+javax(wm,null,class,"getInstance","Context",activity)
+javax(drawable,wm,class,"getDrawable")
+us(5,"src",drawable)
+【隐藏浏览器放大缩小按钮】
+gvs(浏览器控件ID,wv)
+java(ws,wv,"android.webkit.WebView.getSettings")
+java(null,ws,"android.webkit.WebSettings.setBuiltInZoomControls","boolean",true)
+java(null,ws,"android.webkit.WebSettings.setDisplayZoomControls","boolean",false)
+
+【mjava调用图库】
+//iyu
+调用:
+javags(agc,"android.content.Intent","android.content.Intent.ACTION_GET_CONTENT")
+javanew(it,"android.content.Intent","String",agc)
+java(c,it,"android.content.Intent.setType","String","image/*")
+javags(ca,"android.content.Intent","android.content.Intent.CATEGORY_OPENABLE")
+java(c,it,"android.content.Intent.addCategory","String",ca)
+java(c,activity,"android.app.Activity.startActivityForResult","android.content.Intent",it,"int",2)
+
+回调:
+javags(er,activity,"android.app.Activity","RESULT_OK")
+f(st_lC==er)
+{
+  f(st_sC==2)
+  {
+    java(uri,st_iT,"android.content.Intent.getData")
+    call(path, "mjava", "uri.getRealPath", activity, uri)
+    syso(path)
+    us(2, "src", path)
+    us(3, "text", path)
+    //path为图片路径
+  }
+}
+
+
+
+
+
+uri.mjava
+//新建一个名为uri的mjava文件
+import android.content.ContentUris;
+import android.content.Intent;
+import android.net.Uri;
+import android.provider.DocumentsContract;
+import android.provider.MediaStore;
+import android.database.Cursor;
+import android.content.Context;
+
+public static String getRealPath(Context context, Uri uri)
+{
+  String imagePath = null;
+  if(DocumentsContract.isDocumentUri(context, uri))
+  {
+    // 如果是document类型的Uri，则通过document id处理
+            
+    String docId = DocumentsContract.getDocumentId(uri);
+           
+    if ("com.android.providers.media.documents".equals(uri.getAuthority()))
+            
+    {
+                
+      String id = docId.split(":")[1];           
+      String selection = MediaStore.Images.Media._ID + "=" + id;
+  
+      imagePath = getImagePath(context, MediaStore.Images.Media.EXTERNAL_CONTENT_URI, selection);
+    }
+            
+    else if ("com.android.providers.downloads.documents".equals(uri.getAuthority()))
+            
+    {
+                
+      Uri contentUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), Long.valueOf(docId));
+      imagePath = getImagePath(context, contentUri, null);
+    }
+  }
+  else if("content".equalsIgnoreCase(uri.getScheme()))
+  {
+    // content类型普通方式处理
+    imagePath = getImagePath(context, uri, null);
+  }
+  else if("file".equalsIgnoreCase(uri.getScheme()))
+  {
+    // file类型直接获取图片路径
+    imagePath = uri.getPath();
+  }
+  return imagePath;
+}
+
+public String getImagePath(Context context, Uri uri, String selection)
+{
+  String path = null;
+  // 通过Uri和selection来获取真实的图片路径
+  Cursor cursor = context.getContentResolver().query(uri, null, selection, null, null);
+  if (cursor != null)
+  {
+    syso(cursor.moveToFirst());
+    if (cursor.moveToFirst())
+    {
+      path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
+    }
+    cursor.close();
+  }
+  return path;
+}
+
+
+【WebView网页放大缩小】
+放大:
+gvs(1,ss.wv)
+java(c,ss.wv,"android.webkit.WebView.zoomIn")
+
+缩小:
+gvs(1,ss.wv)
+java(c,ss.wv,"android.webkit.WebView.zoomOut")
+
+【设置控件阴影】
+gvs(2, 标题栏)
+//2为控件
+zdp(4, 标题栏阴影)
+//4为阴影厚度
+java(null,标题栏,"android.view.View.setElevation", "float",标题栏阴影)
+【java获取视频任意一帧】
+fdir("%a.mp4",路径)
+javanew(mmr,"android.media.MediaMetadataRetriever")
+java(null,mmr,"android.media.MediaMetadataRetriever.setDataSource","String",路径)
+java(图片,mmr,"android.media.MediaMetadataRetriever.getFrameAtTime","long",0)
+//%a.mp4为视频路径，最后的图片使用us就可以设置到src或者backound，最后的0换第0帧，可改变，但不得超过视频总帧数
+
+【Toolbar设置返回键】
+s id=3
+//toolbar的id
+
+utb(id)
+java(mTba, activity, "android.support.v7.app.AppCompatActivity.getSupportActionBar")
+java(null, mTba, "android.support.v7.app.ToolbarActionBar.setDisplayHomeAsUpEnabled", "boolean", true)
+//设置左边为返回键
+
+utb("set", "leftck", id)
+{
+  tw("返回")
+}
+
+【Toolbar标题栏图标颜色】
+s id=3
+//toolbar的id
+
+utb(id)
+
+gvs(id, mTba)
+
+javags(mMode, null, "android.graphics.PorterDuff$Mode", "SRC_ATOP")
+
+java(颜色,null,"android.graphics.Color.parseColor","String","#ffffff")
+//颜色
+
+java(mTbaBackSrc, mTba, "android.support.v7.widget.Toolbar.getNavigationIcon")
+java(null, mTbaBackSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+
+java(mTbaMenuSrc, mTba, "android.support.v7.widget.Toolbar.getOverflowIcon")
+java(null, mTbaMenuSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+

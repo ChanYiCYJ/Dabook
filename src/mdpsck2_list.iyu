@@ -1,0 +1,72 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=100dp
+background=selectableitem
+clickable=true
+orientation=horizontal
+layout_margin=5dp
+layout_margintop=2dp
+padding=10dp
+elevation=0.5dp</ppt>
+<event><eventItme type="clicki">gvs(st_vW,mdpsck2_list.3,id3)
+gvs(st_vW,mdpsck2_list.5,id5)
+ug(id3,"text",ys)
+ss("以写入到剪切板："+ys,point)
+sxb(ys)
+tw(point)
+
+</eventItme></event>
+</View>
+<View id="4" did="1" type="TextView">
+<ppt>width=-2
+height=-2
+text=
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="5" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="2" did="5" type="TextView">
+<ppt>width=-2
+height=-2
+text=288
+textcolor=#ffffffff
+textsize=18sp</ppt>
+<event></event>
+</View>
+<View id="3" did="5" type="TextView">
+<ppt>width=-2
+height=-2
+text=#607D8B
+textcolor=#fefefefe
+</ppt>
+<event></event>
+</View>
+<View id="6" did="1" type="ImageView">
+<ppt>width=27dp
+height=27dp
+src=@social/ic_sentiment_satisfied_black_24dp.png</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">gvs(st_vW,mdpsck2_list.3,id3)
+gvs(st_vW,mdpsck2_list.4,id4)
+gvs(st_vW,mdpsck2_list.1,id1)
+gvs(st_vW,mdpsck2_list.2,id2)
+ug(id3,"text",ys)
+ug(id4,"text",btys)
+us(id2,"textcolor",btys)
+us(id3,"textcolor",btys)
+s a=5
+s b=7
+.s d="#c4c4c4c4"
+s d=0
+//变量d为边色 
+ngde(a,b,ys,d,e) 
+us(id1,"background",e)
+us(id1,"backgroundripple","#d8d8d8d8")
+</eventItme></UIEventset>

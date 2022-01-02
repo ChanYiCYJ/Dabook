@@ -1,0 +1,148 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="AppBarLayout">
+<ppt>width=-1
+height=-3
+background=#2196F3</ppt>
+<event></event>
+</View>
+<View id="14" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="Toolbar">
+<ppt>width=-1
+height=-3
+app_title=子页面
+app_TitleColor=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="4" did="1" type="CardView">
+<ppt>width=-1
+height=67dp
+layout_margin=7dp
+app_CardcornerRadius=5dp
+app_CardElevation=0
+app_CardBackgroundColor=#fff9f9f9
+</ppt>
+<event></event>
+</View>
+<View id="5" did="4" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=center_vertical
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">sss jmlx ="BASE64加解密"
+uigo("数据加解密子页面.iyu")</eventItme></event>
+</View>
+<View id="6" did="5" type="TextView">
+<ppt>width=-2
+height=-2
+text=Base64
+textColor=#ff0c0c0c
+textSize=19.5sp
+typeface=serif
+layout_marginLeft=4dp
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="7" did="1" type="CardView">
+<ppt>width=-1
+height=67dp
+layout_margin=7dp
+app_CardcornerRadius=5dp
+app_CardElevation=0
+app_CardBackgroundColor=#fff9f9f9
+</ppt>
+<event></event>
+</View>
+<View id="8" did="7" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=center_vertical
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">sss jmlx ="MD5加密"
+uigo("数据加解密子页面.iyu")</eventItme></event>
+</View>
+<View id="13" did="8" type="ImageView">
+<ppt>width=24dp
+height=24dp
+src=@ic_https_black_24dp.png
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="9" did="8" type="TextView">
+<ppt>width=-2
+height=-2
+text=MD5
+textColor=#ff0c0c0c
+textSize=19.5sp
+typeface=serif
+layout_marginLeft=4dp
+layout_marginLeft=2dp</ppt>
+<event></event>
+</View>
+<View id="10" did="1" type="CardView">
+<ppt>width=-1
+height=67dp
+layout_margin=7dp
+app_CardcornerRadius=5dp
+app_CardElevation=0
+app_CardBackgroundColor=#fff9f9f9
+</ppt>
+<event></event>
+</View>
+<View id="11" did="10" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=center_vertical
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">sss jmlx ="16进制转换"
+uigo("数据加解密子页面.iyu")</eventItme></event>
+</View>
+<View id="12" did="11" type="TextView">
+<ppt>width=-2
+height=-2
+text=16进制转换
+textColor=#ff0c0c0c
+textSize=19.5sp
+typeface=serif
+layout_marginLeft=4dp
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">//这些都是子页面的主要配置(一直到注释zypzend)
+f(sss.ztlpd == null)
+{
+fn 工具.沉浸式()
+//获取状态栏的高度
+swh("ztl", h)
+syso(h)
+us(14,"height",h+"dp")
+}
+else
+{
+  uycl(sss.ztys,true)
+}
+  us(2,"background",sss.ztys)
+fn 工具.返回(3,"元素动画")
+us(3,"app_title",sss.title)
+//zypzend
+//元素动画
+gvs(13,a)
+call(null,"mjava","元素动画.set",a)
+</eventItme><eventItme type="downkey">call(null,"mjava","元素动画.end")
+</eventItme></UIEventset>

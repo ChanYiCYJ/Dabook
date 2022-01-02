@@ -1,0 +1,193 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white
+</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="AppBarLayout">
+<ppt>width=-1
+height=-3
+background=#2196F3</ppt>
+<event></event>
+</View>
+<View id="16" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="Toolbar">
+<ppt>width=-1
+height=-3
+app_title=子页面
+app_TitleColor=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="4" did="1" type="CardView">
+<ppt>width=-1
+height=152dp
+layout_margin=5.5dp
+app_CardcornerRadius=5dp
+app_CardElevation=0
+app_CardBackgroundColor=#fff9f9f9
+</ppt>
+<event></event>
+</View>
+<View id="5" did="4" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="6" did="5" type="EditText">
+<ppt>width=-1
+height=-2
+text=
+hint=要加密或解密的内容
+layout_margin=8dp</ppt>
+<event></event>
+</View>
+<View id="7" did="1" type="CardView">
+<ppt>width=-1
+height=52dp
+layout_margin=5.5dp
+app_CardcornerRadius=5dp
+app_CardElevation=0.7dp
+app_CardBackgroundColor=#ffffffff
+</ppt>
+<event></event>
+</View>
+<View id="8" did="7" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=center_vertical
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">ug(6,"text",tBtxt)
+f(tBtxt=="")
+{
+  tw("无加密内容！",0)
+  endcode
+}
+f(sss.jmlx=="BASE64加解密")
+{
+  javax(to,null,sss.jmsf,"toBase64","String",tBtxt)
+}
+f(sss.jmlx=="MD5加密")
+{
+  javax(to,null,sss.jmsf,"toMD5","String",tBtxt,"int",32)
+}
+f(sss.jmlx=="16进制转换")
+{
+  s G="GB2312"
+  javax(to,null,sss.jmsf,"string2Hex","String",tBtxt,"String",G)
+}
+us(15,"text",to)</eventItme></event>
+</View>
+<View id="9" did="8" type="TextView">
+<ppt>width=-2
+height=-2
+text=加密/encrypt
+textColor=#ff0c0c0c
+textSize=17sp
+typeface=serif
+layout_marginLeft=4dp
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="10" did="1" type="CardView">
+<ppt>width=-1
+height=52dp
+layout_margin=5.5dp
+app_CardcornerRadius=5dp
+app_CardElevation=0.7dp
+app_CardBackgroundColor=#ffffffff
+</ppt>
+<event></event>
+</View>
+<View id="11" did="10" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=center_vertical
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">ug(6,"text",dBtxt)
+f(dBtxt=="")
+{
+  tw("无解密内容！",0)
+  endcode
+}
+
+f(sss.jmlx=="BASE64加解密")
+{
+  javax(de,null,sss.jmsf,"deBase64","String",dBtxt)  
+}
+f(sss.jmlx=="16进制转换")
+{
+  s U="UTF-8"
+  javax(de,nul,sss.jmsf,"hex2String","String",dBtxt,"String",U)
+}
+us(15,"text",de)</eventItme></event>
+</View>
+<View id="12" did="11" type="TextView">
+<ppt>width=-2
+height=-2
+text=解密/decode
+textColor=#ff0c0c0c
+textSize=17sp
+typeface=serif
+layout_marginLeft=4dp
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="13" did="1" type="CardView">
+<ppt>width=-1
+height=152dp
+layout_margin=5.5dp
+app_CardcornerRadius=5dp
+app_CardElevation=0
+app_CardBackgroundColor=#fff9f9f9
+</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="15" did="14" type="EditText">
+<ppt>width=-1
+height=-2
+text=
+layout_margin=8dp</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">//这些都是子页面的主要配置(一直到注释zypzend)
+f(sss.ztlpd == null)
+{
+fn 工具.沉浸式()
+//获取状态栏的高度
+swh("ztl", h)
+syso(h)
+us(16,"height",h+"dp")
+}
+else
+{
+  uycl(sss.ztys,true)
+}
+  us(2,"background",sss.ztys)
+fn 工具.返回(3,null)
+us(3,"app_title",sss.jmlx)
+//zypzend
+f(sss.jmlx =="MD5加密")
+{
+  urvw(10)
+}
+fn shangs.控件着色(15,sss.qds)
+fn shangs.控件着色(6,sss.qds)
+</eventItme></UIEventset>

@@ -1,0 +1,18 @@
+<View id="6" did="0" type="ScrollView">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="7" did="6" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="1" did="7" type="RecyclerView">
+<ppt>width=-1
+height=-1
+layout_marginBottom=50dp</ppt>
+<event></event>
+</View>
+<UIEventset></UIEventset>

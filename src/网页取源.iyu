@@ -1,0 +1,217 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="AppBarLayout">
+<ppt>width=-1
+height=-3
+background=#2196F3</ppt>
+<event></event>
+</View>
+<View id="21" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="Toolbar">
+<ppt>width=-1
+height=-3
+app_title=子页面
+app_TitleColor=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="19" did="1" type="CardView">
+<ppt>width=-1
+height=60dp
+layout_margin=5.5dp
+app_CardcornerRadius=5dp
+app_CardElevation=0
+app_CardBackgroundColor=#fff9f9f9
+</ppt>
+<event></event>
+</View>
+<View id="20" did="19" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="5" did="20" type="EditText">
+<ppt>width=-1
+height=-2
+layout_margin=8dp
+text=
+hint=输入网址(需带http或其他协议开头)</ppt>
+<event></event>
+</View>
+<View id="6" did="1" type="CardView">
+<ppt>width=-1
+height=52dp
+layout_margin=5.5dp
+app_CardcornerRadius=5dp
+app_CardElevation=1dp
+app_CardBackgroundColor=#fff9f9f9</ppt>
+<event></event>
+</View>
+<View id="7" did="6" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=center_vertical
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">ug(5,"text",地址)
+f(地址 =="")
+{
+  tw("带空格搞什么噢")
+}
+else
+{
+us(11,"text","")
+us(16,"visibility","visible")
+us(8,"visibility","gone")
+t()
+{
+hs(地址,数据)
+syso(数据)
+ufnsui()
+{
+f(数据 == null)
+{
+  tw("获取失败")
+  us(8,"visibility","visible")
+us(16,"visibility","gone")
+}
+else
+{
+  tw("获取成功！")
+  us(11,"text",数据)
+  us(8,"visibility","visible")
+us(16,"visibility","gone")
+  us(11,"visibility","visible")
+}
+}
+}
+}</eventItme></event>
+</View>
+<View id="16" did="7" type="ProgressBar">
+<ppt>width=22dp
+height=22dp
+style=16842871
+layout_gravity=center
+visibility=gone
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="8" did="7" type="ImageView">
+<ppt>width=22dp
+height=22dp
+src=@ic_language_black_24dp.png
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="9" did="7" type="TextView">
+<ppt>width=-2
+height=-2
+text=获取
+textColor=#ff040404
+textSize=17sp
+typeface=serif
+layout_marginLeft=4dp</ppt>
+<event></event>
+</View>
+<View id="12" did="1" type="CardView">
+<ppt>width=-1
+height=55dp
+layout_margin=12dp
+app_CardcornerRadius=5dp
+app_CardElevation=0
+app_CardBackgroundColor=#fff9f9f9
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="13" did="12" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=center
+background=selectableitem
+clickable=true
+</ppt>
+<event></event>
+</View>
+<View id="15" did="13" type="TextView">
+<ppt>width=-2
+height=-2
+text=详细查看
+textColor=#ff040404
+textSize=17sp
+typeface=serif
+layout_marginLeft=4dp</ppt>
+<event></event>
+</View>
+<View id="17" did="1" type="CardView">
+<ppt>width=-1
+height=-1
+layout_margin=5.5dp
+app_CardcornerRadius=5dp
+app_CardElevation=0
+app_CardBackgroundColor=#fff9f9f9
+</ppt>
+<event></event>
+</View>
+<View id="18" did="17" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="10" did="18" type="TextInputLayout">
+<ppt>width=-1
+height=-2
+layout_marginTop=10dp</ppt>
+<event></event>
+</View>
+<View id="11" did="10" type="EditText">
+<ppt>width=-1
+height=-1
+text=
+visibility=gone</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">//这些都是子页面的主要配置(一直到注释zypzend)
+f(sss.ztlpd == null)
+{
+fn 工具.沉浸式()
+//获取状态栏的高度
+swh("ztl", h)
+syso(h)
+us(21,"height",h+"dp")
+}
+else
+{
+  uycl(sss.ztys,true)
+}
+  us(2,"background",sss.ztys)
+fn 工具.返回(3,"元素动画")
+us(3,"app_title",sss.title)
+//zypzend
+//元素
+gvs(8,a)
+call(null,"mjava","元素动画.set",a)
+//输入法默认打开隐藏
+fn 工具.输入法(18)
+//进度条与编辑框着色
+fn shangs.控件着色(5,sss.qds)
+fn shangs.控件着色(11,sss.qds)</eventItme><eventItme type="downkey">f(st_kC==4)
+{
+call(null,"mjava","元素动画.end")
+}</eventItme><eventItme type="menu">case 打开被扒的网页:
+ug(5,"text",sss.llq)
+uigo("浏览器页面.iyu")
+break
+</eventItme></UIEventset>

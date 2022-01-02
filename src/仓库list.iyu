@@ -1,0 +1,63 @@
+<View id="1" did="0" type="CardView">
+<ppt>width=-1
+height=140dp
+layout_margin=7dp
+app_CardcornerRadius=5dp
+app_CardElevation=0
+app_CardBackgroundColor=#fff9f9f9
+//#fff9f9f9
+app_CardmaxElevation=0.1dp</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center_horizontal
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">gvs(st_vW,仓库list.4,id4)
+gvs(st_vW,仓库list.3,id3)
+ug(id4,"text",sss.txt)
+ug(id3,"text",sss.bt)
+uigo("查看.iyu")</eventItme></event>
+</View>
+<View id="3" did="2" type="TextView">
+<ppt>width=-2
+height=-2
+text=MD配色
+textColor=#ff0e0e0e
+//#ff0e0e0e
+textSize=15sp
+layout_marginTop=15dp
+layout_marginLeft=10dp
+layout_marginRight=10dp
+singleLine=true
+//内容显示在同一行
+ellipsize=end
+//文本超长显示方式 跑马灯
+marqueerepeatlimit=marquee_forever
+//跑马灯显示次数 无限∞重复
+</ppt>
+<event></event>
+</View>
+<View id="4" did="2" type="TextView">
+<ppt>width=-2
+height=-2
+textSize=11sp
+text=#ff0e0e0e#ff0e0e0eje查询www.2b2t.centerje查询www.2b2t.centerje查询www.2b2t.centerje查询www.2b2t.centerje查询www.2b2t.centerje查询www.2b2t.centerje查询www.2b2t.cente
+layout_gravity=center
+layout_marginLeft=20dp
+layout_marginRight=20dp
+layout_marginTop=10dp
+layout_marginBottom=30dp
+maxLines=5
+ellipsize=marquee</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">gvs(st_vW,仓库list.1,gvs_1)
+swh("pxw",w)
+dha(dh, false, true)
+dh(dh, "duration", 400)
+us(gvs_1, "dh", dh)
+</eventItme></UIEventset>

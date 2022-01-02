@@ -1,0 +1,2278 @@
+iapp教程_示例
+【启动图】
+
+
+//先添加一个线性布局
+
+width=-1
+
+height=-1
+
+orientation=vertical
+
+background=@bj.jpg
+
+//这个是背景图
+
+//把上面这个代码放入线性布局属性里
+
+t()
+
+{
+
+stop(3000)
+
+//跳转时间
+
+uigo(’’跳转到界面的名’’)
+
+end()
+
+}
+
+//把上面这个代码放进载入事件
+
+作者:Mr.洛寒
+
+【倒计时】
+
+s id=这里是本文控件id
+
+t()
+
+{
+
+ss("正在倒计时60秒",b)
+
+ufnsui()
+
+{
+
+us(id,"text",b)
+
+}
+
+s a=60
+
+for(1;60)
+
+{
+
+f(a==1)
+
+{
+
+.这里还可以加其代码
+
+ufnsui()
+
+{
+
+us(id,"text","倒计时完成")
+
+}
+
+endcode
+
+}\ns(a-1,a)
+
+ss("正在倒计时"+a+"秒",c)
+
+ufnsui()
+
+{
+
+us(id,"text",c)
+
+}
+
+stop(1000)
+
+}
+
+}
+
+【联网注册机】
+
+//注册机，可以利用来赚钱\
+
+//首先我们必须要有一个后台来管理
+
+//可以去我的磨或者洛寒社区
+
+//推荐使用洛寒社区 luoluo.wap8y.com
+
+//发帖内容如下:用符号 , 隔开
+
+//发帖好了，把网址复制到下面的s wz=""的""符号里面！
+
+//然后把这段代码放入载入
+
+//--------------------
+
+s id=编辑框或者文本id
+
+simei(imei)
+
+us(id,"text",imei)
+
+//---------------------
+
+//然后把下面这段判断代码放入激活按钮
+
+simei(bc)
+
+s wz="网址"
+
+t()
+
+{
+
+hs(wz,aa)
+
+f(cc?bc)
+
+{
+
+ufnsui()
+
+{
+
+tw("已注册！")
+
+}
+
+.还可以添加其他代码，例如
+
+uigo
+
+}
+
+else
+
+{
+
+ufnsui()
+
+{
+
+tw("未注册，请联系作者注册！")
+
+}
+
+}
+
+}
+
+【分享图片】
+
+sit(a, "action", "android.intent.action.SEND")
+
+sit(a, "type", "*/*")
+
+sit(a, "extra", "android.intent.extra.STREAM","/sdcard/iApp/Userimg/icon_iapp.png")
+
+uit(a, "chooser", "分享")
+
+这是路径/sdcard/iApp/Userimg/icon_iapp.png【文本转语音】
+
+ug(id,"text",a)
+
+//输入编辑框id
+
+f(a=="")
+
+{
+
+tw("请输入文字")
+
+}
+
+else
+
+{
+
+stobm(a,"utf-8",a)
+
+sr(a," ","",a)
+
+t()
+
+{
+
+ss("http://tts.baidu.com/text2audio?ie=UTF-8&lan=zh&text="+a,a)
+
+ufnsui()
+
+{
+
+tw("下载中...",0)
+
+}
+
+hd(a,"%bocai/转语音/转换后.mp3",true,b)
+
+f(b==0)
+
+{
+
+ufnsui()
+
+{
+
+tw("已保存到根目录的%bocai/转换后目录里面",0)
+
+}
+
+bfm("%bocai/转语音/转换后.mp3",c)
+
+bfms(c,"st")
+
+}
+
+}
+
+}
+
+//iAph
+
+【进度条】
+
+s jd="progress"
+
+//这是进度的参数
+
+s id=
+
+//这里是进度条ID
+
+t()
+
+{
+
+us(id,jd,1)
+
+s a=1
+
+s b=100
+
+w(100>0)
+
+{
+
+ug(id,jd,pp)
+
+s+(pp,1,ppk)
+
+f(pp==99)
+
+{
+
+uigo("a1.iyu")
+
+//跳转界面
+
+end()
+
+}
+
+us(id,jd,ppk)
+
+stop(20)
+
+}
+
+}
+
+//iAph
+
+【随机验证码】
+
+s a=2
+
+//这里是显示验证码文本的id
+
+t()
+
+{
+
+sran(111111,99999,yz)
+
+ufnsui()
+
+{
+
+us(a,"text",yz)
+
+}
+
+}
+
+//以上代码放入载入界面事件
+
+//下面这个代码放入按钮点击事件
+
+s yzm=2
+
+//显示验证码的文本id
+
+s bjk=3
+
+//输入验证码的编辑框
+
+ug(yzm,"text",nr)
+
+ug(bjk,"text",nrnr)
+
+f(nr==nrnr)
+
+{
+
+ufnsui()
+
+{
+
+tw("验证码正确！")
+
+}
+
+}
+
+else
+
+{
+
+ufnsui()
+
+{
+
+tw("验证码错误！")
+
+}
+
+sran(111111,99999,yz)
+
+ufnsui()
+
+{
+
+us(yzm,"text",yz)
+
+}
+
+}
+
+【百分比启动界面】
+
+s a=0
+
+//jg这是你的间隔
+
+s jg=30
+
+t()
+
+{
+
+//循环100次
+
+for(1;101)
+
+{
+
+ss("正在启动程序"+a+"%",b)
+
+ufnsui()
+
+{
+
+us(id控件, "text", b)
+
+}
+
+s(a+1,a)
+
+stop(jg)
+
+f(a=="100")
+
+{
+
+uigo("跳转界面名称")
+
+end()
+
+}
+
+}
+
+}
+
+//欢迎加入洛寒IAPP基础交流群，群号码：562326618
+
+【清空编辑框】
+
+s id=这里填输入框或输出框ID
+
+ug(id,"text",a)
+
+f(a=="")
+
+{
+
+ufnsui()
+
+{
+
+tw("数据己清除！")
+
+}
+
+}
+
+else
+
+{
+
+ufnsui()
+
+{
+
+us(id,"text","")
+
+}
+
+}
+
+//用来清空输入框里面的内容
+
+【QQ临时会话】
+
+s qq=3445572194
+
+//请修改QQ号
+
+ss("mqqwpa://im/chat?chat_type=wpa&uin="+qq+"&version=1",urlqq)
+
+sit(a,"action", "android.intent.action.VIEW")
+
+sit(a,"data",urlqq)
+
+uit(a, "chooser", "QQ聊天窗口")
+
+【加QQ群代码】
+
+s qun=562326618
+
+//请修改QQ号
+
+ss("mqqapi://card/show_pslcard?src_type=internal&version=1&uin="+qun+"&card_type=group&source=qrcode",joinqq)
+
+sit(a,"action", "android.intent.action.VIEW")
+
+sit(a,"data",joinqq)
+
+uit(a, "chooser", "QQ群窗口")
+
+【使用密码进软件】
+
+s id=4
+
+//id是编辑框id，也就是密码输入框id
+
+ug(id,"text",mm)
+
+s zq="123456"
+
+//123456就是密码
+
+f(mm==zq)
+
+{
+
+ufnsui()
+
+{
+
+tw("密码正确")
+
+//这里还可以添加其他代码
+
+}
+
+}
+
+else
+
+{
+
+ufnsui()
+
+{
+
+tw("密码错误")
+
+}
+
+}
+
+//作者:Mr.洛寒
+
+【判断是否有网络】
+
+t()
+
+{
+
+s gh="http://luohan.wap8y.com"
+
+hs(gh,bc)
+
+f(bc==null)
+
+{
+
+ufnsui()
+
+{
+
+tw("没有网络")
+
+//这里还可以添加其他代码
+
+}
+
+}
+
+else
+
+{
+
+ufnsui()
+
+{
+
+tw("网络可用")
+
+//这里还可以添加其他代码
+
+}
+
+}
+
+}
+
+//作者:Mr.洛寒
+
+【防止软件打开键盘】
+
+在编辑框的父控件属性里添加：
+
+focusable=true
+
+focusableintouchmode=true
+
+//即可
+
+【更新代码示例】
+
+t()
+
+{
+
+hs("这里是更新链接",gx)
+
+//更新链接可以去洛寒社区弄
+
+sj(gx,"更新版本","更新版本",gxbb)
+
+sj(gx,"更新内容","更新内容",gxnr)
+
+sj(gx,"下载链接","下载链接",gxlj)
+
+f(gxbb!=null)
+
+{
+
+f(gxbb>1)
+
+//1为当前应用版本，注意要修改
+
+{
+
+ss("最新版本:"+gxbb,gxbb)
+
+ufnsui()
+
+{
+
+utw(null, gxbb, gxnr, "下载", false, v)
+
+{
+
+ufnsui()
+
+{
+
+hw(gxlj)
+
+}
+
+}
+
+}
+
+}
+
+}
+
+}
+
+网站luoluo.wap8y.com
+
+网站这样写:
+
+更新版本2更新版本"
+
+更新内容修复Bug更新内容
+
+下载链接http://bocaishouce.apk下载链接
+
+作者:Mr.洛寒
+
+【远程公告】
+
+t()
+
+{
+
+hs("网址",a)
+
+sj(a,"公告[","]公告",b)
+
+sr(b,"<br/ >","\n",c)
+
+f(b==null)
+
+{
+
+ufnsui()
+
+{
+
+tw("没有网络")
+
+//没有网络的事件
+
+}
+
+}
+
+else
+
+{
+
+ufnsui()
+
+{
+
+utw(17301651,"公告",c,"复制","取消",true,v)
+
+{
+
+sxb(c)
+
+tw("已复制")
+
+//复制事件
+
+}
+
+else
+
+{
+
+//取消事件
+
+}
+
+}
+
+}
+
+}
+
+【弹窗说明】
+
+s a=null
+
+.这里是弹窗图片
+
+s b="登陆"
+
+.这里是弹窗标题
+
+s nr="mian.iyu"
+
+.这里是弹窗的内容，可以输入界面名直接弹出界面
+
+s button="取消"
+
+utw(a,b,nr,button,false)
+
+{
+
+}
+
+.false 是按下返回键不关闭弹窗
+
+可以改成 true 按下返回键关闭弹窗
+
+.by:Mr.洛寒
+
+【跳转界面动画】
+
+用法：
+
+uigo("abc.iyu")
+
+//输入跳转界面动画的序号；6 右往左推出效果
+
+lan(6)
+
+说明：
+
+用于跳转界面时候进行的动画效果
+
+提示：
+
+0.淡入淡出效果 1.放大淡出效果 2.转动淡出效果1 3.转动淡出效果2 4.左上角展开淡出效果 5.压缩变小淡出效果 6.右往左推出效果 7.下往上推出效果 8.左右交错效果 9.放大淡出效果 10.缩小效果 11.上下交错效果
+
+【双击退出】
+
+f(st_kC==4)
+
+{
+
+f(sss.exit==null)
+
+{
+
+sss exit=0
+
+tw("再按一次返回键退出",0)
+
+t()
+
+{
+
+stop(600)
+
+sss exit=null
+
+}
+
+}
+
+else
+
+{
+
+end()
+
+}
+
+}
+
+//按两次返回键退出，以上代码请放入：界面事件→按键按下事件
+
+【一键删除文件夹】
+
+fn del(path)
+
+t()
+
+{
+
+f(ss.path0==null)
+
+{
+
+fi(path,f)
+
+f(f==false)
+
+{
+
+ufnsui()
+
+{
+
+tw("文件夹路径错误！")
+
+}
+
+ss path0=null
+
+endcode
+
+//判断是否为文件夹，否就停止运行
+
+}
+
+ss path0=path
+
+//把实时要删的文件夹存到变量path0中
+
+}
+
+f(path?ss.path0)
+
+{
+
+//判断原要删的文件夹路径中是否包含有实时要删的文件夹路径，如果包含则执行下面的代码，否就表示原要删的文件夹已删除
+
+fd(path,f)
+
+//尝试删除该文件夹，返值到f
+
+f(f==true)
+
+{
+
+//如果删除path文件夹成功则
+
+ss("删除："+path+" 成功1！",k)
+
+syso(k)
+
+//打印删除的文件（夹）路径详情
+
+slg(path,l)
+
+slof(path,"/",l,l1)
+
+//取路径path的倒数第一个字符"/"的位置
+
+ssg(path,0,l1,path1)
+
+//截取路径path的父目录
+
+fn a.del(path1)
+
+//开始新一轮的删除，以path1为叁数
+
+endcode
+
+}
+
+//如果删除文件夹path失败，则表示path是一个非空文件夹，执行下面的循环删除里面的文件（夹）
+
+fl(path,a)
+
+for(b;a)
+
+{
+
+ss(path+"/"+b,path2)
+
+fd(path2,f)
+
+f(f==false)
+
+{
+
+fn a.del(path2)
+
+//如果删除文件夹path2失败则重新以path2为叁数重新删除
+
+endcode
+
+}
+
+ss("删除："+path2+" 成功！",k)
+
+.syso(k)
+
+//打印删除成功的文件（夹）路径
+
+}
+
+fn a.del(path)\nendcode
+
+//文件夹path里面的所有文件（夹）全删完后重新开始删除，传入叁数path
+
+}
+
+ss path0=null
+
+ufnsui()
+
+{
+
+tw("删除完毕！")
+
+}
+
+}
+
+end fn
+
+//以上代码请放到模块a.myu里，如果你要改模块名称，请将上面代码里的3个a.del改一下
+
+//以下代码放到按钮点击事件中,传入要删的文件夹调用上面的模块一键删除
+
+s lj="/sdcard/abc"
+
+.模块会自动判断路径的正确性以及是否是文件夹
+
+fn a.del(lj)
+
+.调用模块开始删除，原创
+
+【远程弹窗公告】
+
+t(){
+
+hs("这里是网址",a)
+
+sj(a,"①","①",b)
+
+ufnsui()
+
+{
+
+utw(null,"公告",b,"知道了",true,sb)
+
+{
+
+}
+
+}
+
+}
+
+//网站这样写 ①公告内容①
+
+网站 : luoluo.wap8y.com
+
+【编辑框字数限制】
+
+//编辑框的文本更新之后事件
+
+s bjk=1
+
+//反馈编辑框ID
+
+s wb=2
+
+//显示字数的文本ID
+
+s sx=150
+
+//反馈内容字数大于150变成蓝色 (字数上限)
+
+s sx1=15
+
+//反馈内容字数大于15显示的颜色变成蓝色 (因为我反馈设置的是反馈内容不得少于15个字)
+
+ug(bjk,"text",fankui)
+
+slg(fankui,zfcd)
+
+f(zfcd<=sx)
+
+{
+
+s(sx-zfcd,zs)
+
+ss(zfcd+" / "+zs,zzs)
+
+us(wb,"text",zzs)
+
+us(wb, "textcolor", "#cacacaca")
+
+f(zfcd>=sx1)
+
+{
+
+us(wb, "textcolor", "#ff97c9ff")
+
+}
+
+}
+
+else f(zfcd>=sx)
+
+{
+
+s(sx-zfcd,zs1)
+
+ss(zfcd+" / "+zs1,zzs1)
+
+us(wb,"text",zzs1)
+
+us(wb, "textcolor", "#ffff1700")
+
+//设置字数显示颜色
+
+}
+
+// 作者：唯梦倾城
+
+【邮箱反馈示例】
+
+//Pre邮箱反馈
+
+//和反馈字数显示搭配效果更佳
+
+//Pre反馈不会的去
+
+t()
+
+{
+
+s lx=5
+
+//联系编辑框ID
+
+s bjk=17
+
+//反馈编辑框ID
+
+s zx=15
+
+//判断最小提交字数限制
+
+s zd=150
+
+//判断最大提交字数限制
+
+ug(lx,"text",yhm)
+
+ug(bjk,"text",fkly)
+
+syso(ss.fkly)
+
+syso(ss.fklyb)
+
+ss fkly=fkly
+
+//获取反馈信息
+
+f(ss.fkly==ss.fklyb)
+
+{\nufnsui()
+
+{
+
+us(bjk,"text","")
+
+tw("请勿重复提交")
+
+//判断同样内容是否重复提交
+
+}
+
+}
+
+else
+
+{
+
+stobm(fkly, "utf-8", fkly1)
+
+f(fkly==fkly1)
+
+{
+
+ufnsui()
+
+{
+
+tw("请正确输入反馈内容，勿扰！")
+
+//判断是否包含中文
+
+}
+
+}
+
+else
+
+{
+
+slg(fkly,zfcd)
+
+f(zfcd<zx)
+
+{
+
+//判断是的大于15字数
+
+ufnsui()
+
+{
+
+tw("反馈留言不得低于15个字符
+
+为防打扰，不便之处还请见谅!",1)
+
+//低于最小字数提示
+
+}
+
+}
+
+else
+
+{
+
+f(zfcd>zd)
+
+{
+
+ufnsui()
+
+{
+
+tw("反馈字数过多，请精简后再反馈吧！")
+
+//超过最大字数提示
+
+}
+
+}
+
+else
+
+{
+
+f(yhm=="")
+
+{
+
+s yhm="匿名"
+
+//联系为空则为匿名
+
+}
+
+sjxx(11a)
+
+sgsz(11a,2, 11d)
+
+sl(11d,"\n",d11)
+
+sgsz(d11,1,imei)
+
+sgsz(d11,0,imei1)
+
+sgsz(11a,1, 10d)
+
+sl(10d,"\n",d01)
+
+sgsz(d01,2,imei3)
+
+sgsz(d01,3,imei4)
+
+sgsz(11a,0, 9d)
+
+sl(9d,"\n",d31)
+
+sgsz(d31,0,imei5)
+
+//获取/手机品牌/型号/分辨率宽高/cpu型号
+
+ss("品牌："+imei+" ----型号："+imei1+" ----分辨率宽："+imei3+" --分辨率高："+imei4+" ----CPU型号："+imei5,shouji)
+
+strim(yhm, yhm)
+
+strim(fkly,fkly)
+
+ss(fkly+"--------------------"+shouji,fkly)
+
+s url="http://pre.im/feedback/add"
+
+s url1="contact="
+
+ss(url1+yhm+"&",url1)
+
+s url2="content="
+
+ss(url2+fkly,url2)
+
+s url3="&app_key=04b41896351f054d4eb2ae20023956be"
+
+s url4="&app_name=iapp辅助"
+
+//不要拿这测试，不然是发到我邮箱里，不会的去上面的链接里看，在结合这里修改。
+
+ss(url1+url2+url3+url4,urls)
+
+hs(url,urls,"utf-8",urltxt)
+
+f(urltxt=="1")
+
+{
+
+ufnsui()
+
+{
+
+tw("反馈成功！")
+
+//反馈成功提示
+
+ss ii=ii
+
+ug(bjk,"text",fkl)
+
+ss fklyb=fkl
+
+us(bjk,"text","")
+
+}
+
+}
+
+else
+
+{
+
+ufnsui()
+
+{
+
+tw("反馈失败,请检测当前网络状态")
+
+//反馈失败提示}
+
+}
+
+}
+
+//是的大于最大字数限制
+
+}
+
+//判断是否小于最小字数限制
+
+}
+
+//判断是否包含中文
+
+}
+
+//反馈内容是否重复
+
+}
+
+//t线程
+
+//---------------唯梦倾城
+
+【文本跑马灯】
+
+//文本跑马灯显示
+
+//设置在文本属性里面
+
+width=-1
+
+height=-2
+
+//文本控件宽高
+
+text=手机瞬间就三四节咳嗽咳嗽介绍介绍几款试卷是技术手机几十家睡觉死而殴斗搜儿忙你电脑疯闹吃你家饭可瑞康大家解放进房
+
+//显示文本
+
+textsize=15sp
+
+//字体大小
+
+singleline=true
+
+//内容显示在同一行
+
+ellipsize=marquee
+
+//文本超长显示方式 跑马灯
+
+marqueerepeatlimit=marquee_forever
+
+//跑马灯显示次数 无限∞重复
+
+focusableintouchmode=true
+
+//获取焦点
+
+【判断文件是否存在】
+
+s a="%xinl/gg.xinl"
+
+//a是文件路径
+
+fe(a,b)
+
+f(b=="true")
+
+{
+
+ufnsui()
+
+{
+
+tw("文件存在")
+
+//这里还可以添加其他代码
+
+}
+
+}
+
+else
+
+{
+
+ufnsui()
+
+{
+
+tw("文件不存在")
+
+//这里还可以添加其他代码
+
+}
+
+}
+
+【列表利用for循环显示内容】
+
+s a="小白；小黑；小龙；哈啊；是是是；嘻嘻嘻"
+
+//a是要循环的内容用特殊符号"；"隔开
+
+s b="；"
+
+sl(a,b,c)
+
+for(cc;c)
+
+{
+
+ula(v,1=null,2=c)
+
+}
+
+uls(1,v,"l.iyu",-2,-2)
+
+// 1是列表的ID
+
+【QQ获取头像、名称等地址】
+
+获取QQ头像的地址：
+
+http://q2.qlogo.cn/headimg_dl?bs=qq&dst_uin=3445572194&spec=100
+
+例如QQ号3445572194的空间头像的地址是：
+
+http://qlogo1.store.qq.com/qzone/3445572194/3445572194/100
+
+获取QQ秀图片地址：
+
+http://qqshow-user.tencent.com/3445572194/22/00/1.gif?fr=mobileqq
+
+强制聊天链接：
+
+http://wpa.qq.com/msgrd?v=3&uin=3445572194&site=qq&menu=yes
+
+获取QQ网名和QQ空间头像的接口
+
+http://users.qzone.qq.com/fcg-bin/cgi_get_portrait.fcg?uins=3445572194
+
+获取QQ昵称
+
+http://r.pengyou.com/fcg-bin/cgi_get_portrait.fcg?uins=3445572194
+
+【按钮点击调用侧滑】
+
+ug(2,"isdraweropen",b)
+
+.2是侧滑的ID
+
+f(b==true)
+
+{
+
+us(2,"closedrawer","start")
+
+}
+
+else
+
+{
+
+us(2,"opendrawer","start")
+
+}
+
+【属性标识对照表】
+
+text=内容
+
+background=背景
+
+width=宽度、
+
+height=高度、
+
+paddingleft=左内边距、
+
+paddingtop=顶内边距、
+
+paddingright右内边距、
+
+paddingbottom=底内边距、
+
+layout_marginleft=左外边距、
+
+layout_margintop=顶外边距、
+
+layout_marginright=右外边距、
+
+layout_marginbottom=底外边距、
+
+hint=提示字符、
+
+imeoptions=虚拟键盘按键状态、
+
+visibility=控件可视状态、
+
+checked=选项是否被选中、
+
+title=浏览器网页标题、
+
+url=浏览器网址、
+
+lastvisibleposition=列表滑动到项目位置的序号、
+
+count=列表项目总数、
+
+editem=获取下拉框选值、
+
+rating=评分当前数值、
+
+progress=控件当前进度数值、
+
+date=日期控件选值、
+
+time=时间控件选值、
+
+currentitem=获得滑动窗体界面序号、
+
+isdraweropen=侧滑是否界面展开状态、
+
+*ionstart=获取文本框光标开始位置、
+
+*ionend=获取文本框光标结束位置、
+
+cangoback=是否存在可返回的网页、
+
+cangoforward=是否存在可前进的网页、
+
+collapsecolumns=表格布局获取指定列是否折叠、
+
+shrinkcolumns=表格布局获取指定的列是否可收缩、
+
+stretchcolumns=表格布局获取指定的列是否可拉伸、
+
+shrinkcolumnsall=表格布局获取指示是否所有的列都是可收缩的、
+
+stretchcolumnsall=表格布局获取指示是否所有的列都是可拉伸的
+
+属性visibility，显/隐0/8或，visible/gone，其他显隐在控件属性中输入visibility查看
+
+【跳转淘宝搜索】
+
+s pay="taobao://s.taobao.com/search?"
+
+sit(a,"action", "android.intent.action.VIEW")
+
+sit(a,"data",pay)
+
+uit(a, "chooser", "跳转淘宝搜索")
+
+作者:猎鹰
+
+【sit调用系统软件分享软件实例】
+
+sit(a, "action", "android.intent.action.SEND")
+
+sit(a, "type", "application/vnd.android.package-archive")
+
+sit(a, "extra", "android.intent.extra.STREAM","/sdcard/iapp.apk")
+
+.这个是软件路径"/sdcard/iapp.apk"，
+
+uit(a, "chooser", "分享软件")
+
+【特殊字体转换代码ۖิ学 ۖิ̶ۣۖิۖิ̶ ۖิ ۖิ习 ۖิ̶ۣۖิۖิ̶ ۖิ ۖิ助 ۖิ̶ۣۖิۖิ̶ ۖิ ۖิ手 ۖิ̶ۣۖิۖิ̶ ۖิ ۖิ】
+
+s p=""
+
+ug(6,"text",text)
+
+.获取编辑框内容
+
+slg(text,l)
+
+s i=0
+
+f(l!=0)
+
+{
+
+t()
+
+{
+
+w(i<l)
+
+{
+
+s(i+1,o)
+
+ssg(text,i,o,txt)
+
+s(i+1,i)
+
+ss(p+txt+" ۖิ̶ۣۖิۖิ̶ ۖิ ۖิ",p)
+
+.可以修改你喜欢的特殊符号
+
+ufnsui()
+
+{
+
+us(7,"text",p)
+
+.写入编辑框或文本控件
+
+stop(300)
+
+}
+
+}
+
+}
+
+}
+
+else
+
+{
+
+tw("请输入文本")
+
+}
+
+效果：i ۖิ̶ۣۖิۖิ̶ ۖิ ۖิa ۖิ̶ۣۖิۖิ̶ ۖิ ۖิp ۖิ̶ۣۖิۖิ̶ ۖิ ۖิp ۖิ̶ۣۖิۖิ̶ ۖิ ۖิ学 ۖิ̶ۣۖิۖิ̶ ۖิ ۖิ习 ۖิ̶ۣۖิۖิ̶ ۖิ ۖิ助 ۖิ̶ۣۖิۖิ̶ ۖิ ۖิ手 ۖิ̶ۣۖิۖิ̶ ۖิ ۖิ
+
+【密码登录实例】
+
+ug(1,"text",u)
+
+f(u=="")
+
+{
+
+tw("密码不能为空")
+
+}
+
+else f(u=="123456")
+
+.这是密码{
+
+tw("登录成功")
+
+uigo("a")
+
+.这是密码正确后登录的页面
+
+}
+
+else
+
+{
+
+tw("密码错了")
+
+}
+
+【html标签大全】
+
+s a ="(html)<font color="red">嘻</font><font color="#FFA500">嘻</font><font color="yellow">哈</font><font color="green">哈</font><font color="blue">走</font><font color="123104238">过</font><font color="purple">去</font>"
+
+us(id,"text",a)
+
+us(id2,"text",a)
+
+//颜色表：
+
+//black
+
+//gray
+
+//blue
+
+//green
+
+//aqua
+
+//red
+
+//yellow
+
+//white
+
+//或者使用16进制颜色码或者10进制代码
+
+蓝下划线
+
+s a ="(html)嘻嘻<a href="">哈哈</a>走过去"
+
+us(id,"text",a)
+
+us(id2,"text",a)
+
+//注：下划线的标签属于超链接，必须加上标签后面的href才行，否则显示不出来
+
+字体放大
+
+s a ="(html)嘻嘻<big>哈哈</big>走过去"
+
+us(id,"text",a)
+
+us(id2,"text",a)
+
+字体缩小
+
+s a ="(html)嘻嘻<small>哈哈</small>走过去"
+
+us(id,"text",a)
+
+us(id2,"text",a)
+
+颜色名称及色样表
+
+颜色输入blue等(蓝色)
+
+<font color="blue">嘻嘻</font>
+
+有的不可用，只能用16进制或10进制
+
+颜色输入16进制(浅粉红)
+
+<font color="#FFB6C1">嘻嘻</font>
+
+参照下表：
+
+颜色输入十进制(浅粉红)
+
+<font color="255182193">嘻嘻</font>
+
+注意要去掉下表里的逗号
+
+颜色名 中文名称
+
+Hex RGB 十进制 Decimal
+
+LightPink 浅粉红 #FFB6C1 255,182,193
+
+Pink 粉红 #FFC0CB 255,192,203
+
+Crimson 深红(猩红) #DC143C 220,20,60
+
+LavenderBlush 淡紫红 #FFF0F5 255,240,245
+
+PaleVioletRed 弱紫罗兰红 #DB7093 219,112,147
+
+HotPink 热情的粉红 #FF69B4 255,105,180
+
+DeepPink 深粉红 #FF1493 255,20,147
+
+MediumVioletRed 中紫罗兰红 #C71585 199,21,133
+
+Orchid 暗紫色(兰花紫) #DA70D6 218,112,214
+
+Thistle 蓟色 #D8BFD8 216,191,216
+
+Plum 洋李色(李子紫) #DDA0DD 221,160,221
+
+Violet 紫罗兰 #EE82EE 238,130,238
+
+Magenta 洋红(玫瑰红) #FF00FF 255,0,255
+
+Fuchsia 紫红(灯笼海棠) #FF00FF 255,0,255
+
+DarkMagenta 深洋红 #8B008B 139,0,139
+
+Purple 紫色 #800080 128,0,128
+
+MediumOrchid 中兰花紫 #BA55D3 186,85,211
+
+DarkViolet 暗紫罗兰 #9400D3 148,0,211
+
+DarkOrchid 暗兰花紫 #9932CC 153,50,204
+
+Indigo 靛青/紫兰色 #4B0082 75,0,130
+
+BlueViolet 蓝紫罗兰 #8A2BE2 138,43,226
+
+MediumPurple 中紫色 #9370DB 147,112,219
+
+MediumSlateBlue 中暗蓝色(中板岩蓝) #7B68EE 123,104,238
+
+SlateBlue 石蓝色(板岩蓝) #6A5ACD 106,90,205
+
+DarkSlateBlue 暗灰蓝色(暗板岩蓝) #483D8B 72,61,139
+
+Lavender 淡紫色(熏衣草淡紫) #E6E6FA 230,230,250
+
+GhostWhite 幽灵白 #F8F8FF 248,248,255
+
+Blue 纯蓝 #0000FF 0,0,255
+
+MediumBlue 中蓝色 #0000CD 0,0,205
+
+MidnightBlue 午夜蓝 #191970 25,25,112
+
+DarkBlue 暗蓝色 #00008B 0,0,139
+
+Navy 海军蓝 #000080 0,0,128
+
+RoyalBlue 皇家蓝/宝蓝 #4169E1 65,105,225
+
+CornflowerBlue 矢车菊蓝 #6495ED 100,149,237
+
+LightSteelBlue 亮钢蓝 #B0C4DE 176,196,222
+
+LightSlateGray 亮蓝灰(亮石板灰) #778899 119,136,153
+
+SlateGray 灰石色(石板灰) #708090 112,128,144
+
+DodgerBlue 闪兰色(道奇蓝) #1E90FF 30,144,255
+
+AliceBlue 爱丽丝蓝 #F0F8FF 240,248,255
+
+SteelBlue 钢蓝/铁青 #4682B4 70,130,180
+
+LightSkyBlue 亮天蓝色 #87CEFA 135,206,250
+
+SkyBlue 天蓝色 #87CEEB 135,206,235
+
+DeepSkyBlue 深天蓝 #00BFFF 0,191,255
+
+LightBlue 亮蓝 #ADD8E6 173,216,230
+
+PowderBlue 粉蓝色(火药青) #B0E0E6 176,224,230
+
+CadetBlue 军兰色(军服蓝) #5F9EA0 95,158,160
+
+Azure 蔚蓝色 #F0FFFF 240,255,255
+
+LightCyan 淡青色 #E0FFFF 224,255,255
+
+PaleTurquoise 弱绿宝石 #AFEEEE 175,238,238
+
+Cyan 青色 #00FFFF 0,255,255
+
+Aqua 浅绿色(水色) #00FFFF 0,255,255
+
+DarkTurquoise 暗绿宝石 #00CED1 0,206,209
+
+DarkSlateGray 暗瓦灰色(暗石板灰) #2F4F4F 47,79,79
+
+DarkCyan 暗青色 #008B8B 0,139,139
+
+Teal 水鸭色 #008080 0,128,128
+
+MediumTurquoise 中绿宝石 #48D1CC 72,209,204
+
+LightSeaGreen 浅海洋绿 #20B2AA 32,178,170
+
+Turquoise 绿宝石 #40E0D0 64,224,208
+
+Aquamarine 宝石碧绿 #7FFFD4 127,255,212
+
+MediumAquamarine 中宝石碧绿 #66CDAA 102,205,170
+
+MediumSpringGreen 中春绿色 #00FA9A 0,250,154
+
+MintCream 薄荷奶油 #F5FFFA 245,255,250
+
+SpringGreen 春绿色 #00FF7F 0,255,127
+
+MediumSeaGreen 中海洋绿 #3CB371 60,179,113
+
+SeaGreen 海洋绿 #2E8B57 46,139,87
+
+Honeydew 蜜色(蜜瓜色) #F0FFF0 240,255,240
+
+LightGreen 淡绿色 #90EE90 144,238,144
+
+PaleGreen 弱绿色 #98FB98 152,251,152
+
+DarkSeaGreen 暗海洋绿 #8FBC8F 143,188,143
+
+LimeGreen 闪光深绿 #32CD32 50,205,50
+
+Lime 闪光绿 #00FF00 0,255,0
+
+ForestGreen 森林绿 #228B22 34,139,34
+
+Green 纯绿 #008000 0,128,0
+
+DarkGreen 暗绿色 #006400 0,100,0
+
+Chartreuse 黄绿色(查特酒绿) #7FFF00 127,255,0
+
+LawnGreen 草绿色(草坪绿_ #7CFC00 124,252,0
+
+GreenYellow 绿黄色 #ADFF2F 173,255,47
+
+DarkOliveGreen 暗橄榄绿 #556B2F 85,107,47
+
+YellowGreen 黄绿色 #9ACD32 154,205,50
+
+OliveDrab 橄榄褐色 #6B8E23 107,142,35
+
+Beige 米色/灰棕色 #F5F5DC 245,245,220
+
+LightGoldenrodYellow 亮菊黄 #FAFAD2 250,250,210
+
+Ivory 象牙色 #FFFFF0 255,255,240
+
+LightYellow 浅黄色 #FFFFE0 255,255,224
+
+Yellow 纯黄 #FFFF00 255,255,0
+
+Olive 橄榄 #808000 128,128,0
+
+DarkKhaki 暗黄褐色(深卡叽布) #BDB76B 189,183,107
+
+LemonChiffon 柠檬绸 #FFFACD 255,250,205
+
+PaleGoldenrod 灰菊黄(苍麒麟色) #EEE8AA 238,232,170
+
+Khaki 黄褐色(卡叽布) #F0E68C 240,230,140
+
+Gold 金色 #FFD700 255,215,0
+
+Cornsilk 玉米丝色 #FFF8DC 255,248,220
+
+Goldenrod 金菊黄 #DAA520 218,165,32
+
+DarkGoldenrod 暗金菊黄 #B8860B 184,134,11
+
+FloralWhite 花的白色 #FFFAF0 255,250,240
+
+OldLace 老花色(旧蕾丝) #FDF5E6 253,245,230
+
+Wheat 浅黄色(小麦色) #F5DEB3 245,222,179
+
+Moccasin 鹿皮色(鹿皮靴) #FFE4B5 255,228,181
+
+Orange 橙色 #FFA500 255,165,0
+
+PapayaWhip 番木色(番木瓜) #FFEFD5 255,239,213
+
+BlanchedAlmond 白杏色 #FFEBCD 255,235,205
+
+【给控件加园角的方法】
+
+需要在载入事件先赋值，代码如下：
+
+ngde(5,"#ffffff",ok)
+
+us(1,"background",ok)
+
+设置id为1的控件圆角的角度是5，背景颜色是#ffffff，通过ok调用，可以多个控件一起调用，还有其他更多属性，可搜索 ngde 查看。
+
+【$私有文件使用说明】
+
+iAPP2.0中，有一个私有文件夹，但很多人都不知道有什么用。其实这个私有文件夹特别实用的，比如你要保存一些东西，但又不想让用户看到，可以保存到私有文件夹下哦。
+
+私有文件夹的路径是：/data/data/安装包名/files
+
+路径不用管，直接在保存文件加个$符号就行了。私有文件夹的好处是，用户没有Root权限是无法修改你保存的内容的。比如一些txt文件等，若你保存在%手机内存里，那么很可能被人修改或者看到哦！
+
+【随机启动录语】
+
+sl("你爹|你大爷|你二爷|你大舅|你二舅|你大侄子","|",ok)
+
+//分割为数组
+
+sran(0,5,sj)
+
+//生产1-6的随机数
+
+sgsz(ok,sj,yes)
+
+//随机访问语录
+
+tw(yes)
+
+【post提交深度说明】
+
+post在下面的内容我们就讲过，现在更彻底了讲一遍，保证你学会post提交数据！
+
+post的是什么呢？post就是提交数据，提交内容给网站处理，然后获取返回的结果。类似登录功能，同理！
+
+一般我们需要从网站获取源代码后才能知道该提交什么，接口是什么。
+
+举个例子：我从某网站源代码中得出下列代码：
+
+<form action="http://flmle.com/so.php"">
+
+<input type="hidden" name="siteid" value="1000">
+
+<input type="text" name="key" placeholder="输入关键字">
+
+<input type="submit" value="搜索">
+
+</form>
+
+这是一个搜索表单（表单从form开头form结尾)
+
+第一行：<form action="http://flmle.com/so.php">
+
+其中action的这个地址就是提交的接口
+
+第二行：<input type="hidden" name="id" value="1000">
+
+表示这是一个隐藏的输入框 为什么要隐藏呢？因为不需要用户输入，但必须要提交。他的属性是id=1000
+
+那就得出一个提交的内容
+
+第三行： <input type="text" name="key" placeholder="输入关键字">
+
+这是一个需要输入内容的输入框，他的属性是key，得出一个提交的内容：key=搜索关键字
+
+第四行： <input type="submit" value="搜索">
+
+这个完全不用管他，他是一个提交按钮，我们post的时候本身就是一个提交了，所以不需要他！
+
+就这样得出post内容
+
+hs("http://flmle.com/so.php","id=1000&key=搜索关键字","utf-8",ok)
+
+提交的内容是通过&符号串联到一起的，不要写错！
+
+ok就是返回的结果，你可以syso(ok)打印出来查看是否已经提交成功从而截取你需要的结果！
+
+【深度解析sss全局说明】
+
+iAPP2.0最棒的改变莫过于全局变量了。因为全局变量的存在我们可以把很多原来需要写很多都东西最简化。但很多小白并不懂全局变量的使用。全局变量能做什么呢？比如视频播放器，点击一个视频就跳转到界面播放该视频！在很多方面都必须用的到的东西。
+
+首先来看看s变量：
+
+s ok="小白"
+
+再看看全局变量：
+
+sss ok="小白"
+
+全局变量的作用是传递数据，比如有些小白不会使用的。点击一个列表跳转一个界面他可能会 新建若干个界面，然后跳转到指定的界面，非常麻烦鸡肋。
+
+首先新建一个按钮，按钮点击事件如下：
+
+sss ok="小白"
+
+uigo("m.iyu")
+
+再新建一个界面m.iyu，该界面载入事件如下：
+
+tw(sss.ok)
+
+当点击按钮后，全局变量ok就变成小白了。m.iyu界面载入事件就是提示这个全局变量，也就成小白了！也就说点击按钮后sss.ok这个变量就变成“小白”，所以m.iyu这个界面也会提示小白！
+
+【下载文件简单代码】
+
+t()
+
+{
+
+hd("http://flmle.com/ok.apk","iApp/ok.apk",true,ok)
+
+//iApp/ok是保存路径，true是如果存在则覆盖
+
+f(ok=="0")
+
+{
+
+ufnsui()
+
+{
+
+tw("下载成功")
+
+}
+
+}
+
+else
+
+{
+
+ufnsui()
+
+{
+
+tw("下载失败")
+
+}
+
+}
+
+}
+
+【搜索列表关键词的实现方法】
+
+sl("蛋疼;鸡肋;鸡蛋;鸡皮疙瘩;蛋糕",";",so)
+
+//分割一段内容为数组
+
+for(k;so)
+
+{
+
+//循环判断是否包含需要搜索的内容
+
+f(k?"蛋")
+
+{
+
+//打印包含蛋字的内容会打印蛋疼、鸡蛋、蛋糕
+
+syso(k)
+
+}
+
+}
+
+那怎么显示到列表呢？只需要把syso换成ula即可！
+
+【获取imei计算密码】
+
+通常如果获取imei来计算一些密码，直接simei(imei)即可，但如果出现因为字母，那么计算就会出问题了。（有部分手机imei是有英文字符的）
+
+比如
+
+simei(imei)
+
+s(imei/2,ok)
+
+tw(ok)
+
+如果imei有英文字母，这个计算就不成立了，也就出错！怎么办呢？很简单，用正则表达式替换下字符即可，示例：
+
+simei(imei)
+
+sr(imei,"[a-z]","9",imei)
+
+s(imei/2,ok)
+
+tw(ok)
+
+【hs获取网页的新功能__代理ip】
+
+来看看 手册的介绍
+
+//带自动设置cookie方式获取网页，并记录当前网页的Cookie，并设置Header头:（可设置多条，以“||”隔开）文件头包括了Cookie，User-Agent设备型号，设置连接超时，设置接收超时，设置代理IP。
+
+//传递cookie项值，当自定义为null 系统将自动设置已记录的cookie
+
+t()
+
+{
+
+s a = "http://wap.baidu.com/"
+
+hs(a, "title=你好&text=你好吗？", "utf-8", null, true, "User-Agent=Mozilla/5.0 (iPad; U; CPU OS 6_0 like Mac OS X; zh-CN; iPad2)||accept=*/*||accept-language=zh-CN", 20000, 20000, "10.0.0.172:80", b)
+
+syso(b)
+
+}
+
+效果不明觉厉。简单点说就是。如果你有很多代理IP，你就能做一个cc攻击（效率低下），但做一个网页刷访问还是不错的，都是模拟真实用户访问的。比如这样的，20000是访问超时时间也就是20秒，最好设置10000-20000左右最好，怎么无限更换代理IP呢？你只需要把很多IP分割为数组，如：
+
+sl("109.22.33.58:80#36.69.52.33:80","#",ok)
+
+然后for循环读取ok，再循环hs访问即可（不要做坏事哈）
+
+t()
+
+{
+
+hs("网址",null, "utf-8", null, true, null, 20000, 20000, "10.0.0.172:80", b)
+
+syso(b)
+
+}
+
+【图片无限旋转】
+
+dhr(dh, 0, 720, 1, 0.5, 1, 0.5)
+
+dh(dh, "duration", 3000)
+
+us(图片id, "dh", dh)
+
+dhon(dh)
+
+{
+
+us(图片id, "dh", dh)
+
+}
+
+【判断应用是否存在并打开】
+
+uapp("应用包名", c)
+
+f(c==true)
+
+{
+
+.应用存在时将执行
+
+tw("启动中...")
+
+}
+
+else
+
+{
+
+.应用不存在时执行
+
+tw("应用不存在")
+
+}
+
+【控件翻转动画】
+
+dhas(dh, 2, "rotationY", 0,30,60,90,120,150,180,210,240,270,300,330,360)
+
+.2是控件ID
+
+dh(dh, "duration", 2000)
+
+dh(dh, "start")
+
+【蓝色说说生成】
+
+s a=""
+
+ug(2,"text",b)
+
+.2是编辑框ID
+
+f(a==b)
+
+{
+
+tw("请输入内容")
+
+}
+
+else
+
+{
+
+s s="{uin:1314,nick:"
+
+s v=",who:1}"
+
+ug(2,"text",b)
+
+.编辑框ID
+
+ss(s+b+v,jc)
+
+sxb(jc)
+
+tw("请到QQ粘贴说说")
+
+}
+
+【应用签到实例】
+
+s lj="q/i/a/n/dao.txt"
+
+s lj2="q/i/a/n/dsj.txt"
+
+fr(lj2,time)
+
+time(2,tt)
+
+syso(tt)
+
+syso(time)
+
+f(time==tt)
+
+{
+
+tw("今天已经签到过了！")
+
+}
+
+else
+
+{
+
+fr(lj,jf)
+
+s(jf+1,jff)
+
+fw(lj,jff)
+
+ss("积分:"+jff,jfff)
+
+us(4,"text",jfff)
+
+.4是积分显示控件ID
+
+fw(lj2,tt)
+
+tw("签到成功，积分+1")
+
+}
+
+【跳转淘宝搜索】
+
+s pay="taobao://s.taobao.com/search?"
+
+sit(a,"action", "android.intent.action.VIEW")
+
+sit(a,"data",pay)\n\nuit(a, "chooser", "跳转淘宝搜索")
+
+.需下载对应软件。
+
+【调用相册】
+
+sit(a, "action", "android.intent.action.GET_CONTENT")
+
+sit(a, "type", "image/*")
+
+uit(a, "chooser", "调用相册")
+
+【作者】
+作者：Mr_洛寒
+链接：https://www.jianshu.com/p/bbc00eca8ee1
+來源：简书

@@ -1,0 +1,45 @@
+<View id="1" did="0" type="CardView">
+<ppt>width=-1
+height=67dp
+layout_margin=7dp
+app_CardcornerRadius=5dp
+app_CardElevation=0
+app_CardBackgroundColor=#fff9f9f9
+</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=center_vertical
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">ulag(st_vW,3,sss.vaa)
+ulag(st_vW,4,sss.txtb)
+uigo("sc1.iyu")</eventItme></event>
+</View>
+<View id="3" did="2" type="TextView">
+<ppt>width=-2
+height=-2
+text=单手册
+textColor=#ff0c0c0c
+textSize=19.5sp
+typeface=serif
+layout_marginLeft=4dp
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="4" did="2" type="TextView">
+<ppt>width=-2
+height=-2
+text=文本4
+visibility=gone</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">gvs(st_vW,选项手册list.1,gvs_1)
+swh("pxw",w)
+dha(dh, false, true)
+dh(dh, "duration", 400)
+us(gvs_1, "dh", dh)
+</eventItme></UIEventset>

@@ -1,0 +1,324 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="AppBarLayout">
+<ppt>width=-1
+height=-3
+background=#2196F3</ppt>
+<event></event>
+</View>
+<View id="4" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="Toolbar">
+<ppt>width=-1
+height=-3
+app_title=子页面
+app_TitleColor=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="6" did="2" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=horizontal
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="7" did="6" type="CardView">
+<ppt>width=45dp
+height=45dp
+layout_margin=5.5dp
+app_CardcornerRadius=5dp
+app_CardElevation=0
+app_CardBackgroundColor=#fff9f9f9
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="13" did="7" type="LinearLayout">
+<ppt>width=-1
+gravity=center
+height=-1
+orientation=vertical</ppt>
+<event><eventItme type="clicki">us(8,"visibility","visible")
+us(7,"visibility","gone")
+//zypzend
+t()
+{
+fr(sss.txtb,dm)
+sj(dm,"【",null,dm)
+sl(dm,"【",dm)
+for(dms;dm)
+{
+sj(dms,null,"】",dmtitle)
+sj(dms,"】",null,dmshow)
+ula(dm,1=null,2=null,3=dmtitle,4=dmshow,6=null,7=null,8=sb)
+}
+ufnsui()
+{
+gvs("5",Object)
+uls(Object,dm,"仓库list.iyu",-1,-2)
+    cls("android.support.v7.widget.RecyclerView",List_class)
+    cls("android.support.v7.widget.StaggeredGridLayoutManager",Layout_Management_Class)
+    javanew(layout,Layout_Management_Class,"int",2,"int",1)
+    javax(null,Object,List_class,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",layout)
+    cls("android.support.v7.widget.RecyclerView",List_class)
+    cls("android.support.v7.widget.StaggeredGridLayoutManager",Layout_Management_Class)
+    javanew(layout,Layout_Management_Class,"int",1,"int",6)
+    javax(null,6,List_class,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",layout)
+    endutw()
+}
+}
+}
+</eventItme></event>
+</View>
+<View id="14" did="13" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@ic_home_black_24dp.png
+layout_gravity=center</ppt>
+<event></event>
+</View>
+<View id="15" did="6" type="CardView">
+<ppt>width=45dp
+height=45dp
+layout_margin=5.5dp
+app_CardcornerRadius=5dp
+app_CardElevation=0
+app_CardBackgroundColor=#fff9f9f9
+</ppt>
+<event></event>
+</View>
+<View id="16" did="15" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event><eventItme type="clicki">ug(10,"text",so)
+f(so=="")
+{
+tw("请输入关键字")
+}
+else
+{
+
+t()
+{
+sran(100,100,bb)
+stop(bb)
+fe("$mr",mr)
+  f(mr == true)
+  {
+    fr(sss.txtb,dm)
+  }
+else
+{
+  hs("https://gitee.com/chencyhyy/dakubox/raw/master"+sss.txtb,dm)
+}
+fr("$ss",sl)
+s qq=1
+ss("【"+dm+"【",soso)
+sl(soso,"【",soso)
+syso(soso)
+for(ok;soso)
+{
+sj(ok,null,"】",title)
+sj(ok,"】",null,show)
+f(title?so)
+{
+ula(xx,1=null,2=null,3=title,4=show,6=null)
+ufnsui()
+{
+gvs("5",Object)
+us(代码仓库.15,"visibility","gone")
+uls(Object,xx,"仓库list.iyu",-1,-2)
+    cls("android.support.v7.widget.RecyclerView",List_class)
+    cls("android.support.v7.widget.StaggeredGridLayoutManager",Layout_Management_Class)
+    javanew(layout,Layout_Management_Class,"int",2,"int",1)
+    javax(null,Object,List_class,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",layout)
+    cls("android.support.v7.widget.RecyclerView",List_class)
+    cls("android.support.v7.widget.StaggeredGridLayoutManager",Layout_Management_Class)
+    javanew(layout,Layout_Management_Class,"int",1,"int",6)
+    javax(null,6,List_class,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",layout)
+    endutw()
+ss("搜索到"+qq+"条数据",ppp)
+f(qq &gt; 0)
+{
+  us(7,"visibility","visible")
+
+}
+}
+}
+}
+}
+}
+</eventItme></event>
+</View>
+<View id="17" did="16" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@ic_search_black_24dp.png
+layout_gravity=center</ppt>
+<event></event>
+</View>
+<View id="9" did="6" type="CardView">
+<ppt>width=-1
+height=45dp
+layout_margin=5.5dp
+app_CardcornerRadius=5dp
+app_CardElevation=0
+app_CardBackgroundColor=#fff9f9f9
+layout_gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="10" did="9" type="EditText">
+<ppt>width=-1
+height=-1
+text=
+hint=搜索
+layout_gravity=center
+singleLine=true
+imeOptions=actionsearch
+layout_margin=15dp
+</ppt>
+<event><eventItme type="keyboard">f(st_kC==66)
+{
+  ug(10,"text",so)
+f(so=="")
+{
+tw("请输入关键字")
+}
+else
+{
+
+t()
+{
+sran(100,100,bb)
+stop(bb)
+fe("$mr",mr)
+  f(mr == true)
+  {
+    fr(sss.txtb,dm)
+  }
+else
+{
+  hs("https://gitee.com/chencyhyy/dakubox/raw/master"+sss.txtb,dm)
+}
+fr("$ss",sl)
+s qq=1
+ss("【"+dm+"【",soso)
+sl(soso,"【",soso)
+syso(soso)
+for(ok;soso)
+{
+sj(ok,null,"】",title)
+sj(ok,"】",null,show)
+f(title?so)
+{
+ula(xx,1=null,2=null,3=title,4=show,6=null)
+ufnsui()
+{
+gvs("5",Object)
+us(代码仓库.15,"visibility","gone")
+uls(Object,xx,"仓库list.iyu",-1,-2)
+    cls("android.support.v7.widget.RecyclerView",List_class)
+    cls("android.support.v7.widget.StaggeredGridLayoutManager",Layout_Management_Class)
+    javanew(layout,Layout_Management_Class,"int",2,"int",1)
+    javax(null,Object,List_class,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",layout)
+    cls("android.support.v7.widget.RecyclerView",List_class)
+    cls("android.support.v7.widget.StaggeredGridLayoutManager",Layout_Management_Class)
+    javanew(layout,Layout_Management_Class,"int",1,"int",6)
+    javax(null,6,List_class,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",layout)
+    endutw()
+ss("搜索到"+qq+"条数据",ppp)
+f(qq &gt; 0)
+{
+  us(7,"visibility","visible")
+
+}
+}
+}
+}
+}
+}
+}</eventItme></event>
+</View>
+<View id="5" did="1" type="RecyclerView">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">//这些都是子页面的主要配置(一直到注释zypzend)
+f(sss.ztlpd == null)
+{
+fn 工具.沉浸式()
+//获取状态栏的高度
+swh("ztl", h)
+syso(h)
+us(4,"height",h+"dp")
+}
+else
+{
+  uycl(sss.ztys,true)
+}
+fn shangs.控件着色(10,sss.qds)
+
+us(10,"textCursorDrawable",sss.qds)
+  us(2,"background",sss.ztys)
+fn 工具.返回(3,null)
+us(3,"app_title",sss.vaa)
+s id=3
+gvs(id, mTba)
+javags(mMode, null, "android.graphics.PorterDuff$Mode", "SRC_ATOP")
+java(颜色,null,"android.graphics.Color.parseColor","String",sss.qds)
+//颜色
+java(mTbaBackSrc, mTba, "android.support.v7.widget.Toolbar.getNavigationIcon")
+
+java(mTbaMenuSrc, mTba, "android.support.v7.widget.Toolbar.getOverflowIcon")
+java(null, mTbaMenuSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+
+//zypzend
+//输入法默认打开隐藏
+fn 工具.输入法(18)
+t()
+{
+   fe("$mr",mr)
+  f(mr == true)
+  {
+    fr(sss.txtb,dm)
+  }
+else
+{
+  hs("https://gitee.com/chencyhyy/dakubox/raw/master"+sss.txtb,dm)
+}
+sj(dm,"【",null,dm)
+sl(dm,"【",dm)
+for(dms;dm)
+{
+sj(dms,null,"】",dmtitle)
+sj(dms,"】",null,dmshow)
+ula(dm,1=null,2=null,3=dmtitle,4=dmshow,6=null,7=null,8=sb)
+}
+ufnsui()
+{
+gvs("5",Object)
+uls(Object,dm,"仓库list.iyu",-1,-2)
+    cls("android.support.v7.widget.RecyclerView",List_class)
+    cls("android.support.v7.widget.StaggeredGridLayoutManager",Layout_Management_Class)
+    javanew(layout,Layout_Management_Class,"int",2,"int",1)
+    javax(null,Object,List_class,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",layout)
+    cls("android.support.v7.widget.RecyclerView",List_class)
+    cls("android.support.v7.widget.StaggeredGridLayoutManager",Layout_Management_Class)
+    javanew(layout,Layout_Management_Class,"int",1,"int",6)
+    javax(null,6,List_class,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",layout)
+    endutw()
+}
+}
+}
+</eventItme></UIEventset>

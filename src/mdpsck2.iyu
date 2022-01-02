@@ -1,0 +1,115 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+orientation=vertical
+height=-1</ppt>
+<event></event>
+</View>
+<View id="9" did="1" type="AppBarLayout">
+<ppt>width=-1
+height=-2
+</ppt>
+<event></event>
+</View>
+<View id="11" did="9" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="10" did="9" type="Toolbar">
+<ppt>width=-1
+height=-3
+app_title=MD配色
+app_TitleColor=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="5" did="1" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="7" did="5" type="ListView">
+<ppt>width=-1
+height=-1
+dividerheight=0</ppt>
+<event></event>
+</View>
+<View id="3" did="5" type="LinearLayout">
+<ppt>width=-1
+height=10dp
+background=@yy.png</ppt>
+<event></event>
+</View>
+<View id="12" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">s id=10
+uls(7,sss.mdys,"mdpsck2_list.iyu",-1,-1)
+//状态栏
+f(sss.ztlpd == null)
+{
+fn 工具.沉浸式1()
+//获取状态栏的高度
+swh("ztl", h)
+syso(h)
+us(11,"height",h+"dp")
+}
+else
+{
+  uycl(sss.ztys,true)
+}
+  utb(id)
+java(mTba, activity, "android.support.v7.app.AppCompatActivity.getSupportActionBar")
+java(null, mTba, "android.support.v7.app.ToolbarActionBar.setDisplayHomeAsUpEnabled", "boolean", true)
+//设置左边为返回键
+utb("set", "leftck", id)
+{
+  sss mdys=""
+end()
+}
+us(9,"background",sss.mdpsys)
+us(10,"app_title",sss.psbt)
+ug(10,"app_title",y)
+f(y=="黄色/Yellow"||y=="酸橙/Lime"||y=="琥珀/Amber")
+{
+  us(10,"app_titlecolor","#ff080808")
+gvs(id, mTba)
+javags(mMode, null, "android.graphics.PorterDuff$Mode", "SRC_ATOP")
+java(颜色,null,"android.graphics.Color.parseColor","String","#ff080808")
+//颜色
+java(mTbaBackSrc, mTba, "android.support.v7.widget.Toolbar.getNavigationIcon")
+java(null, mTbaBackSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+java(mTbaMenuSrc, mTba, "android.support.v7.widget.Toolbar.getOverflowIcon")
+java(null, mTbaMenuSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+//设置状态栏为透明(沉浸式状态栏)
+java(cs,activity,"android.app.Activity.getWindow")
+java(cs2,cs,"android.view.Window.getDecorView")
+//8192改成1024为白色
+java(null,cs2,"android.view.View.setSystemUiVisibility","int","8192")
+//设置状态栏为透明(沉浸式)
+java(null,cs,"android.view.Window.addFlags","int","67108864")
+}
+else
+{
+  fn 工具.沉浸式1()
+}</eventItme><eventItme type="downkey">f(st_kC==4)
+{
+sss mdys=""
+end()
+}</eventItme><eventItme type="menu">case 强调色:
+us(10,"app_titlecolor",sss.mdpsys)
+us(9,"background","#ffffffff")
+gvs(10, mTba)
+javags(mMode, null, "android.graphics.PorterDuff$Mode", "SRC_ATOP")
+java(颜色,null,"android.graphics.Color.parseColor","String",sss.mdpsys)
+//颜色
+java(mTbaBackSrc, mTba, "android.support.v7.widget.Toolbar.getNavigationIcon")
+
+java(mTbaMenuSrc, mTba, "android.support.v7.widget.Toolbar.getOverflowIcon")
+java(null, mTbaMenuSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+
+break
+</eventItme></UIEventset>

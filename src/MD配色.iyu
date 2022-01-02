@@ -1,0 +1,83 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+orientation=vertical
+height=-1
+background=white</ppt>
+<event></event>
+</View>
+<View id="8" did="1" type="AppBarLayout">
+<ppt>width=-1
+height=-3</ppt>
+<event></event>
+</View>
+<View id="10" did="8" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="9" did="8" type="Toolbar">
+<ppt>width=-1
+height=-3
+app_title=MD配色
+app_TitleColor=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="12" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+</ppt>
+<event></event>
+</View>
+<View id="7" did="12" type="ListView">
+<ppt>width=-1
+height=-1
+dividerHeight=0
+BackgroundColor=#ffffffff</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">us(8,"background",sss.ztys)
+fn 工具.返回(9,"元素动画")
+//状态栏
+f(sss.ztlpd == null)
+{
+fn 工具.沉浸式()
+//获取状态栏的高度
+swh("ztl", h)
+syso(h)
+us(10,"height",h+"dp")
+}
+else
+{
+  uycl(sss.ztys,true)
+}
+gvs(17,a)
+call(null,"mjava","元素动画.set",a)
+t()
+{
+ula(a,1="",4="红色/Red",5="#F44336")
+ula(a,1="",4="粉色/Pink",5="#E91E63")
+ula(a,1="",4="紫色/Purple",5="#9C27B0")
+ula(a,1="",4="深紫/Deep Purple",5="#673AB7")
+ula(a,1="",4="靛蓝/Indigo",5="#3F51B5")
+ula(a,1="",4="蓝色/Blue",5="#2196F3")
+ula(a,1="",4="亮蓝/Light Blue",5="#03A9F4")
+ula(a,1="",4="青色/Cyan",5="#00BCD4")
+ula(a,1="",4="鸭绿/Teal",5="#009688")
+ula(a,1="",4="绿色/Green",5="#4CAF50")
+ula(a,1="",4="亮绿/Light Green",5="#8BC34A")
+ula(a,1="",4="酸橙/Lime",5="#CDDC39")
+ula(a,1="",4="黄色/Yellow",5="#FFEB3B")
+ula(a,1="",4="琥珀/Amber",5="#FFC107")
+ula(a,1="",4="橙色/Orange",5="#FF9800")
+ula(a,1="",4="暗橙/Deep Orange",5="#FF5722")
+ula(a,1="",4="棕色/Brown",5="#795548")
+ula(a,1="",4="灰色/Grey",5="#9E9E9E")
+ula(a,1="",4="蓝灰/Blue Grey",5="#607D8B")
+ufnsui()
+{
+uls(7,a,"mdpsck_list.iyu",-1,-1)
+}
+}</eventItme><eventItme type="downkey">call(null,"mjava","元素动画.end")
+</eventItme></UIEventset>

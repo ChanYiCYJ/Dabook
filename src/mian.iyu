@@ -1,0 +1,79 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+background=white
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="ImageView">
+<ppt>width=115dp
+height=115dp
+src=@flatlogo_1410.png</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">sdeg(0)
+uycl(true)
+javax(pm,activity,"android.content.ContextWrapper","getPackageManager")
+javax(pknm,activity,"android.content.ContextWrapper","getPackageName")
+//本应用包名
+syso(pknm)
+javax(ver,pm,"android.content.pm.PackageManager","getPackageInfo","String",pknm,"int",0)
+javags(sss.版本,ver,"android.content.pm.PackageInfo.versionName")
+//本包名的版本
+syso(版本)
+javax(icon,pm,"android.content.pm.PackageManager","getApplicationInfo","String",pknm,"int",0)
+javax(图标,icon,"android.content.pm.PackageItemInfo","loadIcon","android.content.pm.PackageManager",pm)
+//本应用图标
+syso(图标)
+   fe("$chan.dev.iapp.da",typd)
+f(typd == false)
+{
+  //第一次,uigo至主页与全局激活是还没改记得改!
+ utw("@ic_mood_black_24dp.png","使用指南与协议","欢迎使用Da助手(Dabook)！本软件Ui和使用开源大部分开源Mus/小A教程，一些不知道作者，与2.0以下的版本相比完全不一样\n获取权限说明：\n获取网络：用于连接仓库等操作\n获取存储权限：用于保存数据\n大部分都使用的Gitee\n不会保存你的个人信息，本软件无登录注册","同意",true,v)
+ {
+   fe("$%Da/data/bjk",data1)
+f(data1== false)
+{
+  fw("$chan.dev.iapp.da","ok")
+  loadjar("AndroLua+5.0.10_AndroidX.jar",sss.classes)
+  //取编辑框类
+  cls(sss.classes,"com.androlua.LuaEditor",sss.etc)
+  //取Lexer类以读取取得Language类
+  cls(sss.classes,"com.myopicmobile.textwarrior.common.Lexer",c0)
+  //取Language类以设置要高亮的代码
+  cls(sss.classes,"com.myopicmobile.textwarrior.common.Language",c1)
+  //下面这行已经不需要使用
+  //sss cl=classes
+  //取LuaEditor父类以取得其他功能
+  cls(sss.classes,"com.myopicmobile.textwarrior.android.FreeScrollingTextField",sss.c)
+  cls(sss.classes,"com.myopicmobile.textwarrior.android.TextChangeListener",ss.lc)    
+}
+    fn 全局.主要全局()
+  uigo("home.iyu")
+  end()
+ }
+}
+else
+{
+  fe("$%Da/data/bjk",data1)
+f(data1== false)
+{
+  loadjar("editor",sss.classes)
+  //取编辑框类
+  cls(sss.classes,"com.androlua.LuaEditor",sss.etc)
+  //取Lexer类以读取取得Language类
+  cls(sss.classes,"com.myopicmobile.textwarrior.common.Lexer",c0)
+  //取Language类以设置要高亮的代码
+  cls(sss.classes,"com.myopicmobile.textwarrior.common.Language",c1)
+  //下面这行已经不需要使用
+  //sss cl=classes
+  //取LuaEditor父类以取得其他功能
+  cls(sss.classes,"com.myopicmobile.textwarrior.android.FreeScrollingTextField",sss.c)
+  cls(sss.classes,"com.myopicmobile.textwarrior.android.TextChangeListener",ss.lc)    
+}
+    fn 全局.主要全局()
+  uigo("home.iyu")
+  end()
+}
+</eventItme></UIEventset>

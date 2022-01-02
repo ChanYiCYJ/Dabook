@@ -1,0 +1,43 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="AppBarLayout">
+<ppt>width=-1
+height=-3
+background=#2196F3</ppt>
+<event></event>
+</View>
+<View id="4" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="Toolbar">
+<ppt>width=-1
+height=-3
+app_title=子页面
+app_TitleColor=#ffffffff</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">//这些都是子页面的主要配置(一直到注释zypzend)
+f(sss.ztlpd == null)
+{
+fn 工具.沉浸式()
+//获取状态栏的高度
+swh("ztl", h)
+syso(h)
+us(4,"height",h+"dp")
+}
+else
+{
+  uycl(sss.ztys,true)
+}
+  us(2,"background",sss.ztys)
+fn 工具.返回(3)
+us(3,"app_title",sss.title)
+//zypzend</eventItme></UIEventset>

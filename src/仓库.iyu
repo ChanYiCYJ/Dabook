@@ -1,0 +1,88 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="AppBarLayout">
+<ppt>width=-1
+height=-3
+background=#2196F3</ppt>
+<event></event>
+</View>
+<View id="4" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="Toolbar">
+<ppt>width=-1
+height=-3
+app_title=子页面
+app_TitleColor=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="5" did="1" type="RecyclerView">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">//这些都是子页面的主要配置(一直到注释zypzend)
+f(sss.ztlpd == null)
+{
+fn 工具.沉浸式()
+//获取状态栏的高度
+swh("ztl", h)
+syso(h)
+us(4,"height",h+"dp")
+}
+else
+{
+  uycl(sss.ztys,true)
+}
+  us(2,"background",sss.ztys)
+fn 工具.返回(3,null)
+us(3,"app_title",sss.title)
+//zypzend
+
+  fn 仓库源.噬心源Gitee源()
+</eventItme><eventItme type="menu">case 切换仓库:
+cls("android.support.v7.app.AlertDialog$Builder",class)
+javanew(dialog,class,"Context",activity)
+javax(null,dialog,class,"setTitle","CharSequence","仓库源")
+//设置标题
+s menu="官方源;噬心源(Gitee源);yiz101(简书)"
+//设置菜单文本
+sl(menu,";",items)
+
+//例如获取文件列表
+//fl("%iApp",items)
+
+cls("android.content.DialogInterface$OnClickListener", 事件类)
+javacb(事件, 事件类)
+{
+  sgsz(st_aS,1,mult)
+  //列表项是0开始，也就是0,1,2,3，分别代表一，二，三，四
+  //用序列来判断点击了什么
+  f(mult==0)
+  {
+    us(15,"visibility","visible")
+ fn 仓库源.官方源()
+  }
+  else f(mult==1)
+  {
+  us(15,"visibility","visible")
+   fn 仓库源.噬心源Gitee源()
+ }
+ else f(mult==2)
+ {
+   fn 仓库源.yiz101()
+}
+  sgsz(items,mult,wtm)
+}
+javax(null,dialog,class,"setItems","CharSequence[]",items,事件类,事件)
+javax(dialog,dialog,class,"show")
+//显示
+break</eventItme></UIEventset>

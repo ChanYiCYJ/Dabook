@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<title>DaBook</title>
+<icon>icon.png</icon>
+<packageName>chan.dev.iapp</packageName>
+<versionName>2.1</versionName>
+<versionint>1</versionint>
+<sdk>15</sdk>
+<yuv>3</yuv>
+<remark></remark>
+<Permissions>android.permission.READ_EXTERNAL_STORAGE
+android.permission.WRITE_EXTERNAL_STORAGE
+android.permission.INTERNET</Permissions>
+<createTime>2021-06-14 15:07:29</createTime>
+<upTime>2021-06-14 15:07:29</upTime>

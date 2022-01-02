@@ -1,0 +1,324 @@
+<View id="1" did="0" type="DrawerLayout">
+<ppt>width=-1
+height=-1
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="7" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_gravity=start
+background=white</ppt>
+<event></event>
+</View>
+<View id="10" did="7" type="CardView">
+<ppt>width=-1
+height=150dp
+app_CardcornerRadius=0
+app_CardElevation=0
+</ppt>
+<event></event>
+</View>
+<View id="11" did="10" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=bottom
+padding=16dp
+</ppt>
+<event></event>
+</View>
+<View id="12" did="11" type="TextView">
+<ppt>width=-2
+height=-2
+text=Da助手
+textSize=22sp
+typeface=serif
+textColor=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="13" did="11" type="TextView">
+<ppt>width=-2
+height=-2
+text=由于是beta版，后续会有更多功能
+textColor=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="23" did="7" type="TextView">
+<ppt>width=-1
+height=0.6dp
+background=#ffcccccc</ppt>
+<event></event>
+</View>
+<View id="24" did="7" type="ListView">
+<ppt>width=-1
+height=-1
+dividerHeight=0</ppt>
+<event></event>
+</View>
+<View id="26" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="2" did="26" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="8" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="Toolbar">
+<ppt>width=-1
+height=-3
+app_title=主页
+app_TitleColor=#2196F3
+</ppt>
+<event></event>
+</View>
+<View id="33" did="2" type="ViewPager">
+<ppt>width=-1
+height=-1</ppt>
+<event><eventItme type="onpageselected">java(menu,sss.mBt,"android.support.design.widget.BottomNavigationView.getMenu")
+java(item,menu,"android.view.Menu.getItem","int",st_pN)
+java(null,item,"android.view.MenuItem.setChecked","boolean",true)
+ug(33,"currentitem",chs)
+f(chs == 0)
+{
+  us(3,"app_title","主页")
+}
+else f(chs == 1)
+{
+  us(3,"app_title","仓库")
+}
+else f(chs == 2)
+{
+  us(3,"app_title","手册")
+}
+else f(chs == 3)
+{
+  us(3,"app_title","设置")
+  fe("%Da/data/ts",data2)
+f(data2=="true")
+{
+  us(home4.23,"checked",true)
+}
+}</eventItme></event>
+</View>
+<View id="25" did="2" type="WebView">
+<ppt>width=-2
+height=-2
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="32" did="26" type="LinearLayout">
+<ppt>width=-1
+height=-2
+elevation=20dp
+background=#ffffff
+ut_alignParentBottom=true</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">syso(sss.cky)
+//状态栏
+f(sss.ztlpd == null)
+{
+fn 工具.沉浸式()
+//获取状态栏的高度
+swh("ztl", h)
+syso(h)
+us(8,"height",h+"dp")
+}
+else
+{
+  uycl(sss.ztys,true)
+}
+//主题切换
+us(10,"background",sss.qds)
+us(3,"app_titlecolor",sss.qds)
+//MD栏
+utb(3)
+s id=3
+//toolbar的id
+gvs(id, mTba)
+javags(mMode, null, "android.graphics.PorterDuff$Mode", "SRC_ATOP")
+java(颜色,null,"android.graphics.Color.parseColor","String",sss.qds)
+//颜色
+java(mTbaBackSrc, mTba, "android.support.v7.widget.Toolbar.getNavigationIcon")
+
+java(mTbaMenuSrc, mTba, "android.support.v7.widget.Toolbar.getOverflowIcon")
+java(null, mTbaMenuSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+
+
+//判断主页列表的类型文件判断
+fe("%Da/data/Listhome",sss.pdzyl)
+//变量区
+s 代码运行器副栏="/Van html"
+s MD3="(html)&lt;font color="#ff0000"&gt;D&lt;/font&gt;"
+//事半功倍
+addv(33,"home1.iyu|home2.iyu|home3.iyu|home4.iyu",e)
+
+gvs(32,mLa)
+//底部栏父控件
+
+gvs(33,mVp)
+//滑动窗体
+
+//此源码主要是展示动画所以图标随便找的，比较丑
+
+s one="首页"
+sbp("@ic_data_usage_black_24dp.png",q)
+
+s two="仓库"
+sbp("@ic_extension_black_24dp.png",w)
+s three="手册"
+sbp("@ic_book_black_24dp.png",r)
+s four="设置"
+sbp("@ic_settings_black_24dp.png",p)
+
+call(sss.mBt,"mjava","Mus.set",mLa,mVp,"主页","仓库","手册","设置",q,w,r,p)
+/.gvs(3,toolbar)
+java(tv,toolbar,"android.view.ViewGroup.getChildAt","int",0)
+us(tv,"typeface","@方正黑体简体.TTF")./
+//iapp判断
+</eventItme><eventItme type="loadingComplete">
+fe("$Da/data/ts",data2)
+f(data2=="true")
+{
+ sdeg(2)
+  us(home4.23,"checked",true)
+}
+fe("$%Da/data/bjk",data1)
+f(data1=="false")
+{
+  us(home4.41,"checked",true)
+}
+else f(data1=="true")
+{
+  us(home4.41,"checked",false)
+}
+stop(500)
+  fe("$mr",mr)
+f(mr == true)
+{
+  s 手册文件="默认(iapp文件夹手册);Gitee"
+}
+else
+{
+  s 手册文件="Gitee;默认(iapp文件夹手册)"
+}
+s 手册文件1 = ";"
+sl(手册文件, 手册文件1, 手册文件2)
+uls(home4.60,手册文件2)
+//输入法默认打开隐藏
+fn 工具.输入法(18)
+ufnsui()
+{
+ula(a,4="@ic_color_lens_black_24dp.png",3="MD配色")
+ula(a,4="@ic_https_black_24dp.png",3="数据加解密")
+ula(a,4="@ic_language_black_24dp.png",3="扒网页",5=代码运行器副栏)
+uls(home1.1, a,"主页list.iyu", -1, -2)
+}
+//颜色
+us(home2.6,"textCursorDrawable",sss.qds)
+//仓库
+t()
+{
+  stop(200)
+  ufnsui()
+  {
+    f(sss.cky =="官方源")
+{
+fn 仓库源.官方源()
+}
+else f(sss.cky =="噬心源(Gitee源)")
+{
+fn 仓库源.噬心源Gitee源()
+}
+else f(sss.cky =="yiz101(简书)")
+{
+fn 仓库源.yiz101()
+}
+  }
+}
+
+ //手册
+ t()
+{
+ fe("$mr",mr)
+f(mr == true)
+{
+  fr("@iappbook",dm)
+}  
+else
+{
+  fr("@gitee",dm)
+}
+sj(dm,"【",null,dm)
+sl(dm,"【",dm)
+for(dms;dm)
+{
+sj(dms,null,"】",dmtitle)
+sj(dms,"】",null,dmshow)
+ula(dm,1=null,2=null,3=dmtitle,4=dmshow,5=null,6=null)
+}
+ufnsui()
+{
+uls(home3.1,dm,"选项手册list.iyu",-1,-2)
+}
+}
+  
+
+fn 工具.输入法(2)
+</eventItme><eventItme type="menu">case 切换仓库源:
+cls("android.support.v7.app.AlertDialog$Builder",class)
+javanew(dialog,class,"Context",activity)
+javax(null,dialog,class,"setTitle","CharSequence","仓库源")
+//设置标题
+s menu="官方源;噬心源(Gitee源);yiz101(简书)"
+//设置菜单文本
+sl(menu,";",items)
+
+//例如获取文件列表
+//fl("%iApp",items)
+
+cls("android.content.DialogInterface$OnClickListener", 事件类)
+javacb(事件, 事件类)
+{
+  sgsz(st_aS,1,mult)
+  //列表项是0开始，也就是0,1,2,3，分别代表一，二，三，四
+  //用序列来判断点击了什么
+  f(mult==0)
+  {
+    us(15,"visibility","visible")
+ fn 仓库源.官方源()
+  }
+  else f(mult==1)
+  {
+  us(15,"visibility","visible")
+   fn 仓库源.噬心源Gitee源()
+ }
+ else f(mult==2)
+ {
+   fn 仓库源.yiz101()
+}
+else f(mult==3)
+{
+  uigo("仓库More.iyu")
+}
+  sgsz(items,mult,wtm)
+}
+
+javax(null,dialog,class,"setItems","CharSequence[]",items,事件类,事件)
+javax(dialog,dialog,class,"show")
+//显示
+break
+
+</eventItme></UIEventset>

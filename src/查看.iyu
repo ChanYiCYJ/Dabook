@@ -1,0 +1,127 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="AppBarLayout">
+<ppt>width=-1
+height=-3
+</ppt>
+<event></event>
+</View>
+<View id="4" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="Toolbar">
+<ppt>width=-1
+height=-3
+app_title=子页面
+app_TitleColor=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="5" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="8" did="1" type="ScrollView">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="6" did="8" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="7" did="6" type="EditText">
+<ppt>width=-1
+height=-2
+text=
+hint=文件
+layout_gravity=center_vertical
+layout_margin=5dp</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">//这些都是子页面的主要配置(一直到注释zypzend)
+f(sss.ztlpd == null)
+{
+fn 工具.沉浸式()
+//获取状态栏的高度
+swh("ztl", h)
+syso(h)
+us(4,"height",h+"dp")
+}
+else
+{
+  uycl(sss.ztys,true)
+}
+  us(2,"background",sss.ztys)
+fn 工具.返回(3,null)
+us(3,"app_title",sss.bt)
+//zypzend
+fe("$%Da/data/bjk",data1)
+f(data1=="false")
+{
+    t()
+{
+   //加载AndroLua+的apk
+    ufnsui()
+  {
+    //创建新LuaEditor
+    javanew(et,sss.etc,"Context",activity)
+    //添加到布局
+    ss et=et
+    ss etc=sss.etc
+    fe("$Da/data/glyj",data3)
+ f(data3==true)
+    {
+      //启用夜间模式
+     javax(null,et,sss.etc,"setDark","boolean",true)
+     us(2,"backgroundcolor","#ff313131")
+     us(2,"backgroundcolor","#ff313131")
+    }
+    
+    nvw(et,5)
+       
+ javax(null,et,sss.etc,"setText","CharSequence",sss.txt)
+}
+}
+}
+else f(data1=="true")
+{
+  strim(sss.txt,sss.txt)
+ us(5,"visibility","gone")
+  us(8,"visibility","visible")
+  us(7,"text",sss.txt)
+}
+fn 工具.输入法(2)
+//编辑框:7,父控件滚动:8</eventItme><eventItme type="menu">case 分享:
+javax(text,ss.et,ss.etc,"getText")
+sit(a, "action", "android.intent.action.SEND") 
+sit(a, "type", "text/plain")
+sit(a, "extra", "android.intent.extra.TEXT",text)
+sit(a, "flags", 20030616)
+uit(a, "chooser", "分享")
+break
+case 复制:
+s sb=sss.txt
+sxb(sb)
+tw("已复制")
+break</eventItme><eventItme type="loadingComplete">gvs("3", mTba)
+javags(mMode, null, "android.graphics.PorterDuff$Mode", "SRC_ATOP")
+java(颜色,null,"android.graphics.Color.parseColor","String",sss.qds)
+//颜色
+java(mTbaBackSrc, mTba, "android.support.v7.widget.Toolbar.getNavigationIcon")
+
+java(mTbaMenuSrc, mTba, "android.support.v7.widget.Toolbar.getOverflowIcon")
+java(null, mTbaMenuSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+fw("$jzpd","ok")</eventItme></UIEventset>

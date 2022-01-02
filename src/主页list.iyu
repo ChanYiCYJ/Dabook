@@ -1,0 +1,106 @@
+<View id="1" did="0" type="CardView">
+<ppt>width=-1
+height=67dp
+layout_margin=7dp
+app_CardcornerRadius=5dp
+app_CardElevation=0
+app_CardBackgroundColor=#fff9f9f9
+//#fff9f9f9
+app_CardmaxElevation=0.1dp</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=center_vertical
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">gvs(st_vW,主页list.3,id3)
+gvs(st_vW,主页list.6,id6)
+gvs(st_vW,主页list.5,id5)
+ug(id3,"text",sss.title)
+ug(id5,"text",sss.title1)
+ug(id6,"text",sss.title2)
+s pd=sss.title+sss.title1+sss.title2
+f(sss.title =="扒网页")
+{
+  gvs(st_vW,主页list.4,a)
+call(null,"mjava","元素动画.uigo",a,"image","网页取源.iyu","chan.dev.iapp")
+}
+else f(sss.title =="数据加解密")
+{
+  gvs(st_vW,主页list.4,a)
+call(null,"mjava","元素动画.uigo",a,"image","数据加解密.iyu","chan.dev.iapp")
+}
+else f(sss.title =="MD配色")
+{
+ gvs(st_vW,主页list.4,a)
+call(null,"mjava","元素动画.uigo",a,"image","MD配色.iyu","chan.dev.iapp")
+}
+else f(sss.title =="仓库")
+{
+uigo("仓库.iyu")
+ }
+</eventItme></event>
+</View>
+<View id="4" did="2" type="ImageView">
+<ppt>width=24dp
+height=24dp
+src=@ic_color_lens_black_24dp.png
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="TextView">
+<ppt>width=-2
+height=-2
+text=MD配色
+textColor=#2196F3
+//#ff0e0e0e
+textSize=19.5sp
+layout_marginLeft=4dp</ppt>
+<event></event>
+</View>
+<View id="5" did="2" type="TextView">
+<ppt>width=-2
+height=-2
+text=副栏1
+textColor=#2196F3
+textSize=19.5sp
+typeface=serif
+layout_marginLeft=1dp</ppt>
+<event></event>
+</View>
+<View id="6" did="2" type="TextView">
+<ppt>width=-2
+height=-2
+text=副栏2
+textColor=#2196F3
+textSize=19.5sp
+typeface=serif
+layout_marginLeft=0.7dp</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">gvs(st_vW,主页list.3,id3)
+gvs(st_vW,主页list.4,id4)
+gvs(st_vW,主页list.5,id5)
+gvs(st_vW,主页list.6,id6)
+ug(id5,"text",id5信息)
+us(id3,"textcolor",sss.qds)
+us(id5,"textcolor",sss.qds)
+us(id6,"textcolor",sss.qds)
+f(id5信息 =="副栏1")
+{
+  us(id5,"visibility","gone")
+}
+ug(id6,"text",id6信息)
+f(id6信息 =="副栏2")
+{
+   us(id6,"visibility","gone")
+}
+gvs(st_vW,主页list.1,gvs_1)
+swh("pxw",w)
+dha(dh, false, true)
+dh(dh, "duration", 400)
+us(gvs_1, "dh", dh)
+</eventItme></UIEventset>

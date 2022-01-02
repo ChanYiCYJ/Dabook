@@ -1,0 +1,109 @@
+fn 官方源()
+t()
+{
+//这是云文档的标识
+//T1后端云Key，前往T1后端云后台获取
+ss("http://t1.huayi-w.cn/user_all.json?type=text&key="+sss.key+"&id="+"kpgetgm",ddapi)
+hs("https://gitee.com/chencyhyy/dakubox/raw/master/index.html",sss.xtdbb)
+sj(sss.xtdbb,"【",null,dm)
+sl(dm,"【",dm)
+for(dms;dm)
+{
+sj(dms,null,"】",dmtitle)
+sj(dms,"】",null,dmshow)
+  strim(dmshow,dmshow)
+ula(a,3=dmtitle,4=dmshow,6=null,7=null,8=sb)
+}
+ufnsui()
+{
+  gvs("home2.1",Object)
+us(代码仓库.15,"visibility","gone")
+uls(Object,a,"仓库list.iyu",-1,-2)
+    cls("android.support.v7.widget.RecyclerView",List_class)
+    cls("android.support.v7.widget.StaggeredGridLayoutManager",Layout_Management_Class)
+    javanew(layout,Layout_Management_Class,"int",2,"int",1)
+    javax(null,Object,List_class,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",layout)
+    cls("android.support.v7.widget.RecyclerView",List_class)
+    cls("android.support.v7.widget.StaggeredGridLayoutManager",Layout_Management_Class)
+    javanew(layout,Layout_Management_Class,"int",1,"int",6)
+    javax(null,6,List_class,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",layout)
+fw(sss.ckyp,"官方源")
+}
+}
+}
+end fn
+
+
+fn 噬心源Gitee源()
+t()
+{
+  gvs("home2.1",Object)
+ss("https://gitee.com/shixin1/iApp/raw/master/%E5%AE%9E%E4%BE%8B%E4%BB%A3%E7%A0%81",ddapi)
+hd(ddapi,"$Da/仓库/Git",false,c)
+fr("$Da/仓库/Git",sss.xtdbb)
+sj(sss.xtdbb,"【",null,dm)
+sl(dm,"【",dm)
+for(dms;dm)
+{
+sj(dms,null,"】",dmtitle)
+sj(dms,"】",null,dmshow)
+strim(dmshow,dmshow)
+ula(a,1=null,2=null,3=dmtitle,4=dmshow,6=null,7=null,8=sb)
+}
+ufnsui()
+{
+us(代码仓库.15,"visibility","gone")
+uls(Object,a,"仓库list.iyu",-1,-2)
+    cls("android.support.v7.widget.RecyclerView",List_class)
+    cls("android.support.v7.widget.StaggeredGridLayoutManager",Layout_Management_Class)
+    javanew(layout,Layout_Management_Class,"int",2,"int",1)
+    javax(null,Object,List_class,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",layout)
+    cls("android.support.v7.widget.RecyclerView",List_class)
+    cls("android.support.v7.widget.StaggeredGridLayoutManager",Layout_Management_Class)
+    javanew(layout,Layout_Management_Class,"int",1,"int",6)
+    javax(null,6,List_class,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",layout)
+    
+fw(sss.ckyp,"噬心源(Gitee源)")
+endutw()
+}
+}
+}
+end fn
+
+
+fn yiz101()
+t()
+{
+ss("https://gitee.com/chencyhyy/chan-gitee/raw/master/yiz.txt",ddapi)
+hd(ddapi,"$Da/仓库/yiz",false,c)
+fr("$Da/仓库/yiz",sss.xtdbb)
+sj(sss.xtdbb,"【",null,dm)
+sl(dm,"【",dm)
+for(dms;dm)
+{
+sj(dms,null,"】",dmtitle)
+sj(dms,"】",null,dmshow)
+strim(dmshow,dmshow)
+ula(a,1=null,2=null,3=dmtitle,4=dmshow,6=null,7=null,8=sb)
+}
+ufnsui()
+{
+us(代码仓库.15,"visibility","gone")
+gvs("home2.1",Object)
+us(代码仓库.15,"visibility","gone")
+uls(Object,a,"仓库list.iyu",-1,-2)
+    cls("android.support.v7.widget.RecyclerView",List_class)
+    cls("android.support.v7.widget.StaggeredGridLayoutManager",Layout_Management_Class)
+    javanew(layout,Layout_Management_Class,"int",2,"int",1)
+    javax(null,Object,List_class,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",layout)
+    cls("android.support.v7.widget.RecyclerView",List_class)
+    cls("android.support.v7.widget.StaggeredGridLayoutManager",Layout_Management_Class)
+    javanew(layout,Layout_Management_Class,"int",1,"int",6)
+    javax(null,6,List_class,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",layout)
+    endutw()
+fw(sss.ckyp,"yiz101(简书)")
+endutw()
+}
+}
+}
+end fn

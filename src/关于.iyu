@@ -1,0 +1,317 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="4" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="1" type="Toolbar">
+<ppt>width=-1
+height=-3
+app_title=关于
+app_TitleColor=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="44" did="1" type="ScrollView">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="45" did="44" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="16" did="45" type="CardView">
+<ppt>width=-1
+height=190dp
+layout_margin=8dp
+app_CardElevation=0.7dp
+app_CardcornerRadius=5dp</ppt>
+<event></event>
+</View>
+<View id="17" did="16" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="18" did="17" type="LinearLayout">
+<ppt>width=-1
+height=70dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="19" did="18" type="ImageView">
+<ppt>width=45dp
+height=45dp
+src=@flatlogo_1410.png
+layout_gravity=center_vertical
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="20" did="18" type="TextView">
+<ppt>width=-2
+height=-2
+text=Dabook
+layout_gravity=center_vertical
+layout_marginLeft=10dp
+textColor=#ff040404
+textSize=20sp</ppt>
+<event></event>
+</View>
+<View id="9" did="17" type="LinearLayout">
+<ppt>width=-1
+height=65dp
+orientation=horizontal
+background=selectableitem
+clickable=true
+</ppt>
+<event><eventItme type="clicki">fn 工具.更新()</eventItme></event>
+</View>
+<View id="10" did="9" type="LinearLayout">
+<ppt>width=65dp
+height=65dp
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="12" did="10" type="ImageView">
+<ppt>width=23dp
+height=23dp
+src=@ic_group_black_24dp.png</ppt>
+<event></event>
+</View>
+<View id="11" did="9" type="LinearLayout">
+<ppt>width=-1
+height=-1
+gravity=center_vertical
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="13" did="11" type="TextView">
+<ppt>width=-2
+height=-2
+text=获取更新
+textColor=#ff060606
+textSize=16sp</ppt>
+<event></event>
+</View>
+<View id="14" did="11" type="TextView">
+<ppt>width=-2
+height=-2
+text=有可能是大更新噢</ppt>
+<event></event>
+</View>
+<View id="40" did="17" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=horizontal
+gravity=center_vertical
+background=selectableitem
+clickable=true
+</ppt>
+<event><eventItme type="clicki">fr("@ky.txt",sss.txt)
+sss bt="开源许可与感谢名单"
+uigo("查看.iyu")</eventItme></event>
+</View>
+<View id="41" did="40" type="ImageView">
+<ppt>width=23dp
+height=23dp
+src=@ic_book_black_24dp.png
+layout_marginLeft=20dp</ppt>
+<event></event>
+</View>
+<View id="42" did="40" type="TextView">
+<ppt>width=-2
+height=-2
+text=开源许可与感谢名单
+textColor=#ff060606
+textSize=16sp
+layout_marginLeft=20dp</ppt>
+<event></event>
+</View>
+<View id="22" did="45" type="CardView">
+<ppt>width=-1
+height=275dp
+layout_margin=8dp
+app_CardElevation=0.7dp
+app_CardcornerRadius=5dp</ppt>
+<event></event>
+</View>
+<View id="23" did="22" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="28" did="23" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="29" did="28" type="TextView">
+<ppt>width=-2
+height=-2
+text=M
+textStyle=bold
+textColor=#ff070707
+textSize=16sp
+layout_gravity=center_vertical
+layout_marginLeft=25dp
+</ppt>
+<event></event>
+</View>
+<View id="46" did="28" type="TextView">
+<ppt>width=-2
+height=-2
+text=ore
+textColor=#ff070707
+textSize=16sp
+layout_gravity=center_vertical
+</ppt>
+<event></event>
+</View>
+<View id="25" did="23" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=horizontal
+gravity=center_vertical
+background=selectableitem
+clickable=true
+</ppt>
+<event><eventItme type="clicki">s qun=1127481551
+ss("mqqapi://card/show_pslcard?src_type=internal&version=1&uin="+qun+"&card_type=group&source=qrcode",joinqq)
+sit(a,"action", "android.intent.action.VIEW")
+sit(a,"data",joinqq)
+uit(a, "chooser", "选择QQ")</eventItme></event>
+</View>
+<View id="26" did="25" type="ImageView">
+<ppt>width=23dp
+height=23dp
+src=@1b16513a-e7c0-475b-8f61-7e8906a456d8.png
+layout_marginLeft=20dp</ppt>
+<event></event>
+</View>
+<View id="27" did="25" type="TextView">
+<ppt>width=-2
+height=-2
+text=官方QQ群
+textColor=#ff060606
+textSize=16sp
+layout_marginLeft=20dp</ppt>
+<event></event>
+</View>
+<View id="30" did="23" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=horizontal
+gravity=center_vertical
+background=selectableitem
+clickable=true
+</ppt>
+<event><eventItme type="clicki">hws("https://b23.tv/3GCtUJ")</eventItme></event>
+</View>
+<View id="31" did="30" type="ImageView">
+<ppt>width=23dp
+height=23dp
+src=@d30d2bb3-016c-4397-b10c-4d3f581738e0.png
+layout_marginLeft=20dp</ppt>
+<event></event>
+</View>
+<View id="32" did="30" type="TextView">
+<ppt>width=-2
+height=-2
+text=作者b站账号
+textColor=#ff060606
+textSize=16sp
+layout_marginLeft=20dp</ppt>
+<event></event>
+</View>
+<View id="33" did="23" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=horizontal
+gravity=center_vertical
+background=selectableitem
+clickable=true
+</ppt>
+<event><eventItme type="clicki">hws("https://gitee.com/chencyhyy")</eventItme></event>
+</View>
+<View id="34" did="33" type="ImageView">
+<ppt>width=23dp
+height=23dp
+src=@3ed839a4-2b93-4a6a-8540-f3a151f5ff22.png
+layout_marginLeft=20dp</ppt>
+<event></event>
+</View>
+<View id="35" did="33" type="TextView">
+<ppt>width=-2
+height=-2
+text=Gitee
+textColor=#ff060606
+textSize=16sp
+layout_marginLeft=20dp</ppt>
+<event></event>
+</View>
+<View id="47" did="23" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=horizontal
+gravity=center_vertical
+background=selectableitem
+clickable=true
+</ppt>
+<event><eventItme type="clicki">uigo("捐赠.iyu")</eventItme></event>
+</View>
+<View id="48" did="47" type="ImageView">
+<ppt>width=23dp
+height=23dp
+src=@ic_mood_black_24dp.png
+layout_marginLeft=20dp</ppt>
+<event></event>
+</View>
+<View id="49" did="47" type="TextView">
+<ppt>width=-2
+height=-2
+text=为本项目捐赠
+textColor=#ff060606
+textSize=16sp
+layout_marginLeft=20dp</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">//这些都是子页面的主要配置(一直到注释zypzend)
+f(sss.ztlpd == null)
+{
+fn 工具.沉浸式()
+//获取状态栏的高度
+swh("ztl", h)
+syso(h)
+us(4,"height",h+"dp")
+}
+else
+{
+  uycl(sss.ztys,true)
+}
+fn 工具.返回(3,null)
+//zypzend
+s id=3
+//toolbar的id
+gvs(id, mTba)
+javags(mMode, null, "android.graphics.PorterDuff$Mode", "SRC_ATOP")
+java(颜色,null,"android.graphics.Color.parseColor","String",sss.qds)
+//颜色
+java(mTbaBackSrc, mTba, "android.support.v7.widget.Toolbar.getNavigationIcon")
+
+java(mTbaMenuSrc, mTba, "android.support.v7.widget.Toolbar.getOverflowIcon")
+java(null, mTbaMenuSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+us(14,"text","当前版本:"+sss.版本)</eventItme></UIEventset>

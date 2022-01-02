@@ -1,0 +1,251 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="4" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="1" type="Toolbar">
+<ppt>width=-1
+height=-3
+app_title= 
+app_TitleColor=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="5" did="1" type="ScrollView">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="6" did="5" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="7" did="6" type="LinearLayout">
+<ppt>width=-1
+height=65dp
+orientation=horizontal
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">hws("http://xsm20210730.baoliaowu.cn/ShakyRegister?shareCode=23C1AB&time=1628744899")</eventItme></event>
+</View>
+<View id="8" did="7" type="LinearLayout">
+<ppt>width=65dp
+height=65dp
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="9" did="7" type="LinearLayout">
+<ppt>width=-1
+height=-1
+gravity=center_vertical
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="10" did="9" type="TextView">
+<ppt>width=-2
+height=-2
+text=悬赏猫
+textColor=#ff070707
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="11" did="9" type="TextView">
+<ppt>width=-2
+height=-2
+text=一起薅羊毛赚钱，捐赠我钱一起赚
+textColor=#ff5e5e5e</ppt>
+<event></event>
+</View>
+<View id="17" did="6" type="TextView">
+<ppt>width=-1
+height=0.25dp
+text=
+BackgroundColor=#ffdfdfdf</ppt>
+<event></event>
+</View>
+<View id="12" did="6" type="LinearLayout">
+<ppt>width=-1
+height=65dp
+orientation=horizontal
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">hws("https://qr.alipay.com/fkx17374nhfp4tuirwxcg66")</eventItme></event>
+</View>
+<View id="13" did="12" type="LinearLayout">
+<ppt>width=65dp
+height=65dp
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="14" did="12" type="LinearLayout">
+<ppt>width=-1
+height=-1
+gravity=center_vertical
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="15" did="14" type="TextView">
+<ppt>width=-2
+height=-2
+text=支付宝
+textColor=#ff070707
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="18" did="6" type="TextView">
+<ppt>width=-1
+height=0.25dp
+text=
+BackgroundColor=#ffdfdfdf</ppt>
+<event></event>
+</View>
+<View id="19" did="6" type="LinearLayout">
+<ppt>width=-1
+height=65dp
+orientation=horizontal
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">sss jz="@qrcode_20210306155808.png"
+uigo("捐赠1.iyu")</eventItme></event>
+</View>
+<View id="20" did="19" type="LinearLayout">
+<ppt>width=65dp
+height=65dp
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="21" did="19" type="LinearLayout">
+<ppt>width=-1
+height=-1
+gravity=center_vertical
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="22" did="21" type="TextView">
+<ppt>width=-2
+height=-2
+text=QQ
+textColor=#ff070707
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="23" did="6" type="TextView">
+<ppt>width=-1
+height=0.25dp
+text=
+BackgroundColor=#ffdfdfdf</ppt>
+<event></event>
+</View>
+<View id="24" did="6" type="LinearLayout">
+<ppt>width=-1
+height=65dp
+orientation=horizontal
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">sss jz="@mm_facetoface_collect_qrcode_1618650563658.png"
+uigo("捐赠1.iyu")</eventItme></event>
+</View>
+<View id="25" did="24" type="LinearLayout">
+<ppt>width=65dp
+height=65dp
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="26" did="24" type="LinearLayout">
+<ppt>width=-1
+height=-1
+gravity=center_vertical
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="27" did="26" type="TextView">
+<ppt>width=-2
+height=-2
+text=微信
+textColor=#ff070707
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="28" did="6" type="TextView">
+<ppt>width=-1
+height=0.25dp
+text=
+BackgroundColor=#ffdfdfdf</ppt>
+<event></event>
+</View>
+<View id="29" did="6" type="LinearLayout">
+<ppt>width=-1
+height=65dp
+orientation=horizontal
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">fn 工具.更新()
+stop(2000)
+ufnsui()
+{
+  sxb(sss.链接)
+  tw("链接已复制到粘贴版")
+}
+</eventItme></event>
+</View>
+<View id="30" did="29" type="LinearLayout">
+<ppt>width=65dp
+height=65dp
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="31" did="29" type="LinearLayout">
+<ppt>width=-1
+height=-1
+gravity=center_vertical
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="32" did="31" type="TextView">
+<ppt>width=-2
+height=-2
+text=推广给好友
+textColor=#ff070707
+textSize=17sp</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">//这些都是子页面的主要配置(一直到注释zypzend)
+f(sss.ztlpd == null)
+{
+fn 工具.沉浸式()
+//获取状态栏的高度
+swh("ztl", h)
+syso(h)
+us(4,"height",h+"dp")
+}
+else
+{
+  uycl(sss.ztys,true)
+}
+fn 工具.返回(3,null)
+//zypzend
+s id=3
+//toolbar的id
+gvs(id, mTba)
+javags(mMode, null, "android.graphics.PorterDuff$Mode", "SRC_ATOP")
+java(颜色,null,"android.graphics.Color.parseColor","String",sss.qds)
+//颜色
+java(mTbaBackSrc, mTba, "android.support.v7.widget.Toolbar.getNavigationIcon")
+
+java(mTbaMenuSrc, mTba, "android.support.v7.widget.Toolbar.getOverflowIcon")
+java(null, mTbaMenuSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+us(7,"text",sss.版本)</eventItme></UIEventset>

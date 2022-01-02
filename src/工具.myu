@@ -1,0 +1,150 @@
+fn 返回(id,ys)
+f(ys == null)
+{
+utb(id)
+java(mTba, activity, "android.support.v7.app.AppCompatActivity.getSupportActionBar")
+java(null, mTba, "android.support.v7.app.ToolbarActionBar.setDisplayHomeAsUpEnabled", "boolean", true)
+gvs(id, mTba)
+javags(mMode, null, "android.graphics.PorterDuff$Mode", "SRC_ATOP")
+java(颜色,null,"android.graphics.Color.parseColor","String",sss.qds)
+//颜色
+java(mTbaBackSrc, mTba, "android.support.v7.widget.Toolbar.getNavigationIcon")
+java(null, mTbaBackSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+java(mTbaMenuSrc, mTba, "android.support.v7.widget.Toolbar.getOverflowIcon")
+java(null, mTbaMenuSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+//设置左边为返回键
+utb("set", "leftck", id)
+{
+  end()
+}
+}
+else f(ys =="元素动画")
+{
+  //元素动画返回方式
+  utb(id)
+java(mTba, activity, "android.support.v7.app.AppCompatActivity.getSupportActionBar")
+java(null, mTba, "android.support.v7.app.ToolbarActionBar.setDisplayHomeAsUpEnabled", "boolean", true)
+gvs(id, mTba)
+javags(mMode, null, "android.graphics.PorterDuff$Mode", "SRC_ATOP")
+java(颜色,null,"android.graphics.Color.parseColor","String","#ffffffff")
+//颜色
+java(mTbaBackSrc, mTba, "android.support.v7.widget.Toolbar.getNavigationIcon")
+java(null, mTbaBackSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+java(mTbaMenuSrc, mTba, "android.support.v7.widget.Toolbar.getOverflowIcon")
+java(null, mTbaMenuSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+//设置左边为返回键
+utb("set", "leftck", id)
+{
+  call(null,"mjava","元素动画.end")
+}
+}
+us(id,"app_titlecolor",sss.qds)
+gvs(id, mTba)
+
+javags(mMode, null, "android.graphics.PorterDuff$Mode", "SRC_ATOP")
+
+java(颜色,null,"android.graphics.Color.parseColor","String",sss.qds)
+//颜色
+
+java(mTbaBackSrc, mTba, "android.support.v7.widget.Toolbar.getNavigationIcon")
+java(null, mTbaBackSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+
+java(mTbaMenuSrc, mTba, "android.support.v7.widget.Toolbar.getOverflowIcon")
+java(null, mTbaMenuSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
+
+
+end fn
+fn 输入法(flag)
+/.
+可选值：
+0 系统默认，由系统选择显示方式
+2 当用户进入时，默认隐藏输入法
+4 当用户进入时，默认显示输入法
+16 输入法弹出时，调整空白区域来显示输入法。即使调整空白区域，输入法还是有可能遮挡一些有内容区域，这时用户就只有退出输入法才能看到这些被遮挡区域并进行交互。
+18 与16相同，但是当用户进入时，默认隐藏输入法
+20 与16相同，但是当用户进入时，默认显示输入法
+32 输入法弹出时，顶起当前布局（更改布局高度，同时整个布局上移）
+34 与32相同，但是当用户进入时，默认隐藏输入法
+36 与32相同，但是当用户进入时，默认显示输入法
+48 当输入法弹出时，什么也不做，直接让输入法覆盖界面
+50 与48相同，但是当用户进入时，默认隐藏输入法
+52 与48相同，但是当用户进入时，默认显示输入法
+./
+java(window,activity,"android.app.Activity.getWindow")
+java(null,window,"android.view.Window.setSoftInputMode","int",flag)
+end fn
+fn 沉浸式()
+java(cs, activity, "android.app.Activity.getWindow")
+java(cs2, cs, "android.view.Window.getDecorView")
+java(null, cs2, "android.view.View.setSystemUiVisibility", "int", "8192")
+//设置状态栏透明(沉浸式)
+java(null, cs, "android.view.Window.addFlags", "int", "67108864")
+java(cs,activity,"android.app.Activity.getWindow")
+java(cs2,cs,"android.view.Window.getDecorView")
+java(null,cs,"android.view.Window.addFlags","int","67108864")
+end fn
+fn 沉浸式1()
+//设置状态栏为透明(沉浸式状态栏)
+java(cs,activity,"android.app.Activity.getWindow")
+java(cs2,cs,"android.view.Window.getDecorView")
+//8192改成1024为白色
+java(null,cs2,"android.view.View.setSystemUiVisibility","int","8192")
+//设置状态栏为透明(沉浸式)
+java(null,cs,"android.view.Window.addFlags","int","67108864")
+end fn
+
+fn 更新()
+ t()
+{
+hs("https://gitee.com/chencyhyy/dakubox/raw/master/README.md",gx)
+syso(gx)
+//更新链接可以去洛寒社区弄
+sj(gx,"更新版本","更新版本",版本)
+sj(gx,"更新内容","更新内容",内容)
+sj(gx,"下载链接","下载链接",sss.链接)
+f(版本 &gt; sss.版本)
+//1为当前应用版本，注意要修改
+{
+  ufnsui()
+  {
+    ss("最新版本:"+版本,版本)
+    utw(null, 版本, 内容, "下载","取消", false, v)
+{
+hws(sss.链接)
+}
+else
+{
+  endutw()
+}
+}
+}
+else
+{
+  ufnsui()
+  {
+    tw("已是最新版本")
+  }
+}
+}
+}
+end fn
+
+fn 一言()
+t()
+{
+  hs("https://v1.hitokoto.cn/?max_length=15",yan)
+  syso(yan)
+  json(yan,yan)
+  json(yan,"get","hitokoto",yan1)
+  json(yan,"get","from",yan2)
+  syso(yan1)
+  us(3,"app_subtitle",yan1)
+  ufnsui()
+  {
+    f(yan1 == null)
+    {
+      us(3,"app_subtitle","空荡的一天才能体会到平时的美好")
+    }
+  }
+}
+end fn

@@ -1,0 +1,73 @@
+/*
+*Mus原创开源
+*我们的编程交流群676343719
+*请尊重原创，转载请注明版权
+*/
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.Bitmap;
+import android.content.res.ColorStateList;
+import android.view.MenuItem;
+import android.view.Menu;
+import android.widget.LinearLayout;
+import android.support.design.widget.BottomNavigationView;
+import android.support.annotation.NonNull;
+import android.support.v4.view.ViewPager;
+/*
+*Mus原创开源
+*我们的编程交流群676343719
+*请尊重原创，转载请注明版权
+*/
+
+public BottomNavigationView set(LinearLayout mLa,ViewPager Vp,String one,String two,String three,String four,Bitmap o,Bitmap t,Bitmap h,Bitmap f)
+{
+  final ViewPager mVp=Vp;
+  BottomNavigationView mBt=new BottomNavigationView(activity);
+  mLa.addView(mBt);
+  Menu menu=mBt.getMenu();
+  menu.add(0,0,0,one);
+  menu.add(0,1,1,two);
+  menu.add(0,2,2,three);
+  menu.add(0,3,3,four);
+  
+  MenuItem item = menu.findItem(0);
+  item.setIcon(new BitmapDrawable(o));
+  item=menu.findItem(1);
+ 
+  item.setIcon(new BitmapDrawable(t));
+  item=menu.findItem(2);
+  item.setIcon(new BitmapDrawable(h));
+  item=menu.findItem(3);
+  item.setIcon(new BitmapDrawable(f));
+
+  BottomNavigationView.OnNavigationItemSelectedListener mC=new BottomNavigationView.OnNavigationItemSelectedListener()
+  {
+        public boolean onNavigationItemSelected(MenuItem item)
+        {
+            switch (item.getItemId())
+            {
+                case 0:
+                    mVp.setCurrentItem(0);
+                    return true;
+                case 1:
+                    mVp.setCurrentItem(1);
+                    return true;
+                case 2:
+                    mVp.setCurrentItem(2);
+                    return true;
+                case 3:
+                    mVp.setCurrentItem(3);
+                    return true;
+            }
+            return false;
+        }
+    };
+  
+  mBt.setOnNavigationItemSelectedListener(mC);
+
+  return mBt;
+}
+/*
+*Mus原创开源
+*我们的编程交流群676343719
+*请尊重原创，转载请注明版权
+*/

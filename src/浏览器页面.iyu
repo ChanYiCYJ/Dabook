@@ -1,0 +1,62 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="AppBarLayout">
+<ppt>width=-1
+height=-3
+background=#2196F3</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="Toolbar">
+<ppt>width=-1
+height=-3
+app_title=子页面
+app_TitleColor=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="4" did="1" type="WebView">
+<ppt>width=-1
+height=-1</ppt>
+<event><eventItme type="onpagefinished">ug(4,"title",bt)
+us(3,"app_title",bt)</eventItme></event>
+</View>
+<UIEventset><eventItme type="loading">//这些都是子页面的主要配置(一直到注释zypzend)
+fn 工具.返回(3,null)
+f(sss.ztys == null)
+{
+  fn 全局.主要全局()
+  uycl(sss.ztys,true)
+    us(2,"background",sss.ztys)
+}
+else
+{
+  uycl(sss.ztys,true)
+  us(2,"background",sss.ztys)
+}
+us(3,"app_title",sss.title)
+//zypzend
+//浏览器区,代码从原Da助手照van
+us(4,"url",sss.llq)
+gvs(4,wv)
+java(ws,wv,"android.webkit.WebView.getSettings")
+java(null,ws,"android.webkit.WebSettings.setBuiltInZoomControls","boolean",true)
+java(null,ws,"android.webkit.WebSettings.setDisplayZoomControls","boolean",false)
+
+
+</eventItme><eventItme type="downkey">f(st_kC==4)
+{
+  ug(4,"cangoback",pd)
+f(pd==true)
+{
+us(4, "gobackorforward", -1)
+}
+else
+{
+call(null,"mjava","元素动画.end")
+}
+}</eventItme><eventItme type="menu">case 在浏览器打开:
+hws(sss.llq)
+break</eventItme></UIEventset>

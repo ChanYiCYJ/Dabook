@@ -1,0 +1,384 @@
+<View id="15" did="0" type="ScrollView">
+<ppt>width=-1
+background=white
+height=-1
+layout_marginBottom=55dp</ppt>
+<event></event>
+</View>
+<View id="2" did="15" type="LinearLayout">
+<ppt>width=-1
+height=-1
+background=white
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="61" did="2" type="CardView">
+<ppt>width=-1
+height=175dp
+layout_margin=8dp
+app_CardElevation=0.7dp
+app_CardcornerRadius=5dp</ppt>
+<event></event>
+</View>
+<View id="62" did="61" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="31" did="62" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="32" did="31" type="TextView">
+<ppt>width=-2
+height=-2
+text=软件设置
+textColor=#ff070707
+textSize=16sp
+layout_gravity=center_vertical
+layout_marginLeft=25dp
+</ppt>
+<event></event>
+</View>
+<View id="34" did="62" type="LinearLayout">
+<ppt>width=-1
+height=65dp
+orientation=horizontal
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">fe("$%Da/data/bjk",data1)
+f(data1=="false")
+{
+   fw("$%Da/data/bjk",data2)
+  us(home4.41,"checked",false)
+  sdeg(2)
+}
+else f(data1=="true")
+{
+ fd("$%Da/data/bjk",sj)
+  us(home4.41,"checked",true)
+}</eventItme></event>
+</View>
+<View id="35" did="34" type="LinearLayout">
+<ppt>width=65dp
+height=65dp
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="36" did="35" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@ic_data_usage_black_24dp.png</ppt>
+<event></event>
+</View>
+<View id="37" did="34" type="LinearLayout">
+<ppt>width=-2
+height=-1
+gravity=center_vertical
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="38" did="37" type="TextView">
+<ppt>width=-2
+height=-2
+text=Androlua＋高亮
+textColor=#ff070707
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="39" did="37" type="TextView">
+<ppt>width=-2
+height=-2
+text=关闭将开启系统编辑框
+textColor=#ff5e5e5e</ppt>
+<event></event>
+</View>
+<View id="40" did="34" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_gravity=right
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="41" did="40" type="SwitchCompat">
+<ppt>width=-2
+height=-2
+layout_gravity=right
+layout_marginRight=15dp</ppt>
+<event><eventItme type="clicki">fe("$%Da/data/bjk",data1)
+f(data1=="false")
+{
+   fw("$%Da/data/bjk",data2)
+  us(home4.41,"checked",false)
+  sdeg(2)
+}
+else f(data1=="true")
+{
+ fd("$%Da/data/bjk",sj)
+  us(home4.41,"checked",true)
+}</eventItme></event>
+</View>
+<View id="55" did="62" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=horizontal
+background=selectableitem
+clickable=true</ppt>
+<event></event>
+</View>
+<View id="56" did="55" type="LinearLayout">
+<ppt>width=55dp
+height=65dp
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="58" did="55" type="LinearLayout">
+<ppt>width=-1
+height=-1
+gravity=center_vertical
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="59" did="58" type="TextView">
+<ppt>width=-2
+height=-2
+text=手册选择
+textColor=#ff070707
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="60" did="58" type="Spinner">
+<ppt>width=-2
+height=-2
+layout_marginLeft=5dp</ppt>
+<event><eventItme type="onitemselected">ug(home4.60,"selecteditem",cdz)
+syso(cdz)
+f(cdz=="默认(iapp文件夹手册)")
+{
+  fe("$mr",mr)
+  f(mr == false)
+  {
+    fw("$mr","ok")
+  }
+}
+else f(cdz=="Gitee")
+{
+  fe("$mr",mr)
+  f(mr == true)
+  {
+    fd("$mr",m)
+    
+}
+ t()
+{
+ fe("$mr",mr)
+  f(mr == true)
+  {
+    fr("@iappbook",dm)
+  }  
+else
+{
+  fr("@gitee",dm)
+}
+sj(dm,"【",null,dm)
+sl(dm,"【",dm)
+for(dms;dm)
+{
+sj(dms,null,"】",dmtitle)
+sj(dms,"】",null,dmshow)
+ula(dm,1=null,2=null,3=dmtitle,4=dmshow,5=null,6=null)
+}
+ufnsui()
+{
+uls(home3.1,dm,"选项手册list.iyu",-1,-2)
+}
+}
+
+  }
+</eventItme></event>
+</View>
+<View id="63" did="2" type="CardView">
+<ppt>width=-1
+height=115dp
+layout_margin=8dp
+app_CardElevation=0.7dp
+app_CardcornerRadius=5dp</ppt>
+<event></event>
+</View>
+<View id="64" did="63" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="29" did="64" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="30" did="29" type="TextView">
+<ppt>width=-2
+height=-2
+text=调试与日志
+textColor=#ff070707
+textSize=16sp
+layout_gravity=center_vertical
+layout_marginLeft=25dp
+</ppt>
+<event></event>
+</View>
+<View id="17" did="64" type="LinearLayout">
+<ppt>width=-1
+height=65dp
+orientation=horizontal
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">fe("$Da/data/ts",data2)
+f(data2=="false")
+{
+   fw("$Da/data/ts",data2)
+  us(home4.23,"checked",true)
+  sdeg(2)
+}
+else f(data2=="true")
+{
+ fd("$Da/data/ts",sj)
+  us(home4.23,"checked",false)
+}</eventItme></event>
+</View>
+<View id="18" did="17" type="LinearLayout">
+<ppt>width=65dp
+height=65dp
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="19" did="18" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@ic_https_black_24dp.png</ppt>
+<event></event>
+</View>
+<View id="20" did="17" type="LinearLayout">
+<ppt>width=-2
+height=-1
+gravity=center_vertical
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="21" did="20" type="TextView">
+<ppt>width=-2
+height=-2
+text=调试模式
+textColor=#ff070707
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="22" did="20" type="TextView">
+<ppt>width=-2
+height=-2
+text=打印软件错误日志
+textColor=#ff5e5e5e</ppt>
+<event></event>
+</View>
+<View id="24" did="17" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_gravity=right
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="23" did="24" type="SwitchCompat">
+<ppt>width=-2
+height=-2
+layout_gravity=right
+layout_marginRight=15dp</ppt>
+<event><eventItme type="clicki">fe("$Da/data/ts",data2)
+f(data2=="false")
+{
+   fw("$Da/data/ts",data2)
+  us(home4.23,"checked",true)
+  sdeg(2)
+}
+else f(data2=="true")
+{
+ fd("$Da/data/ts",sj)
+  us(home4.23,"checked",false)
+}</eventItme></event>
+</View>
+<View id="65" did="2" type="CardView">
+<ppt>width=-1
+height=115dp
+layout_margin=8dp
+app_CardElevation=0.7dp
+app_CardcornerRadius=5dp</ppt>
+<event></event>
+</View>
+<View id="66" did="65" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="25" did="66" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="27" did="25" type="TextView">
+<ppt>width=-2
+height=-2
+text=关于
+textColor=#ff070707
+textSize=16sp
+layout_gravity=center_vertical
+layout_marginLeft=25dp
+</ppt>
+<event></event>
+</View>
+<View id="42" did="66" type="LinearLayout">
+<ppt>width=-1
+height=65dp
+orientation=horizontal
+background=selectableitem
+clickable=true</ppt>
+<event><eventItme type="clicki">uigo("关于.iyu")</eventItme></event>
+</View>
+<View id="43" did="42" type="LinearLayout">
+<ppt>width=65dp
+height=65dp
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="44" did="43" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@ic_report_black_24dp.png</ppt>
+<event></event>
+</View>
+<View id="45" did="42" type="LinearLayout">
+<ppt>width=-1
+height=-1
+gravity=center_vertical
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="46" did="45" type="TextView">
+<ppt>width=-2
+height=-2
+text=关于
+textColor=#ff070707
+textSize=18sp</ppt>
+<event></event>
+</View>
+<UIEventset></UIEventset>

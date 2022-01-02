@@ -1,0 +1,34 @@
+<View id="5" did="0" type="ScrollView">
+<ppt>width=-1
+height=-1
+background=white</ppt>
+<event></event>
+</View>
+<View id="2" did="5" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="ImageView">
+<ppt>width=-2
+height=300dp
+src=@1625446217396.png
+</ppt>
+<event></event>
+</View>
+<View id="4" did="2" type="ImageView">
+<ppt>width=-2
+height=300dp
+src=@mm_facetoface_collect_qrcode_1618650563658.png
+</ppt>
+<event></event>
+</View>
+<View id="6" did="2" type="ImageView">
+<ppt>width=-2
+height=300dp
+src=@qrcode_20210306155808.png</ppt>
+<event></event>
+</View>
+<UIEventset></UIEventset>

@@ -1,0 +1,15 @@
+<android.support.design.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="1000"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  >
+  <TextView
+    android:id="1002"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="iApp v3"
+    />
+</android.support.design.widget.CoordinatorLayout>
