@@ -55,17 +55,18 @@ layout_marginLeft=15dp</ppt>
 <ppt>width=-2
 height=-2
 text=MD配色
-textColor=#2196F3
+textColor=#ff0e0e0e
 //#ff0e0e0e
 textSize=19.5sp
-layout_marginLeft=4dp</ppt>
+layout_marginLeft=4dp
+typeface=@Roboto-Regular.ttf</ppt>
 <event></event>
 </View>
 <View id="5" did="2" type="TextView">
 <ppt>width=-2
 height=-2
 text=副栏1
-textColor=#2196F3
+textColor=#ff0e0e0e
 textSize=19.5sp
 typeface=serif
 layout_marginLeft=1dp</ppt>
@@ -75,7 +76,7 @@ layout_marginLeft=1dp</ppt>
 <ppt>width=-2
 height=-2
 text=副栏2
-textColor=#2196F3
+textColor=#ff0e0e0e
 textSize=19.5sp
 typeface=serif
 layout_marginLeft=0.7dp</ppt>
@@ -86,9 +87,7 @@ gvs(st_vW,主页list.4,id4)
 gvs(st_vW,主页list.5,id5)
 gvs(st_vW,主页list.6,id6)
 ug(id5,"text",id5信息)
-us(id3,"textcolor",sss.qds)
-us(id5,"textcolor",sss.qds)
-us(id6,"textcolor",sss.qds)
+
 f(id5信息 =="副栏1")
 {
   us(id5,"visibility","gone")

@@ -184,9 +184,9 @@ s four="设置"
 sbp("@ic_settings_black_24dp.png",p)
 
 call(sss.mBt,"mjava","Mus.set",mLa,mVp,"主页","仓库","手册","设置",q,w,r,p)
-/.gvs(3,toolbar)
+gvs(3,toolbar)
 java(tv,toolbar,"android.view.ViewGroup.getChildAt","int",0)
-us(tv,"typeface","@方正黑体简体.TTF")./
+us(tv,"typeface","@Roboto-Regular(1).ttf")
 //iapp判断
 </eventItme><eventItme type="loadingComplete">
 fe("$Da/data/ts",data2)

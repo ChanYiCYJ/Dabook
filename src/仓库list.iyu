@@ -38,6 +38,7 @@ ellipsize=end
 //文本超长显示方式 跑马灯
 marqueerepeatlimit=marquee_forever
 //跑马灯显示次数 无限∞重复
+typeface=@Roboto-Regular.ttf
 </ppt>
 <event></event>
 </View>
@@ -52,7 +53,9 @@ layout_marginRight=20dp
 layout_marginTop=10dp
 layout_marginBottom=30dp
 maxLines=5
-ellipsize=marquee</ppt>
+ellipsize=marquee
+typeface=@Roboto-Regular (1).ttf
+ellipsize=end</ppt>
 <event></event>
 </View>
 <UIEventset><eventItme type="loading">gvs(st_vW,仓库list.1,gvs_1)
