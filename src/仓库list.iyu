@@ -2,7 +2,7 @@
 <ppt>width=-1
 height=140dp
 layout_margin=7dp
-app_CardcornerRadius=5dp
+app_CardcornerRadius=10dp
 app_CardElevation=0
 app_CardBackgroundColor=#fff9f9f9
 //#fff9f9f9
@@ -46,16 +46,16 @@ typeface=@Roboto-Regular.ttf
 <ppt>width=-2
 height=-2
 textSize=11sp
-text=#ff0e0e0e#ff0e0e0eje查询www.2b2t.centerje查询www.2b2t.centerje查询www.2b2t.centerje查询www.2b2t.centerje查询www.2b2t.centerje查询www.2b2t.centerje查询www.2b2t.cente
+text=#ff0e0e0e#ff0e0e0eje查询www.2b2t.centerje查询www.2b2t.centerje查询www.2b2t.centerje查询www.2t.centerje查询www.2b2t.centerje查询www.2b2t.centerje查询www.2b2t.cente
 layout_gravity=center
 layout_marginLeft=20dp
 layout_marginRight=20dp
 layout_marginTop=10dp
 layout_marginBottom=30dp
-maxLines=5
+maxLines=4
 ellipsize=marquee
 typeface=@Roboto-Regular (1).ttf
-ellipsize=end</ppt>
+ellipsize=start</ppt>
 <event></event>
 </View>
 <UIEventset><eventItme type="loading">gvs(st_vW,仓库list.1,gvs_1)

@@ -38,7 +38,7 @@ BackgroundColor=#ffffffff</ppt>
 <event></event>
 </View>
 <UIEventset><eventItme type="loading">us(8,"background",sss.ztys)
-fn 工具.返回(9,"元素动画")
+fn 工具.返回(9,null)
 //状态栏
 f(sss.ztlpd == null)
 {
@@ -79,5 +79,4 @@ ufnsui()
 {
 uls(7,a,"mdpsck_list.iyu",-1,-1)
 }
-}</eventItme><eventItme type="downkey">call(null,"mjava","元素动画.end")
-</eventItme></UIEventset>
+}</eventItme></UIEventset>

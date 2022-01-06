@@ -183,6 +183,7 @@ sbp("@ic_book_black_24dp.png",r)
 s four="设置"
 sbp("@ic_settings_black_24dp.png",p)
 
+
 call(sss.mBt,"mjava","Mus.set",mLa,mVp,"主页","仓库","手册","设置",q,w,r,p)
 gvs(3,toolbar)
 java(tv,toolbar,"android.view.ViewGroup.getChildAt","int",0)

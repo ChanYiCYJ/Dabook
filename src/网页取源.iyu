@@ -52,8 +52,8 @@ hint=输入网址(需带http或其他协议开头)</ppt>
 <ppt>width=-1
 height=52dp
 layout_margin=5.5dp
+app_CardElevation=0dp
 app_CardcornerRadius=5dp
-app_CardElevation=1dp
 app_CardBackgroundColor=#fff9f9f9</ppt>
 <event></event>
 </View>

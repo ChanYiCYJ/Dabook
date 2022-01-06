@@ -1,4 +1,11 @@
-<View id="2" did="0" type="AppBarLayout">
+<View id="15" did="0" type="CardView">
+<ppt>width=-1
+height=55dp
+app_CardElevation=1dp
+app_CardcornerRadius=0</ppt>
+<event></event>
+</View>
+<View id="2" did="15" type="AppBarLayout">
 <ppt>width=-1
 height=55dp
 background=white</ppt>
@@ -66,7 +73,7 @@ layout_gravity=center</ppt>
 <ppt>width=45dp
 height=45dp
 layout_margin=5.5dp
-app_CardcornerRadius=5dp
+app_CardcornerRadius=10dp
 app_CardElevation=0
 app_CardBackgroundColor=#fff9f9f9
 </ppt>
@@ -142,13 +149,19 @@ layout_gravity=center</ppt>
 <ppt>width=-1
 height=45dp
 layout_margin=5.5dp
-app_CardcornerRadius=5dp
+app_CardcornerRadius=10dp
 app_CardElevation=0
 app_CardBackgroundColor=#fff9f9f9
 layout_gravity=center_vertical</ppt>
 <event></event>
 </View>
-<View id="6" did="4" type="EditText">
+<View id="16" did="4" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="6" did="16" type="EditText">
 <ppt>width=-1
 height=-1
 text=
@@ -156,7 +169,7 @@ hint=搜索
 layout_gravity=center
 singleLine=true
 imeOptions=actionsearch
-layout_margin=15dp
+layout_margin=1dp
 </ppt>
 <event><eventItme type="aftertextchanged">strim(st_sS,sss.nr)</eventItme><eventItme type="keyboard">f(st_kC==66)
 {
@@ -215,7 +228,8 @@ f(qq &gt; 0)
 <View id="1" did="0" type="RecyclerView">
 <ppt>width=-1
 height=-1
-layout_marginBottom=55dp</ppt>
+layout_marginBottom=55dp
+</ppt>
 <event></event>
 </View>
 <UIEventset></UIEventset>

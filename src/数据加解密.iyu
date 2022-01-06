@@ -28,7 +28,7 @@ app_TitleColor=#ffffffff</ppt>
 <ppt>width=-1
 height=67dp
 layout_margin=7dp
-app_CardcornerRadius=5dp
+app_CardcornerRadius=10dp
 app_CardElevation=0
 app_CardBackgroundColor=#fff9f9f9
 </ppt>
@@ -59,7 +59,7 @@ layout_marginLeft=15dp</ppt>
 <ppt>width=-1
 height=67dp
 layout_margin=7dp
-app_CardcornerRadius=5dp
+app_CardcornerRadius=10dp
 app_CardElevation=0
 app_CardBackgroundColor=#fff9f9f9
 </ppt>
@@ -97,7 +97,7 @@ layout_marginLeft=2dp</ppt>
 <ppt>width=-1
 height=67dp
 layout_margin=7dp
-app_CardcornerRadius=5dp
+app_CardcornerRadius=10dp
 app_CardElevation=0
 app_CardBackgroundColor=#fff9f9f9
 </ppt>

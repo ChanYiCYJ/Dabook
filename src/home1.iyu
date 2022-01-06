@@ -1,6 +1,30 @@
-<View id="1" did="0" type="RecyclerView">
+<View id="5" did="0" type="ScrollView">
 <ppt>width=-1
 height=-1</ppt>
+<event></event>
+</View>
+<View id="4" did="5" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="2" did="4" type="CardView">
+<ppt>width=-1
+height=120dp
+layout_margin=7dp
+app_CardcornerRadius=10dp
+app_CardElevation=0
+app_CardBackgroundColor=#fff9f9f9
+//#fff9f9f9
+app_CardmaxElevation=0.1dp</ppt>
+<event></event>
+</View>
+<View id="1" did="4" type="RecyclerView">
+<ppt>width=-1
+height=-1
+fadingEdgeLength=0
+</ppt>
 <event></event>
 </View>
 <UIEventset></UIEventset>

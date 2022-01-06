@@ -33,8 +33,9 @@ orientation=vertical</ppt>
 <ppt>width=-1
 height=190dp
 layout_margin=8dp
-app_CardElevation=0.7dp
-app_CardcornerRadius=5dp</ppt>
+app_CardElevation=0dp
+app_CardcornerRadius=5dp
+app_CardBackgroundColor=#fff9f9f9</ppt>
 <event></event>
 </View>
 <View id="17" did="16" type="LinearLayout">
@@ -142,8 +143,9 @@ layout_marginLeft=20dp</ppt>
 <ppt>width=-1
 height=275dp
 layout_margin=8dp
-app_CardElevation=0.7dp
-app_CardcornerRadius=5dp</ppt>
+app_CardElevation=0dp
+app_CardcornerRadius=5dp
+app_CardBackgroundColor=#fff9f9f9</ppt>
 <event></event>
 </View>
 <View id="23" did="22" type="LinearLayout">

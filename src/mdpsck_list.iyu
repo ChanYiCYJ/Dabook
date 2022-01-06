@@ -2,7 +2,7 @@
 <ppt>width=-1
 height=-2
 layout_margin=5dp
-app_CardcornerRadius=5dp
+app_CardcornerRadius=10dp
 app_CardElevation=0
 //#fff9f9f9
 app_CardmaxElevation=0.1dp

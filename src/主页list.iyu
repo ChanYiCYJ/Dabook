@@ -2,7 +2,7 @@
 <ppt>width=-1
 height=67dp
 layout_margin=7dp
-app_CardcornerRadius=5dp
+app_CardcornerRadius=10dp
 app_CardElevation=0
 app_CardBackgroundColor=#fff9f9f9
 //#fff9f9f9
@@ -35,8 +35,7 @@ call(null,"mjava","元素动画.uigo",a,"image","数据加解密.iyu","chan.dev.
 }
 else f(sss.title =="MD配色")
 {
- gvs(st_vW,主页list.4,a)
-call(null,"mjava","元素动画.uigo",a,"image","MD配色.iyu","chan.dev.iapp")
+ uigo("MD配色.iyu")
 }
 else f(sss.title =="仓库")
 {
