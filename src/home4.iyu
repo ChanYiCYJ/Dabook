@@ -17,7 +17,7 @@ orientation=vertical</ppt>
 height=175dp
 layout_margin=8dp
 app_CardElevation=0dp
-app_CardcornerRadius=5dp
+app_CardcornerRadius=6dp
 app_CardBackgroundColor=#fff9f9f9</ppt>
 <event></event>
 </View>
@@ -209,7 +209,7 @@ uls(home3.1,dm,"选项手册list.iyu",-1,-2)
 height=115dp
 layout_margin=8dp
 app_CardElevation=0dp
-app_CardcornerRadius=5dp
+app_CardcornerRadius=6dp
 app_CardBackgroundColor=#fff9f9f9</ppt>
 <event></event>
 </View>
@@ -401,7 +401,7 @@ else f(data2=="true")
 height=115dp
 layout_margin=8dp
 app_CardElevation=0dp
-app_CardcornerRadius=5dp
+app_CardcornerRadius=6dp
 app_CardBackgroundColor=#fff9f9f9</ppt>
 <event></event>
 </View>
@@ -457,77 +457,6 @@ orientation=vertical</ppt>
 <event></event>
 </View>
 <View id="46" did="45" type="TextView">
-<ppt>width=-2
-height=-2
-text=关于
-textColor=#ff070707
-textSize=18sp</ppt>
-<event></event>
-</View>
-<View id="67" did="2" type="CardView">
-<ppt>width=-1
-height=115dp
-layout_margin=8dp
-app_CardElevation=0dp
-app_CardcornerRadius=5dp
-app_CardBackgroundColor=#fff9f9f9</ppt>
-<event></event>
-</View>
-<View id="68" did="67" type="LinearLayout">
-<ppt>width=-1
-height=-1
-orientation=vertical</ppt>
-<event></event>
-</View>
-<View id="69" did="68" type="LinearLayout">
-<ppt>width=-1
-height=50dp
-orientation=horizontal
-</ppt>
-<event></event>
-</View>
-<View id="70" did="69" type="TextView">
-<ppt>width=-2
-height=-2
-text=测试性功能
-textColor=#ff070707
-textSize=16sp
-layout_gravity=center_vertical
-layout_marginLeft=25dp
-typeface=@Roboto-Regular.ttf
-</ppt>
-<event></event>
-</View>
-<View id="71" did="68" type="LinearLayout">
-<ppt>width=-1
-height=65dp
-orientation=horizontal
-background=selectableitem
-clickable=true
-visibility=gone</ppt>
-<event><eventItme type="clicki">uigo("关于.iyu")</eventItme></event>
-</View>
-<View id="72" did="71" type="LinearLayout">
-<ppt>width=65dp
-height=65dp
-orientation=vertical
-gravity=center</ppt>
-<event></event>
-</View>
-<View id="73" did="72" type="ImageView">
-<ppt>width=-2
-height=-2
-src=@ic_report_black_24dp.png</ppt>
-<event></event>
-</View>
-<View id="74" did="71" type="LinearLayout">
-<ppt>width=-1
-height=-1
-gravity=center_vertical
-orientation=vertical</ppt>
-<event></event>
-</View>
-<View id="75" did="74" type="TextView">
 <ppt>width=-2
 height=-2
 text=关于

@@ -9,17 +9,6 @@ height=-1
 orientation=vertical</ppt>
 <event></event>
 </View>
-<View id="2" did="4" type="CardView">
-<ppt>width=-1
-height=120dp
-layout_margin=7dp
-app_CardcornerRadius=10dp
-app_CardElevation=0
-app_CardBackgroundColor=#fff9f9f9
-//#fff9f9f9
-app_CardmaxElevation=0.1dp</ppt>
-<event></event>
-</View>
 <View id="1" did="4" type="RecyclerView">
 <ppt>width=-1
 height=-1

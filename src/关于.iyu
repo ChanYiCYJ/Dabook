@@ -75,7 +75,7 @@ orientation=horizontal
 background=selectableitem
 clickable=true
 </ppt>
-<event><eventItme type="clicki">fn 工具.更新()</eventItme></event>
+<event></event>
 </View>
 <View id="10" did="9" type="LinearLayout">
 <ppt>width=65dp
@@ -100,7 +100,7 @@ orientation=vertical</ppt>
 <View id="13" did="11" type="TextView">
 <ppt>width=-2
 height=-2
-text=获取更新
+text=当前版本
 textColor=#ff060606
 textSize=16sp</ppt>
 <event></event>
@@ -108,7 +108,7 @@ textSize=16sp</ppt>
 <View id="14" did="11" type="TextView">
 <ppt>width=-2
 height=-2
-text=有可能是大更新噢</ppt>
+text=1</ppt>
 <event></event>
 </View>
 <View id="40" did="17" type="LinearLayout">
@@ -141,7 +141,7 @@ layout_marginLeft=20dp</ppt>
 </View>
 <View id="22" did="45" type="CardView">
 <ppt>width=-1
-height=275dp
+height=165dp
 layout_margin=8dp
 app_CardElevation=0dp
 app_CardcornerRadius=5dp
@@ -191,7 +191,7 @@ gravity=center_vertical
 background=selectableitem
 clickable=true
 </ppt>
-<event><eventItme type="clicki">s qun=1127481551
+<event><eventItme type="clicki">s qun=151152408
 ss("mqqapi://card/show_pslcard?src_type=internal&version=1&uin="+qun+"&card_type=group&source=qrcode",joinqq)
 sit(a,"action", "android.intent.action.VIEW")
 sit(a,"data",joinqq)
@@ -208,32 +208,6 @@ layout_marginLeft=20dp</ppt>
 <ppt>width=-2
 height=-2
 text=官方QQ群
-textColor=#ff060606
-textSize=16sp
-layout_marginLeft=20dp</ppt>
-<event></event>
-</View>
-<View id="30" did="23" type="LinearLayout">
-<ppt>width=-1
-height=55dp
-orientation=horizontal
-gravity=center_vertical
-background=selectableitem
-clickable=true
-</ppt>
-<event><eventItme type="clicki">hws("https://b23.tv/3GCtUJ")</eventItme></event>
-</View>
-<View id="31" did="30" type="ImageView">
-<ppt>width=23dp
-height=23dp
-src=@d30d2bb3-016c-4397-b10c-4d3f581738e0.png
-layout_marginLeft=20dp</ppt>
-<event></event>
-</View>
-<View id="32" did="30" type="TextView">
-<ppt>width=-2
-height=-2
-text=作者b站账号
 textColor=#ff060606
 textSize=16sp
 layout_marginLeft=20dp</ppt>
@@ -260,32 +234,6 @@ layout_marginLeft=20dp</ppt>
 <ppt>width=-2
 height=-2
 text=Gitee
-textColor=#ff060606
-textSize=16sp
-layout_marginLeft=20dp</ppt>
-<event></event>
-</View>
-<View id="47" did="23" type="LinearLayout">
-<ppt>width=-1
-height=55dp
-orientation=horizontal
-gravity=center_vertical
-background=selectableitem
-clickable=true
-</ppt>
-<event><eventItme type="clicki">uigo("捐赠.iyu")</eventItme></event>
-</View>
-<View id="48" did="47" type="ImageView">
-<ppt>width=23dp
-height=23dp
-src=@ic_mood_black_24dp.png
-layout_marginLeft=20dp</ppt>
-<event></event>
-</View>
-<View id="49" did="47" type="TextView">
-<ppt>width=-2
-height=-2
-text=为本项目捐赠
 textColor=#ff060606
 textSize=16sp
 layout_marginLeft=20dp</ppt>

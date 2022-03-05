@@ -1,11 +1,4 @@
-<View id="15" did="0" type="CardView">
-<ppt>width=-1
-height=55dp
-app_CardElevation=1dp
-app_CardcornerRadius=0</ppt>
-<event></event>
-</View>
-<View id="2" did="15" type="AppBarLayout">
+<View id="2" did="0" type="AppBarLayout">
 <ppt>width=-1
 height=55dp
 background=white</ppt>
