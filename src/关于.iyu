@@ -120,7 +120,7 @@ background=selectableitem
 clickable=true
 </ppt>
 <event><eventItme type="clicki">fr("@ky.txt",sss.txt)
-sss bt="开源许可与感谢名单"
+sss bt="部分开源项目"
 uigo("查看.iyu")</eventItme></event>
 </View>
 <View id="41" did="40" type="ImageView">
@@ -133,7 +133,7 @@ layout_marginLeft=20dp</ppt>
 <View id="42" did="40" type="TextView">
 <ppt>width=-2
 height=-2
-text=开源许可与感谢名单
+text=部分开源项目
 textColor=#ff060606
 textSize=16sp
 layout_marginLeft=20dp</ppt>
@@ -191,23 +191,19 @@ gravity=center_vertical
 background=selectableitem
 clickable=true
 </ppt>
-<event><eventItme type="clicki">s qun=151152408
-ss("mqqapi://card/show_pslcard?src_type=internal&version=1&uin="+qun+"&card_type=group&source=qrcode",joinqq)
-sit(a,"action", "android.intent.action.VIEW")
-sit(a,"data",joinqq)
-uit(a, "chooser", "选择QQ")</eventItme></event>
+<event><eventItme type="clicki">hws("http://chan.386210.xyz/")</eventItme></event>
 </View>
 <View id="26" did="25" type="ImageView">
 <ppt>width=23dp
 height=23dp
-src=@1b16513a-e7c0-475b-8f61-7e8906a456d8.png
+src=@ic_language_black_24dp.png
 layout_marginLeft=20dp</ppt>
 <event></event>
 </View>
 <View id="27" did="25" type="TextView">
 <ppt>width=-2
 height=-2
-text=官方QQ群
+text=YongeChan的博客
 textColor=#ff060606
 textSize=16sp
 layout_marginLeft=20dp</ppt>

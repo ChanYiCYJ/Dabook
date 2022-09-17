@@ -58,7 +58,7 @@ textColor=#ff0e0e0e
 //#ff0e0e0e
 textSize=19.5sp
 layout_marginLeft=4dp
-typeface=@Roboto-Regular.ttf</ppt>
+</ppt>
 <event></event>
 </View>
 <View id="5" did="2" type="TextView">
