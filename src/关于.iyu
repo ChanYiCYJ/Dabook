@@ -31,7 +31,7 @@ orientation=vertical</ppt>
 </View>
 <View id="16" did="45" type="CardView">
 <ppt>width=-1
-height=190dp
+height=135dp
 layout_margin=8dp
 app_CardElevation=0dp
 app_CardcornerRadius=5dp
@@ -111,37 +111,9 @@ height=-2
 text=1</ppt>
 <event></event>
 </View>
-<View id="40" did="17" type="LinearLayout">
-<ppt>width=-1
-height=55dp
-orientation=horizontal
-gravity=center_vertical
-background=selectableitem
-clickable=true
-</ppt>
-<event><eventItme type="clicki">fr("@ky.txt",sss.txt)
-sss bt="部分开源项目"
-uigo("查看.iyu")</eventItme></event>
-</View>
-<View id="41" did="40" type="ImageView">
-<ppt>width=23dp
-height=23dp
-src=@ic_book_black_24dp.png
-layout_marginLeft=20dp</ppt>
-<event></event>
-</View>
-<View id="42" did="40" type="TextView">
-<ppt>width=-2
-height=-2
-text=部分开源项目
-textColor=#ff060606
-textSize=16sp
-layout_marginLeft=20dp</ppt>
-<event></event>
-</View>
 <View id="22" did="45" type="CardView">
 <ppt>width=-1
-height=165dp
+height=110dp
 layout_margin=8dp
 app_CardElevation=0dp
 app_CardcornerRadius=5dp
@@ -183,32 +155,6 @@ layout_gravity=center_vertical
 </ppt>
 <event></event>
 </View>
-<View id="25" did="23" type="LinearLayout">
-<ppt>width=-1
-height=55dp
-orientation=horizontal
-gravity=center_vertical
-background=selectableitem
-clickable=true
-</ppt>
-<event><eventItme type="clicki">hws("http://chan.386210.xyz/")</eventItme></event>
-</View>
-<View id="26" did="25" type="ImageView">
-<ppt>width=23dp
-height=23dp
-src=@ic_language_black_24dp.png
-layout_marginLeft=20dp</ppt>
-<event></event>
-</View>
-<View id="27" did="25" type="TextView">
-<ppt>width=-2
-height=-2
-text=YongeChan的博客
-textColor=#ff060606
-textSize=16sp
-layout_marginLeft=20dp</ppt>
-<event></event>
-</View>
 <View id="33" did="23" type="LinearLayout">
 <ppt>width=-1
 height=55dp
@@ -217,7 +163,8 @@ gravity=center_vertical
 background=selectableitem
 clickable=true
 </ppt>
-<event><eventItme type="clicki">hws("https://gitee.com/chencyhyy")</eventItme></event>
+<event><eventItme type="clicki">sss llq="https://gitee.com/chencyhyy/DabookIAPP"
+uigo("浏览器页面.iyu")</eventItme></event>
 </View>
 <View id="34" did="33" type="ImageView">
 <ppt>width=23dp
@@ -229,7 +176,7 @@ layout_marginLeft=20dp</ppt>
 <View id="35" did="33" type="TextView">
 <ppt>width=-2
 height=-2
-text=Gitee
+text=Gitee(Chinese)
 textColor=#ff060606
 textSize=16sp
 layout_marginLeft=20dp</ppt>

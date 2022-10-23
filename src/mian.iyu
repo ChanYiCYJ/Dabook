@@ -30,7 +30,7 @@ syso(图标)
 f(typd == false)
 {
   //第一次,uigo至主页与全局激活是还没改记得改!
- utw("@flatlogo_1410.png","使用指南与协议","欢迎使用Da助手(Dabook)！本软件Ui和使用开源大部分开源Mus/小A教程，一些不知道作者，与2.0以下的版本相比完全不一样\n获取权限说明：\n获取网络：用于连接仓库等操作\n获取存储权限：用于保存数据\n大部分都使用的Gitee\n不会保存你的个人信息，本软件无登录注册","同意",true,v)
+ utw(null,"DaBookTips","Tips:本软件已停止更新啦","同意",true,v)
  {
    fe("$%Da/data/bjk",data1)
 f(data1== false)
