@@ -6,6 +6,6 @@
      Html
 #### Thank
      BlueMorningStudio 2020
-#### Language[zh-cn](https://gitee.com/chencyhyy/DabookIAPP).
+#### Language[中文](https://github.com/ChanYiCYJ/Dabook/blob/master/README.zh.md).
 
 
