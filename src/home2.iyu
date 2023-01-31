@@ -1,13 +1,8 @@
-<View id="2" did="0" type="AppBarLayout">
+<View id="3" did="0" type="LinearLayout">
 <ppt>width=-1
 height=55dp
-background=white</ppt>
-<event></event>
-</View>
-<View id="3" did="2" type="LinearLayout">
-<ppt>width=-1
-height=-1
-orientation=horizontal</ppt>
+orientation=horizontal
+layout_marginTop=2dp</ppt>
 <event></event>
 </View>
 <View id="7" did="3" type="RelativeLayout">
@@ -68,8 +63,7 @@ height=45dp
 layout_margin=5.5dp
 app_CardcornerRadius=10dp
 app_CardElevation=0
-app_CardBackgroundColor=#fff9f9f9
-</ppt>
+app_CardBackgroundColor=#E3F2FD</ppt>
 <event><eventItme type="clicki">sj(a1,null,jqzf,kt)
 sr(a1,kt,"",a1)
 strim(a1,a1)
@@ -142,27 +136,27 @@ layout_gravity=center</ppt>
 <ppt>width=-1
 height=45dp
 layout_margin=5.5dp
-app_CardcornerRadius=10dp
+app_CardcornerRadius=12dp
 app_CardElevation=0
-app_CardBackgroundColor=#fff9f9f9
 layout_gravity=center_vertical</ppt>
 <event></event>
 </View>
 <View id="16" did="4" type="LinearLayout">
 <ppt>width=-1
 height=-1
-orientation=vertical</ppt>
+orientation=vertical
+layout_margin=5dp</ppt>
 <event></event>
 </View>
 <View id="6" did="16" type="EditText">
 <ppt>width=-1
 height=-1
 text=
-hint=搜索
+hint=搜索｜Search
 layout_gravity=center
 singleLine=true
 imeOptions=actionsearch
-layout_margin=1dp
+textCursorDrawable=#ffe9e9e9
 </ppt>
 <event><eventItme type="aftertextchanged">strim(st_sS,sss.nr)</eventItme><eventItme type="keyboard">f(st_kC==66)
 {

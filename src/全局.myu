@@ -8,19 +8,6 @@ sss ztys= "#ffffffff"
 sss key="03118d449bea5ec2"
 sss token="72185a285373cd50e608a8c735ddc283"
 //Da kuhttps://gitee.com/chencyhyy/dakubox/raw/master
-//导入包(Androlua)
-loadjar("editor",sss.classes)
-  //取编辑框类
-  cls(sss.classes,"com.androlua.LuaEditor",sss.etc)
-  //取Lexer类以读取取得Language类
-  cls(sss.classes,"com.myopicmobile.textwarrior.common.Lexer",c0)
-  //取Language类以设置要高亮的代码
-  cls(sss.classes,"com.myopicmobile.textwarrior.common.Language",c1)
-  //下面这行已经不需要使用
-  //sss cl=classes
-  //取LuaEditor父类以取得其他功能
-  cls(sss.classes,"com.myopicmobile.textwarrior.android.FreeScrollingTextField",sss.c)
-  cls(sss.classes,"com.myopicmobile.textwarrior.android.TextChangeListener",ss.lc) 
 //导入包数据加解密
 loadjar("data",ijar)
 cls(ijar,"cn.qiong.sdk.Alpha",sss.jmsf)

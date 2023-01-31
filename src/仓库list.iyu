@@ -1,7 +1,7 @@
 <View id="1" did="0" type="CardView">
 <ppt>width=-1
 height=140dp
-layout_margin=7dp
+layout_margin=6dp
 app_CardcornerRadius=10dp
 app_CardElevation=0
 app_CardBackgroundColor=#fff9f9f9

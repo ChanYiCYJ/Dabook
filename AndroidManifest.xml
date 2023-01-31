@@ -2,7 +2,7 @@
 <title>DaBook</title>
 <icon>icon.png</icon>
 <packageName>chan.dev.iapp</packageName>
-<versionName>2.4</versionName>
+<versionName>2.5</versionName>
 <versionint>1</versionint>
 <sdk>15</sdk>
 <yuv>3</yuv>

@@ -8,14 +8,16 @@ background=white</ppt>
 <View id="4" did="1" type="LinearLayout">
 <ppt>width=-1
 height=-2
-orientation=vertical</ppt>
+orientation=vertical
+BackgroundColor=#E3F2FD</ppt>
 <event></event>
 </View>
 <View id="3" did="1" type="Toolbar">
 <ppt>width=-1
 height=-3
 app_title=关于
-app_TitleColor=#ffffffff</ppt>
+app_TitleColor=#ffffffff
+BackgroundColor=#E3F2FD</ppt>
 <event></event>
 </View>
 <View id="44" did="1" type="ScrollView">
@@ -31,11 +33,11 @@ orientation=vertical</ppt>
 </View>
 <View id="16" did="45" type="CardView">
 <ppt>width=-1
-height=135dp
+height=155dp
 layout_margin=8dp
 app_CardElevation=0dp
-app_CardcornerRadius=5dp
-app_CardBackgroundColor=#fff9f9f9</ppt>
+app_CardcornerRadius=8dp
+</ppt>
 <event></event>
 </View>
 <View id="17" did="16" type="LinearLayout">
@@ -46,13 +48,14 @@ orientation=vertical</ppt>
 </View>
 <View id="18" did="17" type="LinearLayout">
 <ppt>width=-1
-height=70dp
-orientation=horizontal</ppt>
+height=80dp
+orientation=horizontal
+BackgroundColor=#E3F2FD</ppt>
 <event></event>
 </View>
 <View id="19" did="18" type="ImageView">
-<ppt>width=45dp
-height=45dp
+<ppt>width=50dp
+height=50dp
 src=@flatlogo_1410.png
 layout_gravity=center_vertical
 layout_marginLeft=15dp</ppt>
@@ -65,12 +68,12 @@ text=Dabook
 layout_gravity=center_vertical
 layout_marginLeft=10dp
 textColor=#ff040404
-textSize=20sp</ppt>
+textSize=23sp</ppt>
 <event></event>
 </View>
 <View id="9" did="17" type="LinearLayout">
 <ppt>width=-1
-height=65dp
+height=75dp
 orientation=horizontal
 background=selectableitem
 clickable=true
@@ -78,16 +81,10 @@ clickable=true
 <event></event>
 </View>
 <View id="10" did="9" type="LinearLayout">
-<ppt>width=65dp
-height=65dp
+<ppt>width=75dp
+height=75dp
 orientation=vertical
 gravity=center</ppt>
-<event></event>
-</View>
-<View id="12" did="10" type="ImageView">
-<ppt>width=23dp
-height=23dp
-src=@ic_group_black_24dp.png</ppt>
 <event></event>
 </View>
 <View id="11" did="9" type="LinearLayout">
@@ -100,9 +97,9 @@ orientation=vertical</ppt>
 <View id="13" did="11" type="TextView">
 <ppt>width=-2
 height=-2
-text=当前版本
+text=Version
 textColor=#ff060606
-textSize=16sp</ppt>
+textSize=18sp</ppt>
 <event></event>
 </View>
 <View id="14" did="11" type="TextView">
@@ -113,7 +110,7 @@ text=1</ppt>
 </View>
 <View id="22" did="45" type="CardView">
 <ppt>width=-1
-height=110dp
+height=130dp
 layout_margin=8dp
 app_CardElevation=0dp
 app_CardcornerRadius=5dp
@@ -133,28 +130,6 @@ orientation=horizontal
 gravity=center_vertical</ppt>
 <event></event>
 </View>
-<View id="29" did="28" type="TextView">
-<ppt>width=-2
-height=-2
-text=M
-textStyle=bold
-textColor=#ff070707
-textSize=16sp
-layout_gravity=center_vertical
-layout_marginLeft=25dp
-</ppt>
-<event></event>
-</View>
-<View id="46" did="28" type="TextView">
-<ppt>width=-2
-height=-2
-text=ore
-textColor=#ff070707
-textSize=16sp
-layout_gravity=center_vertical
-</ppt>
-<event></event>
-</View>
 <View id="33" did="23" type="LinearLayout">
 <ppt>width=-1
 height=55dp
@@ -163,12 +138,12 @@ gravity=center_vertical
 background=selectableitem
 clickable=true
 </ppt>
-<event><eventItme type="clicki">sss llq="https://gitee.com/chencyhyy/DabookIAPP"
+<event><eventItme type="clicki">sss llq="@Dabook.html"
 uigo("浏览器页面.iyu")</eventItme></event>
 </View>
 <View id="34" did="33" type="ImageView">
-<ppt>width=23dp
-height=23dp
+<ppt>width=24dp
+height=24dp
 src=@3ed839a4-2b93-4a6a-8540-f3a151f5ff22.png
 layout_marginLeft=20dp</ppt>
 <event></event>
@@ -176,9 +151,9 @@ layout_marginLeft=20dp</ppt>
 <View id="35" did="33" type="TextView">
 <ppt>width=-2
 height=-2
-text=Gitee(Chinese)
+text=Gitee
 textColor=#ff060606
-textSize=16sp
+textSize=15sp
 layout_marginLeft=20dp</ppt>
 <event></event>
 </View>
@@ -207,4 +182,4 @@ java(mTbaBackSrc, mTba, "android.support.v7.widget.Toolbar.getNavigationIcon")
 
 java(mTbaMenuSrc, mTba, "android.support.v7.widget.Toolbar.getOverflowIcon")
 java(null, mTbaMenuSrc, "android.graphics.drawable.Drawable.setColorFilter", "int", 颜色, "android.graphics.PorterDuff$Mode", mMode)
-us(14,"text","当前版本:"+sss.版本)</eventItme></UIEventset>
+us(14,"text",sss.版本)</eventItme></UIEventset>

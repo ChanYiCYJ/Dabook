@@ -14,7 +14,8 @@ background=#2196F3</ppt>
 <ppt>width=-1
 height=-3
 app_title=子页面
-app_TitleColor=#ffffffff</ppt>
+app_TitleColor=#ffffffff
+</ppt>
 <event></event>
 </View>
 <View id="4" did="1" type="WebView">

@@ -124,7 +124,8 @@ layout_marginLeft=4dp
 layout_marginLeft=15dp</ppt>
 <event></event>
 </View>
-<UIEventset><eventItme type="loading">//这些都是子页面的主要配置(一直到注释zypzend)
+<UIEventset><eventItme type="loading">fn 全局.主要全局()
+//这些都是子页面的主要配置(一直到注释zypzend)
 f(sss.ztlpd == null)
 {
 fn 工具.沉浸式()

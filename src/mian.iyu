@@ -6,12 +6,6 @@ orientation=vertical
 gravity=center</ppt>
 <event></event>
 </View>
-<View id="2" did="1" type="ImageView">
-<ppt>width=115dp
-height=115dp
-src=@flatlogo_1410.png</ppt>
-<event></event>
-</View>
 <UIEventset><eventItme type="loading">sdeg(0)
 uycl(true)
 javax(pm,activity,"android.content.ContextWrapper","getPackageManager")
@@ -30,13 +24,13 @@ syso(图标)
 f(typd == false)
 {
   //第一次,uigo至主页与全局激活是还没改记得改!
- utw(null,"DaBookTips","Tips:本软件已停止更新啦","同意",true,v)
+ utw(null,"DaBookTips","Tips:软件分享交流群.exe特供版，此版本是我经过多次修改后因为没时间打包便开源到网络上了的版本，无需再次打包","同意",true,v)
  {
    fe("$%Da/data/bjk",data1)
 f(data1== false)
 {
   fw("$chan.dev.iapp.da","ok")
-  loadjar("AndroLua+5.0.10_AndroidX.jar",sss.classes)
+  loadjar("editor.dex",sss.classes)
   //取编辑框类
   cls(sss.classes,"com.androlua.LuaEditor",sss.etc)
   //取Lexer类以读取取得Language类
@@ -59,7 +53,7 @@ else
   fe("$%Da/data/bjk",data1)
 f(data1== false)
 {
-  loadjar("editor",sss.classes)
+  loadjar("editor.dex",sss.classes)
   //取编辑框类
   cls(sss.classes,"com.androlua.LuaEditor",sss.etc)
   //取Lexer类以读取取得Language类
@@ -71,9 +65,15 @@ f(data1== false)
   //取LuaEditor父类以取得其他功能
   cls(sss.classes,"com.myopicmobile.textwarrior.android.FreeScrollingTextField",sss.c)
   cls(sss.classes,"com.myopicmobile.textwarrior.android.TextChangeListener",ss.lc)    
-}
+} 
+  t()
+  { 
+  ufnsui()
+  {
     fn 全局.主要全局()
-  uigo("home.iyu")
+    uigo("home.iyu")
   end()
+  }
+  }
 }
 </eventItme></UIEventset>

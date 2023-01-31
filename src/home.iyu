@@ -1,7 +1,84 @@
 <View id="1" did="0" type="DrawerLayout">
 <ppt>width=-1
 height=-1
+</ppt>
+<event></event>
+</View>
+<View id="26" did="1" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="2" did="26" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="8" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+BackgroundColor=#E3F2FD</ppt>
+<event></event>
+</View>
+<View id="34" did="2" type="CardView">
+<ppt>width=-1
+height=-3
+app_CardElevation=0dp
+BackgroundColor=#E3F2FD</ppt>
+<event></event>
+</View>
+<View id="3" did="34" type="Toolbar">
+<ppt>width=-1
+height=-3
+app_title=主页
+layout_margin=10dp</ppt>
+<event></event>
+</View>
+<View id="33" did="2" type="ViewPager">
+<ppt>width=-1
+height=-1</ppt>
+<event><eventItme type="onpageselected">java(menu,sss.mBt,"android.support.design.widget.BottomNavigationView.getMenu")
+java(item,menu,"android.view.Menu.getItem","int",st_pN)
+java(null,item,"android.view.MenuItem.setChecked","boolean",true)
+ug(33,"currentitem",chs)
+f(chs == 0)
+{
+  us(3,"app_title","主页")
+}
+else f(chs == 1)
+{
+  us(3,"app_title","仓库")
+}
+else f(chs == 2)
+{
+  us(3,"app_title","手册")
+}
+else f(chs == 3)
+{
+  us(3,"app_title","设置")
+  fe("%Da/data/ts",data2)
+f(data2=="true")
+{
+  us(home4.23,"checked",true)
+}
+}</eventItme></event>
+</View>
+<View id="25" did="2" type="WebView">
+<ppt>width=-2
+height=-2
 visibility=gone</ppt>
+<event></event>
+</View>
+<View id="32" did="26" type="LinearLayout">
+<ppt>width=-1
+height=-2
+elevation=15dp
+BackgroundColor=#E3F2FD
+ut_alignParentBottom=true
+</ppt>
 <event></event>
 </View>
 <View id="7" did="1" type="LinearLayout">
@@ -57,77 +134,7 @@ height=-1
 dividerHeight=0</ppt>
 <event></event>
 </View>
-<View id="26" did="0" type="RelativeLayout">
-<ppt>width=-1
-height=-1</ppt>
-<event></event>
-</View>
-<View id="2" did="26" type="LinearLayout">
-<ppt>width=-1
-height=-1
-orientation=vertical
-background=white</ppt>
-<event></event>
-</View>
-<View id="8" did="2" type="LinearLayout">
-<ppt>width=-1
-height=-2
-orientation=vertical</ppt>
-<event></event>
-</View>
-<View id="3" did="2" type="Toolbar">
-<ppt>width=-1
-height=-3
-app_title=主页
-app_TitleColor=#2196F3
-</ppt>
-<event></event>
-</View>
-<View id="33" did="2" type="ViewPager">
-<ppt>width=-1
-height=-1</ppt>
-<event><eventItme type="onpageselected">java(menu,sss.mBt,"android.support.design.widget.BottomNavigationView.getMenu")
-java(item,menu,"android.view.Menu.getItem","int",st_pN)
-java(null,item,"android.view.MenuItem.setChecked","boolean",true)
-ug(33,"currentitem",chs)
-f(chs == 0)
-{
-  us(3,"app_title","主页")
-}
-else f(chs == 1)
-{
-  us(3,"app_title","仓库")
-}
-else f(chs == 2)
-{
-  us(3,"app_title","手册")
-}
-else f(chs == 3)
-{
-  us(3,"app_title","设置")
-  fe("%Da/data/ts",data2)
-f(data2=="true")
-{
-  us(home4.23,"checked",true)
-}
-}</eventItme></event>
-</View>
-<View id="25" did="2" type="WebView">
-<ppt>width=-2
-height=-2
-visibility=gone</ppt>
-<event></event>
-</View>
-<View id="32" did="26" type="LinearLayout">
-<ppt>width=-1
-height=-2
-elevation=20dp
-background=#ffffff
-ut_alignParentBottom=true</ppt>
-<event></event>
-</View>
 <UIEventset><eventItme type="loading">syso(sss.cky)
-//状态栏
 f(sss.ztlpd == null)
 {
 fn 工具.沉浸式()
@@ -141,7 +148,7 @@ else
   uycl(sss.ztys,true)
 }
 //主题切换
-us(10,"background",sss.qds)
+us(10,"background","#E3F2FD")
 us(3,"app_titlecolor",sss.qds)
 //MD栏
 utb(3)
