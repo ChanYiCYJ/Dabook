@@ -1,8 +1,8 @@
 <View id="6" did="0" type="CardView">
 <ppt>width=-1
 height=-2
-layout_margin=5dp
-app_CardcornerRadius=10dp
+layout_margin=5.5dp
+app_CardcornerRadius=12dp
 app_CardElevation=0
 //#fff9f9f9
 app_CardmaxElevation=0.1dp
@@ -11,7 +11,7 @@ app_CardBackgroundColor=#fff9f9f9</ppt>
 </View>
 <View id="1" did="6" type="LinearLayout">
 <ppt>width=-1
-height=75dp
+height=82dp
 orientation=horizontal
 gravity=center_vertical
 layout_margin=5dp
@@ -387,11 +387,11 @@ ula(sss.mdys,1="",6="",2=900,4="#fefefefe",3="#263238")
 uigo("mdpsck2.iyu")</eventItme></event>
 </View>
 <View id="2" did="1" type="LinearLayout">
-<ppt>width=40dp
-height=40dp
+<ppt>width=45dp
+height=45dp
 layout_marginleft=15dp
 backgroundcolor=#ff0089ff
-elevation=9dp
+elevation=0dp
 </ppt>
 <event></event>
 </View>
@@ -408,18 +408,19 @@ paddingleft=5dp</ppt>
 <ppt>width=-2
 height=-2
 text=蓝色
-textsize=17sp
+textsize=18sp
 textcolor=#da000000
-</ppt>
+textStyle=bold</ppt>
 <event></event>
 </View>
 <View id="5" did="3" type="TextView">
 <ppt>width=-2
 height=-2
 text=文本5
-textsize=13.5sp
+textsize=15sp
 layout_margintop=2dp
-textcolor=#c3000000</ppt>
+textcolor=#c3000000
+</ppt>
 <event></event>
 </View>
 <UIEventset><eventItme type="loading">gvs(st_vW,mdpsck_list.2,id2)
